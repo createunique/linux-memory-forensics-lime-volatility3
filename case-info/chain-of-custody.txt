@@ -1,0 +1,178 @@
+=== CHAIN OF CUSTODY ===
+
+Case ID: CASE_20251228_0001
+Evidence Type: Digital - RAM Memory Dump
+Item Number: EVIDENCE-001
+
+---
+
+EVIDENCE DESCRIPTION
+--------------------
+Item: Complete system memory image
+Filename: mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+Size: ~1.2 GB (1,200,000,000 bytes approximate)
+Format: LiME (Linux Memory Extractor) format
+Hash: SHA-256 [stored separately in evidence.sha256]
+
+---
+
+ACQUISITION
+-----------
+Date/Time: 2025-12-27 21:48:36 UTC (start) → 21:49:03 UTC (complete)
+Location: victim-u20 VM (192.168.164.129)
+Method: Live response via LiME kernel module
+Acquired By: labadmin (DFIR Analyst)
+Tool: LiME kernel module (lime-5.4.0-216-generic.ko)
+Command: sudo insmod lime-5.4.0-216-generic.ko "path=/home/labadmin/dfir_acq/mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime format=lime timeout=0"
+Verification: SHA-256 hash generated immediately after acquisition
+Status: SUCCESSFUL
+
+---
+
+TRANSFER #1
+-----------
+Date/Time: 2025-12-27 21:50:15 UTC
+From: victim-u20 (/home/labadmin/dfir_acq/)
+To: analystvmu20 (~/dfir-cases/CASE_20251228_0001/evidence/)
+Method: SCP (Secure Copy Protocol)
+Command: scp -p labadmin@192.168.164.129:/home/labadmin/dfir_acq/*.lime ~/dfir-cases/CASE_20251228_0001/evidence/
+Transferred By: labadmin (DFIR Analyst)
+Integrity Check: SHA-256 verified after transfer - PASSED
+Status: SUCCESSFUL
+
+---
+
+STORAGE
+-------
+Date/Time: 2025-12-27 21:51:00 UTC
+Location: analystvmu20:~/dfir-cases/CASE_20251228_0001/evidence/
+Permissions: 640 (rw-r-----)
+Owner: labadmin:labadmin
+Backup: None (single copy on analyst workstation)
+Access Controls: Restricted to labadmin account only
+
+---
+
+ANALYSIS
+--------
+Date/Time: 2025-12-27 22:00:00 UTC → 2025-12-28 00:30:00 UTC
+Location: analystvmu20 (same system as storage)
+Analyst: labadmin
+Tool: Volatility3 v2.26+
+Plugins Run: 13 (pslist, pstree, psscan, psaux, lsof, sockstat, lsmod, kmsg, bash, malfind, modxview, boottime, isfinfo)
+Outputs: 13 text files in phase-2-examination/examination-outputs/
+Access: Read-only (dump file not modified during analysis)
+Status: ANALYSIS COMPLETE
+
+---
+
+CUSTODY LOG
+-----------
+
+Entry 1:
+  Date/Time: 2025-12-27 21:48:36 UTC
+  Action: Evidence acquired from live system
+  Location: victim-u20 VM memory
+  Handler: labadmin
+  Method: LiME kernel module
+  Notes: Complete RAM capture, timeout=0 parameter used
+
+Entry 2:
+  Date/Time: 2025-12-27 21:49:03 UTC
+  Action: Acquisition completed, hash generated
+  Location: victim-u20:/home/labadmin/dfir_acq/
+  Handler: labadmin
+  Verification: SHA-256 hash computed
+  Notes: File ownership changed to labadmin:labadmin, permissions set to 640
+
+Entry 3:
+  Date/Time: 2025-12-27 21:50:15 UTC
+  Action: Evidence transferred to analyst workstation
+  Location: analystvmu20:~/dfir-cases/CASE_20251228_0001/evidence/
+  Handler: labadmin
+  Method: SCP over SSH
+  Verification: SHA-256 re-verified after transfer - MATCH
+  Notes: Original file retained on victim (deleted after verification)
+
+Entry 4:
+  Date/Time: 2025-12-27 21:51:00 UTC
+  Action: Integrity verification completed
+  Location: analystvmu20 (analyst workstation)
+  Handler: labadmin
+  Result: PASSED (hash match confirmed)
+  Notes: Evidence secured for analysis
+
+Entry 5:
+  Date/Time: 2025-12-27 22:00:00 UTC
+  Action: Analysis initiated
+  Location: analystvmu20
+  Handler: labadmin
+  Tool: Volatility3
+  Notes: Read-only access, no modifications to evidence
+
+Entry 6:
+  Date/Time: 2025-12-28 00:30:00 UTC
+  Action: Analysis completed
+  Location: analystvmu20
+  Handler: labadmin
+  Outputs: 13 plugin outputs saved
+  Notes: Evidence remains intact and verified
+
+Entry 7:
+  Date/Time: 2025-12-28 10:00:00 UTC
+  Action: Report compilation and case packaging
+  Location: analystvmu20
+  Handler: labadmin
+  Deliverable: Complete DFIR investigation package
+  Notes: Evidence file excluded from git repository per .gitignore
+
+---
+
+INTEGRITY VERIFICATION HISTORY
+-------------------------------
+
+Verification 1:
+  Date/Time: 2025-12-27 21:49:03 UTC
+  Location: victim-u20
+  Method: SHA-256 hash generation
+  Result: [hash stored in evidence.sha256]
+  Status: BASELINE HASH ESTABLISHED
+
+Verification 2:
+  Date/Time: 2025-12-27 21:51:00 UTC
+  Location: analystvmu20
+  Method: SHA-256 hash comparison
+  Result: MATCH with baseline
+  Status: TRANSFER INTEGRITY VERIFIED
+
+Verification 3:
+  Date/Time: 2025-12-28 00:30:00 UTC (post-analysis)
+  Location: analystvmu20
+  Method: SHA-256 hash comparison
+  Result: MATCH with baseline
+  Status: EVIDENCE UNMODIFIED DURING ANALYSIS
+
+---
+
+CURRENT CUSTODY
+---------------
+As of: 2025-12-29
+Location: analystvmu20:~/dfir-cases/CASE_20251228_0001/evidence/
+Custodian: labadmin (DFIR Analyst)
+Status: SECURED, READ-ONLY
+Access: Restricted (file permissions 640)
+Backup: None (single copy retained)
+Next Action: Long-term archival or secure deletion per policy
+
+---
+
+CHAIN OF CUSTODY MAINTAINED: YES
+EVIDENCE INTEGRITY: VERIFIED (multiple checks)
+TAMPERING DETECTED: NO
+ADMISSIBILITY: HIGH (complete documentation, unbroken chain)
+
+---
+
+Documented By: labadmin
+Date: 2025-12-29
+Signature: [Digital signature placeholder]

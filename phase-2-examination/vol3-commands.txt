@@ -1,0 +1,144 @@
+=== VOLATILITY3 ANALYSIS COMMANDS ===
+
+Case ID: CASE_20251228_0001
+Analyst: labadmin
+Analysis Date: 2025-12-27
+
+---
+
+ENVIRONMENT SETUP
+-----------------
+# Activate Python virtual environment
+source ~/dfir_tools/vol3_env/bin/activate
+
+# Set environment variables
+export DUMP="~/dfir-cases/CASE_20251228_0001/evidence/mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime"
+export SYMS="~/dfir_symbols"
+export EXAM_DIR="~/dfir-cases/CASE_20251228_0001/examination-outputs"
+
+# Create output directory
+mkdir -p "$EXAM_DIR"
+
+---
+
+VALIDATION COMMANDS
+-------------------
+# Verify dump and ISF symbols
+vol -f "$DUMP" -s "$SYMS" banners.Banners | tee "$EXAM_DIR/01_banners.txt"
+vol -f "$DUMP" -s "$SYMS" isfinfo.IsfInfo | tee "$EXAM_DIR/02_isfinfo.txt"
+
+---
+
+CORE ANALYSIS PLUGINS
+----------------------
+
+## Boot Time and System Information
+vol -f "$DUMP" -s "$SYMS" linux.boottime.Boottime | tee "$EXAM_DIR/10_boottime.txt"
+
+## Process Analysis
+vol -f "$DUMP" -s "$SYMS" linux.pslist.PsList | tee "$EXAM_DIR/11_pslist.txt"
+vol -f "$DUMP" -s "$SYMS" linux.pstree.PsTree | tee "$EXAM_DIR/12_pstree.txt"
+vol -f "$DUMP" -s "$SYMS" linux.psscan.PsScan | tee "$EXAM_DIR/13_psscan.txt"
+vol -f "$DUMP" -s "$SYMS" linux.psaux.PsAux | tee "$EXAM_DIR/14_psaux.txt"
+
+## File Descriptors and Open Files
+vol -f "$DUMP" -s "$SYMS" linux.lsof.Lsof | tee "$EXAM_DIR/15_lsof.txt"
+
+## Network Analysis
+vol -f "$DUMP" -s "$SYMS" linux.sockstat.Sockstat | tee "$EXAM_DIR/20_sockstat.txt"
+
+## Kernel Modules
+vol -f "$DUMP" -s "$SYMS" linux.lsmod.Lsmod | tee "$EXAM_DIR/30_lsmod.txt"
+
+## System Artifacts
+vol -f "$DUMP" -s "$SYMS" linux.kmsg.Kmsg | tee "$EXAM_DIR/40_kmsg.txt"
+vol -f "$DUMP" -s "$SYMS" linux.bash.Bash | tee "$EXAM_DIR/41_bash.txt"
+
+## Malware Detection
+vol -f "$DUMP" -s "$SYMS" linux.malfind.Malfind | tee "$EXAM_DIR/50_malfind.txt"
+vol -f "$DUMP" -s "$SYMS" linux.malware.modxview.Modxview | tee "$EXAM_DIR/51_modxview.txt"
+
+---
+
+ADVANCED COMMANDS (Optional)
+-----------------------------
+
+## Memory Maps for Specific Process
+vol -f "$DUMP" -s "$SYMS" linux.proc.Maps.Maps --pid 20480 --dump --output-dir="$EXAM_DIR/dumps/"
+
+## YARA Scanning (if rules available)
+vol -f "$DUMP" -s "$SYMS" linux.yarascan.YaraScan --yara-file ~/yara_rules/linux_malware.yar | tee "$EXAM_DIR/52_yarascan.txt"
+
+## ELF Binary Extraction
+vol -f "$DUMP" -s "$SYMS" linux.elfs.Elfs | tee "$EXAM_DIR/53_elfs.txt"
+
+---
+
+COMMAND EXECUTION NOTES
+-----------------------
+- All commands executed on analyst workstation (analystvmu20)
+- Python virtual environment: ~/dfir_tools/vol3_env
+- Volatility3 version: 2.26 or higher
+- ISF symbol file: Ubuntu_5.4.0-216-generic_5.4.0-216.236_amd64.json
+- Total execution time: ~45 minutes
+- All outputs saved with timestamps and logged
+
+---
+
+EXPECTED OUTPUT HEADERS
+-----------------------
+
+01_banners.txt:
+  Banner: Linux version 5.4.0-216-generic...
+
+02_isfinfo.txt:
+  Table Name | ... | Symbol | ... | Type
+
+10_boottime.txt:
+  2025-12-27 19:02:00 UTC+0000
+
+11_pslist.txt:
+  OFFSET (V) | PID | TID | PPID | COMM | ... 
+
+12_pstree.txt:
+  1 | systemd
+    └─ 1930 | sshd
+
+13_psscan.txt:
+  (Similar to pslist with additional hidden process detection)
+
+14_psaux.txt:
+  PID | COMMAND
+
+15_lsof.txt:
+  PID | FD | PATH
+
+20_sockstat.txt:
+  NetNS | Proto | SAddr | SPort | ... | Inode | PID/Comm
+
+30_lsmod.txt:
+  Offset | Name | Size
+
+40_kmsg.txt:
+  Kernel message buffer output
+
+41_bash.txt:
+  PID | Process | CommandTime | Command
+
+50_malfind.txt:
+  PID | Name | Start | End | ... | Protection | Hexdump | Disasm
+
+51_modxview.txt:
+  Module integrity check results
+
+---
+
+VOLATILITY3 PLUGIN VERSIONS
+----------------------------
+All plugins from Volatility3 stable release (2.26+)
+Linux framework plugins used: 13 total
+Output files generated: 13 (.txt files)
+
+---
+
+For complete analysis methodology, see: phase-2-examination/vol3-analysis.md

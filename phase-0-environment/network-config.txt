@@ -1,0 +1,56 @@
+# Network Configuration - Victim VM
+
+## Interface Details
+
+### ens33 (NAT)
+- **IP Address:** 172.16.179.143
+- **Netmask:** 255.255.255.0 (/24)
+- **Broadcast:** 172.16.179.255
+- **Gateway:** 172.16.179.2
+- **MAC Address:** 00:0c:29:3a:ab:ca
+- **IPv6:** fe80::20c:29ff:fe3a:abca/64
+- **MTU:** 1500
+- **Purpose:** Internet access for package updates
+
+### ens34 (Host-only VMnet1)
+- **IP Address:** 192.168.164.129
+- **Netmask:** 255.255.255.0 (/24)
+- **Broadcast:** 192.168.164.255
+- **MAC Address:** 00:0c:29:3a:ab:d4
+- **IPv6:** fe80::20c:29ff:fe3a:abd4/64
+- **MTU:** 1500
+- **Purpose:** Forensic workstation SSH access
+
+### lo (Loopback)
+- **IP Address:** 127.0.0.1
+- **Netmask:** 255.0.0.0 (/8)
+- **IPv6:** ::1/128
+
+## Routing Table
+```plaintext
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         172.16.179.2    0.0.0.0         UG    100    0        0 ens33
+172.16.179.0    0.0.0.0         255.255.255.0   U     0      0        0 ens33
+192.168.164.0   0.0.0.0         255.255.255.0   U     0      0        0 ens34
+```
+
+## DNS Configuration
+- **Nameserver:** 127.0.0.53 (systemd-resolved)
+- **Search Domain:** None
+
+## Network Services
+- **SSH:** Port 22 (listening on all interfaces)
+- **HTTP:** Port 80 (Apache2, listening on all interfaces)
+- **C2 Simulation:** Attempted connection to 192.168.164.1:4444
+
+## Host Machine Access
+From the forensic workstation (host):
+```bash
+ssh labadmin@192.168.164.129
+```
+
+## Security Notes
+- No firewall rules configured (UFW inactive)
+- SSH allows password authentication
+- Both interfaces accessible for testing
+- Host-only network isolated from production

@@ -1,0 +1,40 @@
+type,indicator,source,confidence,notes
+process_name,.kworker_update,pslist.txt,VERY_HIGH,Masqueraded kernel process (dot prefix)
+process_pid,20288,pslist.txt,VERY_HIGH,Systemd service spawned process
+process_name,.uhelper,pstree.txt,VERY_HIGH,Code injection helper tool
+process_pid,20375,pslist.txt,VERY_HIGH,Suspicious binary in /opt/.cache
+process_name,.injector,malfind.txt,VERY_HIGH,Active code injection tool
+process_pid,20480,malfind.txt,VERY_HIGH,Primary code injection process
+process_name,mem_marker.py,psaux.txt,HIGH,9MB in-memory marker process
+process_name,.rsim.py,bash.txt,VERY_HIGH,Reverse shell simulator
+shellcode_pattern,90 90 90 90 90 90 90 90 CC,malfind.txt,VERY_HIGH,NOP sled + INT3 breakpoint
+shellcode_pattern,31 C0 48 31 FF C3,malfind.txt,VERY_HIGH,XOR registers + RET (x86-64)
+memory_address,0x7f3396a68000,malfind.txt,VERY_HIGH,RWX anonymous page in PID 20480
+memory_permissions,rwx,malfind.txt,VERY_HIGH,Read-write-execute (code injection indicator)
+user_account,backupsvc,bash.txt,VERY_HIGH,Hidden user with UID 997
+user_uid,997,bash.txt,VERY_HIGH,System user range (suspicious)
+sudo_entry,backupsvc ALL=(ALL) NOPASSWD:ALL,bash.txt,VERY_HIGH,Passwordless sudo privilege escalation
+service_file,kworker-update.service,bash.txt,VERY_HIGH,Systemd persistence mechanism
+service_path,/etc/systemd/system/kworker-update.service,bash.txt,VERY_HIGH,Custom service location
+script_path,/usr/local/bin/.kworker_update.sh,bash.txt,HIGH,Service execution script (hidden)
+network_target,192.168.164.1:4444,sockstat.txt,HIGH,C2 server destination (attempted)
+network_port,4444,sockstat.txt,HIGH,Common Metasploit default port
+network_protocol,tcp,sockstat.txt,HIGH,TCP connection to C2
+script_path,/opt/.cache/.rsim.py,bash.txt,HIGH,Reverse shell simulator script
+log_file,/var/log/.rsim.log,bash.txt,MEDIUM,C2 connection logs (hidden)
+persistence_dir,/opt/.cache,bash.txt,VERY_HIGH,Primary attacker staging location
+persistence_dir,/var/tmp/.dbus,bash.txt,HIGH,Code injection staging directory
+persistence_dir,/var/tmp/.cache-update,bash.txt,HIGH,Secondary persistence location
+sudoers_file,/etc/sudoers.d/010-backupsvc,bash.txt,VERY_HIGH,Sudo privilege configuration
+attacker_session,PID 3038 (bash),pstree.txt,VERY_HIGH,Primary attacker shell session
+attacker_ssh,PID 2945 (sshd),pstree.txt,VERY_HIGH,SSH daemon serving attacker
+ssh_source_ip,192.168.164.x,sockstat.txt,HIGH,Attacker source (host-only network)
+victim_ip,192.168.164.129,network-config.txt,CONFIRMED,Victim ens34 interface
+victim_hostname,victim-u20,banners.txt,CONFIRMED,Compromised system hostname
+kernel_version,5.4.0-216-generic,banners.txt,CONFIRMED,Ubuntu 20.04 kernel
+kernel_module,lime,lsmod.txt,MEDIUM,LiME acquisition module (expected)
+kernel_taint,OOT_MODULE UNSIGNED_MODULE,lsmod.txt,MEDIUM,Out-of-tree unsigned (LiME)
+boot_time,2025-12-27 19:02:00 UTC,boottime.txt,CONFIRMED,System boot timestamp
+dump_time,2025-12-27 21:49:03 UTC,acquisition-log.txt,CONFIRMED,Memory acquisition timestamp
+attack_duration,2h 47min,timeline.txt,CONFIRMED,Boot to dump time window
+command_count,50+,bash.txt,HIGH,Attacker commands executed

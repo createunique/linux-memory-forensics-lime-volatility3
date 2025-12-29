@@ -1,0 +1,3229 @@
+Volatility 3 Framework 2.26.2
+
+facility	level	timestamp	caller	line
+
+kern	notice	0.000000	-	Linux version 5.4.0-216-generic (buildd@lcy02-amd64-014) (gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2)) #236-Ubuntu SMP Fri Apr 11 19:53:21 UTC 2025 (Ubuntu 5.4.0-216.236-generic 5.4.291)
+kern	info	0.000000	-	Command line: BOOT_IMAGE=/vmlinuz-5.4.0-216-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro debian-installer/custom-installation=/custom find_preseed=/preseed.cfg auto preseed/file=/floppy/preseed.cfg automatic-ubiquity noprompt priority=critical locale=en_US console-setup/modelcode=evdev
+kern	info	0.000000	-	KERNEL supported cpus:
+kern	info	0.000000	-	  Intel GenuineIntel
+kern	info	0.000000	-	  AMD AuthenticAMD
+kern	info	0.000000	-	  Hygon HygonGenuine
+kern	info	0.000000	-	  Centaur CentaurHauls
+kern	info	0.000000	-	  zhaoxin   Shanghai  
+kern	info	0.000000	-	BIOS-provided physical RAM map:
+kern	info	0.000000	-	BIOS-e820: [mem 0x0000000000000000-0x000000000009e7ff] usable
+kern	info	0.000000	-	BIOS-e820: [mem 0x000000000009e800-0x000000000009ffff] reserved
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000000dc000-0x00000000000fffff] reserved
+kern	info	0.000000	-	BIOS-e820: [mem 0x0000000000100000-0x00000000bfecffff] usable
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000bfed0000-0x00000000bfefefff] ACPI data
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000bfeff000-0x00000000bfefffff] ACPI NVS
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000bff00000-0x00000000bfffffff] usable
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000f0000000-0x00000000f7ffffff] reserved
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000fec00000-0x00000000fec0ffff] reserved
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+kern	info	0.000000	-	BIOS-e820: [mem 0x00000000fffe0000-0x00000000ffffffff] reserved
+kern	info	0.000000	-	BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+kern	info	0.000000	-	NX (Execute Disable) protection: active
+kern	info	0.000000	-	SMBIOS 2.7 present.
+kern	info	0.000000	-	DMI: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 11/12/2020
+kern	info	0.000000	-	vmware: hypercall mode: 0x02
+kern	info	0.000000	-	Hypervisor detected: VMware
+kern	info	0.000000	-	vmware: TSC freq read from hypervisor : 3187.200 MHz
+kern	info	0.000000	-	vmware: Host bus clock speed read from hypervisor : 66000000 Hz
+kern	info	0.000000	-	vmware: using sched offset of 3291957735 ns
+kern	info	0.000001	-	tsc: Detected 3187.200 MHz processor
+kern	debug	0.002913	-	e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+kern	debug	0.002914	-	e820: remove [mem 0x000a0000-0x000fffff] usable
+kern	info	0.002917	-	last_pfn = 0x140000 max_arch_pfn = 0x400000000
+kern	debug	0.002931	-	MTRR default type: uncachable
+kern	debug	0.002932	-	MTRR fixed ranges enabled:
+kern	debug	0.002933	-	  00000-9FFFF write-back
+kern	debug	0.002933	-	  A0000-BFFFF uncachable
+kern	debug	0.002933	-	  C0000-CFFFF write-protect
+kern	debug	0.002934	-	  D0000-EFFFF uncachable
+kern	debug	0.002934	-	  F0000-FFFFF write-protect
+kern	debug	0.002934	-	MTRR variable ranges enabled:
+kern	debug	0.002935	-	  0 base 000000000000 mask 1FE000000000 write-back
+kern	debug	0.002935	-	  1 base 0000C0000000 mask 1FFFC0000000 uncachable
+kern	debug	0.002936	-	  2 disabled
+kern	debug	0.002936	-	  3 disabled
+kern	debug	0.002936	-	  4 disabled
+kern	debug	0.002936	-	  5 disabled
+kern	debug	0.002936	-	  6 disabled
+kern	debug	0.002937	-	  7 disabled
+kern	info	0.002944	-	x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+kern	info	0.002954	-	total RAM covered: 130048M
+kern	info	0.003228	-	Found optimal setting for mtrr clean up
+kern	info	0.003229	-	 gran_size: 64K 	chunk_size: 64K 	num_reg: 7  	lose cover RAM: 0G
+kern	debug	0.003271	-	e820: update [mem 0xc0000000-0xffffffff] usable ==> reserved
+kern	info	0.003276	-	last_pfn = 0xc0000 max_arch_pfn = 0x400000000
+kern	info	0.008496	-	found SMP MP-table at [mem 0x000f6a70-0x000f6a7f]
+kern	info	0.010003	-	check: Scanning 1 areas for low memory corruption
+kern	info	0.010022	-	Using GB pages for direct mapping
+kern	info	0.010164	-	RAMDISK: [mem 0x2ce97000-0x32742fff]
+kern	info	0.010168	-	ACPI: Early table checksum verification disabled
+kern	info	0.010171	-	ACPI: RSDP 0x00000000000F6A00 000024 (v02 PTLTD )
+kern	info	0.010173	-	ACPI: XSDT 0x00000000BFEDC633 00005C (v01 INTEL  440BX    06040000 VMW  01324272)
+kern	info	0.010177	-	ACPI: FACP 0x00000000BFEFEE73 0000F4 (v04 INTEL  440BX    06040000 PTL  000F4240)
+kern	info	0.010180	-	ACPI: DSDT 0x00000000BFEDD9E8 02148B (v01 PTLTD  Custom   06040000 MSFT 03000001)
+kern	info	0.010184	-	ACPI: FACS 0x00000000BFEFFFC0 000040
+kern	info	0.010186	-	ACPI: FACS 0x00000000BFEFFFC0 000040
+kern	info	0.010188	-	ACPI: BOOT 0x00000000BFEDD9C0 000028 (v01 PTLTD  $SBFTBL$ 06040000  LTP 00000001)
+kern	info	0.010190	-	ACPI: APIC 0x00000000BFEDD27E 000742 (v01 PTLTD  ? APIC   06040000  LTP 00000000)
+kern	info	0.010192	-	ACPI: MCFG 0x00000000BFEDD242 00003C (v01 PTLTD  $PCITBL$ 06040000  LTP 00000001)
+kern	info	0.010194	-	ACPI: SRAT 0x00000000BFEDC72F 0008D0 (v02 VMWARE MEMPLUG  06040000 VMW  00000001)
+kern	info	0.010195	-	ACPI: HPET 0x00000000BFEDC6F7 000038 (v01 VMWARE VMW HPET 06040000 VMW  00000001)
+kern	info	0.010197	-	ACPI: WAET 0x00000000BFEDC6CF 000028 (v01 VMWARE VMW WAET 06040000 VMW  00000001)
+kern	info	0.010199	-	ACPI: Reserving FACP table memory at [mem 0xbfefee73-0xbfefef66]
+kern	info	0.010199	-	ACPI: Reserving DSDT table memory at [mem 0xbfedd9e8-0xbfefee72]
+kern	info	0.010200	-	ACPI: Reserving FACS table memory at [mem 0xbfefffc0-0xbfefffff]
+kern	info	0.010200	-	ACPI: Reserving FACS table memory at [mem 0xbfefffc0-0xbfefffff]
+kern	info	0.010201	-	ACPI: Reserving BOOT table memory at [mem 0xbfedd9c0-0xbfedd9e7]
+kern	info	0.010201	-	ACPI: Reserving APIC table memory at [mem 0xbfedd27e-0xbfedd9bf]
+kern	info	0.010202	-	ACPI: Reserving MCFG table memory at [mem 0xbfedd242-0xbfedd27d]
+kern	info	0.010202	-	ACPI: Reserving SRAT table memory at [mem 0xbfedc72f-0xbfedcffe]
+kern	info	0.010202	-	ACPI: Reserving HPET table memory at [mem 0xbfedc6f7-0xbfedc72e]
+kern	info	0.010203	-	ACPI: Reserving WAET table memory at [mem 0xbfedc6cf-0xbfedc6f6]
+kern	debug	0.010217	-	ACPI: Local APIC address 0xfee00000
+kern	debug	0.010224	-	system APIC only can use physical flat
+kern	info	0.010224	-	Setting APIC routing to physical flat.
+kern	info	0.010253	-	SRAT: PXM 0 -> APIC 0x00 -> Node 0
+kern	info	0.010254	-	SRAT: PXM 0 -> APIC 0x01 -> Node 0
+kern	info	0.010254	-	SRAT: PXM 0 -> APIC 0x02 -> Node 0
+kern	info	0.010254	-	SRAT: PXM 0 -> APIC 0x03 -> Node 0
+kern	info	0.010255	-	SRAT: PXM 0 -> APIC 0x04 -> Node 0
+kern	info	0.010255	-	SRAT: PXM 0 -> APIC 0x05 -> Node 0
+kern	info	0.010255	-	SRAT: PXM 0 -> APIC 0x06 -> Node 0
+kern	info	0.010256	-	SRAT: PXM 0 -> APIC 0x07 -> Node 0
+kern	info	0.010256	-	SRAT: PXM 0 -> APIC 0x08 -> Node 0
+kern	info	0.010257	-	SRAT: PXM 0 -> APIC 0x09 -> Node 0
+kern	info	0.010257	-	SRAT: PXM 0 -> APIC 0x0a -> Node 0
+kern	info	0.010257	-	SRAT: PXM 0 -> APIC 0x0b -> Node 0
+kern	info	0.010258	-	SRAT: PXM 0 -> APIC 0x0c -> Node 0
+kern	info	0.010258	-	SRAT: PXM 0 -> APIC 0x0d -> Node 0
+kern	info	0.010258	-	SRAT: PXM 0 -> APIC 0x0e -> Node 0
+kern	info	0.010259	-	SRAT: PXM 0 -> APIC 0x0f -> Node 0
+kern	info	0.010259	-	SRAT: PXM 0 -> APIC 0x10 -> Node 0
+kern	info	0.010259	-	SRAT: PXM 0 -> APIC 0x11 -> Node 0
+kern	info	0.010260	-	SRAT: PXM 0 -> APIC 0x12 -> Node 0
+kern	info	0.010260	-	SRAT: PXM 0 -> APIC 0x13 -> Node 0
+kern	info	0.010260	-	SRAT: PXM 0 -> APIC 0x14 -> Node 0
+kern	info	0.010261	-	SRAT: PXM 0 -> APIC 0x15 -> Node 0
+kern	info	0.010261	-	SRAT: PXM 0 -> APIC 0x16 -> Node 0
+kern	info	0.010262	-	SRAT: PXM 0 -> APIC 0x17 -> Node 0
+kern	info	0.010262	-	SRAT: PXM 0 -> APIC 0x18 -> Node 0
+kern	info	0.010262	-	SRAT: PXM 0 -> APIC 0x19 -> Node 0
+kern	info	0.010263	-	SRAT: PXM 0 -> APIC 0x1a -> Node 0
+kern	info	0.010263	-	SRAT: PXM 0 -> APIC 0x1b -> Node 0
+kern	info	0.010263	-	SRAT: PXM 0 -> APIC 0x1c -> Node 0
+kern	info	0.010264	-	SRAT: PXM 0 -> APIC 0x1d -> Node 0
+kern	info	0.010264	-	SRAT: PXM 0 -> APIC 0x1e -> Node 0
+kern	info	0.010264	-	SRAT: PXM 0 -> APIC 0x1f -> Node 0
+kern	info	0.010265	-	SRAT: PXM 0 -> APIC 0x20 -> Node 0
+kern	info	0.010265	-	SRAT: PXM 0 -> APIC 0x21 -> Node 0
+kern	info	0.010266	-	SRAT: PXM 0 -> APIC 0x22 -> Node 0
+kern	info	0.010266	-	SRAT: PXM 0 -> APIC 0x23 -> Node 0
+kern	info	0.010266	-	SRAT: PXM 0 -> APIC 0x24 -> Node 0
+kern	info	0.010267	-	SRAT: PXM 0 -> APIC 0x25 -> Node 0
+kern	info	0.010267	-	SRAT: PXM 0 -> APIC 0x26 -> Node 0
+kern	info	0.010267	-	SRAT: PXM 0 -> APIC 0x27 -> Node 0
+kern	info	0.010268	-	SRAT: PXM 0 -> APIC 0x28 -> Node 0
+kern	info	0.010268	-	SRAT: PXM 0 -> APIC 0x29 -> Node 0
+kern	info	0.010268	-	SRAT: PXM 0 -> APIC 0x2a -> Node 0
+kern	info	0.010269	-	SRAT: PXM 0 -> APIC 0x2b -> Node 0
+kern	info	0.010269	-	SRAT: PXM 0 -> APIC 0x2c -> Node 0
+kern	info	0.010269	-	SRAT: PXM 0 -> APIC 0x2d -> Node 0
+kern	info	0.010270	-	SRAT: PXM 0 -> APIC 0x2e -> Node 0
+kern	info	0.010270	-	SRAT: PXM 0 -> APIC 0x2f -> Node 0
+kern	info	0.010271	-	SRAT: PXM 0 -> APIC 0x30 -> Node 0
+kern	info	0.010271	-	SRAT: PXM 0 -> APIC 0x31 -> Node 0
+kern	info	0.010271	-	SRAT: PXM 0 -> APIC 0x32 -> Node 0
+kern	info	0.010272	-	SRAT: PXM 0 -> APIC 0x33 -> Node 0
+kern	info	0.010272	-	SRAT: PXM 0 -> APIC 0x34 -> Node 0
+kern	info	0.010272	-	SRAT: PXM 0 -> APIC 0x35 -> Node 0
+kern	info	0.010273	-	SRAT: PXM 0 -> APIC 0x36 -> Node 0
+kern	info	0.010273	-	SRAT: PXM 0 -> APIC 0x37 -> Node 0
+kern	info	0.010273	-	SRAT: PXM 0 -> APIC 0x38 -> Node 0
+kern	info	0.010274	-	SRAT: PXM 0 -> APIC 0x39 -> Node 0
+kern	info	0.010274	-	SRAT: PXM 0 -> APIC 0x3a -> Node 0
+kern	info	0.010275	-	SRAT: PXM 0 -> APIC 0x3b -> Node 0
+kern	info	0.010275	-	SRAT: PXM 0 -> APIC 0x3c -> Node 0
+kern	info	0.010275	-	SRAT: PXM 0 -> APIC 0x3d -> Node 0
+kern	info	0.010276	-	SRAT: PXM 0 -> APIC 0x3e -> Node 0
+kern	info	0.010276	-	SRAT: PXM 0 -> APIC 0x3f -> Node 0
+kern	info	0.010276	-	SRAT: PXM 0 -> APIC 0x40 -> Node 0
+kern	info	0.010277	-	SRAT: PXM 0 -> APIC 0x41 -> Node 0
+kern	info	0.010277	-	SRAT: PXM 0 -> APIC 0x42 -> Node 0
+kern	info	0.010277	-	SRAT: PXM 0 -> APIC 0x43 -> Node 0
+kern	info	0.010278	-	SRAT: PXM 0 -> APIC 0x44 -> Node 0
+kern	info	0.010278	-	SRAT: PXM 0 -> APIC 0x45 -> Node 0
+kern	info	0.010278	-	SRAT: PXM 0 -> APIC 0x46 -> Node 0
+kern	info	0.010279	-	SRAT: PXM 0 -> APIC 0x47 -> Node 0
+kern	info	0.010279	-	SRAT: PXM 0 -> APIC 0x48 -> Node 0
+kern	info	0.010280	-	SRAT: PXM 0 -> APIC 0x49 -> Node 0
+kern	info	0.010280	-	SRAT: PXM 0 -> APIC 0x4a -> Node 0
+kern	info	0.010280	-	SRAT: PXM 0 -> APIC 0x4b -> Node 0
+kern	info	0.010281	-	SRAT: PXM 0 -> APIC 0x4c -> Node 0
+kern	info	0.010281	-	SRAT: PXM 0 -> APIC 0x4d -> Node 0
+kern	info	0.010281	-	SRAT: PXM 0 -> APIC 0x4e -> Node 0
+kern	info	0.010282	-	SRAT: PXM 0 -> APIC 0x4f -> Node 0
+kern	info	0.010282	-	SRAT: PXM 0 -> APIC 0x50 -> Node 0
+kern	info	0.010282	-	SRAT: PXM 0 -> APIC 0x51 -> Node 0
+kern	info	0.010283	-	SRAT: PXM 0 -> APIC 0x52 -> Node 0
+kern	info	0.010283	-	SRAT: PXM 0 -> APIC 0x53 -> Node 0
+kern	info	0.010284	-	SRAT: PXM 0 -> APIC 0x54 -> Node 0
+kern	info	0.010284	-	SRAT: PXM 0 -> APIC 0x55 -> Node 0
+kern	info	0.010284	-	SRAT: PXM 0 -> APIC 0x56 -> Node 0
+kern	info	0.010285	-	SRAT: PXM 0 -> APIC 0x57 -> Node 0
+kern	info	0.010285	-	SRAT: PXM 0 -> APIC 0x58 -> Node 0
+kern	info	0.010285	-	SRAT: PXM 0 -> APIC 0x59 -> Node 0
+kern	info	0.010286	-	SRAT: PXM 0 -> APIC 0x5a -> Node 0
+kern	info	0.010286	-	SRAT: PXM 0 -> APIC 0x5b -> Node 0
+kern	info	0.010286	-	SRAT: PXM 0 -> APIC 0x5c -> Node 0
+kern	info	0.010287	-	SRAT: PXM 0 -> APIC 0x5d -> Node 0
+kern	info	0.010287	-	SRAT: PXM 0 -> APIC 0x5e -> Node 0
+kern	info	0.010287	-	SRAT: PXM 0 -> APIC 0x5f -> Node 0
+kern	info	0.010288	-	SRAT: PXM 0 -> APIC 0x60 -> Node 0
+kern	info	0.010288	-	SRAT: PXM 0 -> APIC 0x61 -> Node 0
+kern	info	0.010289	-	SRAT: PXM 0 -> APIC 0x62 -> Node 0
+kern	info	0.010289	-	SRAT: PXM 0 -> APIC 0x63 -> Node 0
+kern	info	0.010289	-	SRAT: PXM 0 -> APIC 0x64 -> Node 0
+kern	info	0.010290	-	SRAT: PXM 0 -> APIC 0x65 -> Node 0
+kern	info	0.010290	-	SRAT: PXM 0 -> APIC 0x66 -> Node 0
+kern	info	0.010290	-	SRAT: PXM 0 -> APIC 0x67 -> Node 0
+kern	info	0.010291	-	SRAT: PXM 0 -> APIC 0x68 -> Node 0
+kern	info	0.010291	-	SRAT: PXM 0 -> APIC 0x69 -> Node 0
+kern	info	0.010291	-	SRAT: PXM 0 -> APIC 0x6a -> Node 0
+kern	info	0.010292	-	SRAT: PXM 0 -> APIC 0x6b -> Node 0
+kern	info	0.010292	-	SRAT: PXM 0 -> APIC 0x6c -> Node 0
+kern	info	0.010292	-	SRAT: PXM 0 -> APIC 0x6d -> Node 0
+kern	info	0.010293	-	SRAT: PXM 0 -> APIC 0x6e -> Node 0
+kern	info	0.010293	-	SRAT: PXM 0 -> APIC 0x6f -> Node 0
+kern	info	0.010294	-	SRAT: PXM 0 -> APIC 0x70 -> Node 0
+kern	info	0.010294	-	SRAT: PXM 0 -> APIC 0x71 -> Node 0
+kern	info	0.010294	-	SRAT: PXM 0 -> APIC 0x72 -> Node 0
+kern	info	0.010295	-	SRAT: PXM 0 -> APIC 0x73 -> Node 0
+kern	info	0.010295	-	SRAT: PXM 0 -> APIC 0x74 -> Node 0
+kern	info	0.010295	-	SRAT: PXM 0 -> APIC 0x75 -> Node 0
+kern	info	0.010296	-	SRAT: PXM 0 -> APIC 0x76 -> Node 0
+kern	info	0.010296	-	SRAT: PXM 0 -> APIC 0x77 -> Node 0
+kern	info	0.010296	-	SRAT: PXM 0 -> APIC 0x78 -> Node 0
+kern	info	0.010297	-	SRAT: PXM 0 -> APIC 0x79 -> Node 0
+kern	info	0.010297	-	SRAT: PXM 0 -> APIC 0x7a -> Node 0
+kern	info	0.010298	-	SRAT: PXM 0 -> APIC 0x7b -> Node 0
+kern	info	0.010298	-	SRAT: PXM 0 -> APIC 0x7c -> Node 0
+kern	info	0.010298	-	SRAT: PXM 0 -> APIC 0x7d -> Node 0
+kern	info	0.010299	-	SRAT: PXM 0 -> APIC 0x7e -> Node 0
+kern	info	0.010299	-	SRAT: PXM 0 -> APIC 0x7f -> Node 0
+kern	info	0.010301	-	ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0x0009ffff]
+kern	info	0.010302	-	ACPI: SRAT: Node 0 PXM 0 [mem 0x00100000-0xbfffffff]
+kern	info	0.010302	-	ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x13fffffff]
+kern	info	0.010303	-	ACPI: SRAT: Node 0 PXM 0 [mem 0x140000000-0x103fffffff] hotplug
+kern	info	0.010304	-	NUMA: Node 0 [mem 0x00000000-0x0009ffff] + [mem 0x00100000-0xbfffffff] -> [mem 0x00000000-0xbfffffff]
+kern	info	0.010305	-	NUMA: Node 0 [mem 0x00000000-0xbfffffff] + [mem 0x100000000-0x13fffffff] -> [mem 0x00000000-0x13fffffff]
+kern	info	0.010309	-	NODE_DATA(0) allocated [mem 0x13ffd3000-0x13fffdfff]
+kern	info	0.010476	-	Zone ranges:
+kern	info	0.010476	-	  DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+kern	info	0.010477	-	  DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+kern	info	0.010478	-	  Normal   [mem 0x0000000100000000-0x000000013fffffff]
+kern	info	0.010478	-	  Device   empty
+kern	info	0.010479	-	Movable zone start for each node
+kern	info	0.010480	-	Early memory node ranges
+kern	info	0.010481	-	  node   0: [mem 0x0000000000001000-0x000000000009dfff]
+kern	info	0.010481	-	  node   0: [mem 0x0000000000100000-0x00000000bfecffff]
+kern	info	0.010482	-	  node   0: [mem 0x00000000bff00000-0x00000000bfffffff]
+kern	info	0.010482	-	  node   0: [mem 0x0000000100000000-0x000000013fffffff]
+kern	info	0.010489	-	Zeroed struct page in unavailable ranges: 147 pages
+kern	info	0.010489	-	Initmem setup node 0 [mem 0x0000000000001000-0x000000013fffffff]
+kern	debug	0.010490	-	On node 0 totalpages: 1048429
+kern	debug	0.010491	-	  DMA zone: 64 pages used for memmap
+kern	debug	0.010491	-	  DMA zone: 21 pages reserved
+kern	debug	0.010491	-	  DMA zone: 3997 pages, LIFO batch:0
+kern	debug	0.010551	-	  DMA32 zone: 12224 pages used for memmap
+kern	debug	0.010551	-	  DMA32 zone: 782288 pages, LIFO batch:63
+kern	debug	0.022650	-	  Normal zone: 4096 pages used for memmap
+kern	debug	0.022651	-	  Normal zone: 262144 pages, LIFO batch:63
+kern	info	0.028520	-	ACPI: PM-Timer IO Port: 0x1008
+kern	debug	0.028522	-	ACPI: Local APIC address 0xfee00000
+kern	debug	0.028524	-	system APIC only can use physical flat
+kern	info	0.028532	-	ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+kern	info	0.028533	-	ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+kern	info	0.028533	-	ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+kern	info	0.028533	-	ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+kern	info	0.028534	-	ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+kern	info	0.028534	-	ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+kern	info	0.028534	-	ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+kern	info	0.028535	-	ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+kern	info	0.028535	-	ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+kern	info	0.028536	-	ACPI: LAPIC_NMI (acpi_id[0x09] high edge lint[0x1])
+kern	info	0.028536	-	ACPI: LAPIC_NMI (acpi_id[0x0a] high edge lint[0x1])
+kern	info	0.028536	-	ACPI: LAPIC_NMI (acpi_id[0x0b] high edge lint[0x1])
+kern	info	0.028537	-	ACPI: LAPIC_NMI (acpi_id[0x0c] high edge lint[0x1])
+kern	info	0.028537	-	ACPI: LAPIC_NMI (acpi_id[0x0d] high edge lint[0x1])
+kern	info	0.028538	-	ACPI: LAPIC_NMI (acpi_id[0x0e] high edge lint[0x1])
+kern	info	0.028538	-	ACPI: LAPIC_NMI (acpi_id[0x0f] high edge lint[0x1])
+kern	info	0.028538	-	ACPI: LAPIC_NMI (acpi_id[0x10] high edge lint[0x1])
+kern	info	0.028539	-	ACPI: LAPIC_NMI (acpi_id[0x11] high edge lint[0x1])
+kern	info	0.028539	-	ACPI: LAPIC_NMI (acpi_id[0x12] high edge lint[0x1])
+kern	info	0.028539	-	ACPI: LAPIC_NMI (acpi_id[0x13] high edge lint[0x1])
+kern	info	0.028540	-	ACPI: LAPIC_NMI (acpi_id[0x14] high edge lint[0x1])
+kern	info	0.028540	-	ACPI: LAPIC_NMI (acpi_id[0x15] high edge lint[0x1])
+kern	info	0.028541	-	ACPI: LAPIC_NMI (acpi_id[0x16] high edge lint[0x1])
+kern	info	0.028541	-	ACPI: LAPIC_NMI (acpi_id[0x17] high edge lint[0x1])
+kern	info	0.028541	-	ACPI: LAPIC_NMI (acpi_id[0x18] high edge lint[0x1])
+kern	info	0.028542	-	ACPI: LAPIC_NMI (acpi_id[0x19] high edge lint[0x1])
+kern	info	0.028542	-	ACPI: LAPIC_NMI (acpi_id[0x1a] high edge lint[0x1])
+kern	info	0.028543	-	ACPI: LAPIC_NMI (acpi_id[0x1b] high edge lint[0x1])
+kern	info	0.028543	-	ACPI: LAPIC_NMI (acpi_id[0x1c] high edge lint[0x1])
+kern	info	0.028543	-	ACPI: LAPIC_NMI (acpi_id[0x1d] high edge lint[0x1])
+kern	info	0.028544	-	ACPI: LAPIC_NMI (acpi_id[0x1e] high edge lint[0x1])
+kern	info	0.028544	-	ACPI: LAPIC_NMI (acpi_id[0x1f] high edge lint[0x1])
+kern	info	0.028544	-	ACPI: LAPIC_NMI (acpi_id[0x20] high edge lint[0x1])
+kern	info	0.028545	-	ACPI: LAPIC_NMI (acpi_id[0x21] high edge lint[0x1])
+kern	info	0.028545	-	ACPI: LAPIC_NMI (acpi_id[0x22] high edge lint[0x1])
+kern	info	0.028546	-	ACPI: LAPIC_NMI (acpi_id[0x23] high edge lint[0x1])
+kern	info	0.028546	-	ACPI: LAPIC_NMI (acpi_id[0x24] high edge lint[0x1])
+kern	info	0.028546	-	ACPI: LAPIC_NMI (acpi_id[0x25] high edge lint[0x1])
+kern	info	0.028547	-	ACPI: LAPIC_NMI (acpi_id[0x26] high edge lint[0x1])
+kern	info	0.028547	-	ACPI: LAPIC_NMI (acpi_id[0x27] high edge lint[0x1])
+kern	info	0.028547	-	ACPI: LAPIC_NMI (acpi_id[0x28] high edge lint[0x1])
+kern	info	0.028548	-	ACPI: LAPIC_NMI (acpi_id[0x29] high edge lint[0x1])
+kern	info	0.028548	-	ACPI: LAPIC_NMI (acpi_id[0x2a] high edge lint[0x1])
+kern	info	0.028549	-	ACPI: LAPIC_NMI (acpi_id[0x2b] high edge lint[0x1])
+kern	info	0.028549	-	ACPI: LAPIC_NMI (acpi_id[0x2c] high edge lint[0x1])
+kern	info	0.028549	-	ACPI: LAPIC_NMI (acpi_id[0x2d] high edge lint[0x1])
+kern	info	0.028550	-	ACPI: LAPIC_NMI (acpi_id[0x2e] high edge lint[0x1])
+kern	info	0.028550	-	ACPI: LAPIC_NMI (acpi_id[0x2f] high edge lint[0x1])
+kern	info	0.028550	-	ACPI: LAPIC_NMI (acpi_id[0x30] high edge lint[0x1])
+kern	info	0.028551	-	ACPI: LAPIC_NMI (acpi_id[0x31] high edge lint[0x1])
+kern	info	0.028551	-	ACPI: LAPIC_NMI (acpi_id[0x32] high edge lint[0x1])
+kern	info	0.028552	-	ACPI: LAPIC_NMI (acpi_id[0x33] high edge lint[0x1])
+kern	info	0.028552	-	ACPI: LAPIC_NMI (acpi_id[0x34] high edge lint[0x1])
+kern	info	0.028552	-	ACPI: LAPIC_NMI (acpi_id[0x35] high edge lint[0x1])
+kern	info	0.028553	-	ACPI: LAPIC_NMI (acpi_id[0x36] high edge lint[0x1])
+kern	info	0.028553	-	ACPI: LAPIC_NMI (acpi_id[0x37] high edge lint[0x1])
+kern	info	0.028553	-	ACPI: LAPIC_NMI (acpi_id[0x38] high edge lint[0x1])
+kern	info	0.028554	-	ACPI: LAPIC_NMI (acpi_id[0x39] high edge lint[0x1])
+kern	info	0.028554	-	ACPI: LAPIC_NMI (acpi_id[0x3a] high edge lint[0x1])
+kern	info	0.028555	-	ACPI: LAPIC_NMI (acpi_id[0x3b] high edge lint[0x1])
+kern	info	0.028555	-	ACPI: LAPIC_NMI (acpi_id[0x3c] high edge lint[0x1])
+kern	info	0.028555	-	ACPI: LAPIC_NMI (acpi_id[0x3d] high edge lint[0x1])
+kern	info	0.028556	-	ACPI: LAPIC_NMI (acpi_id[0x3e] high edge lint[0x1])
+kern	info	0.028556	-	ACPI: LAPIC_NMI (acpi_id[0x3f] high edge lint[0x1])
+kern	info	0.028557	-	ACPI: LAPIC_NMI (acpi_id[0x40] high edge lint[0x1])
+kern	info	0.028557	-	ACPI: LAPIC_NMI (acpi_id[0x41] high edge lint[0x1])
+kern	info	0.028557	-	ACPI: LAPIC_NMI (acpi_id[0x42] high edge lint[0x1])
+kern	info	0.028558	-	ACPI: LAPIC_NMI (acpi_id[0x43] high edge lint[0x1])
+kern	info	0.028558	-	ACPI: LAPIC_NMI (acpi_id[0x44] high edge lint[0x1])
+kern	info	0.028558	-	ACPI: LAPIC_NMI (acpi_id[0x45] high edge lint[0x1])
+kern	info	0.028559	-	ACPI: LAPIC_NMI (acpi_id[0x46] high edge lint[0x1])
+kern	info	0.028559	-	ACPI: LAPIC_NMI (acpi_id[0x47] high edge lint[0x1])
+kern	info	0.028560	-	ACPI: LAPIC_NMI (acpi_id[0x48] high edge lint[0x1])
+kern	info	0.028560	-	ACPI: LAPIC_NMI (acpi_id[0x49] high edge lint[0x1])
+kern	info	0.028560	-	ACPI: LAPIC_NMI (acpi_id[0x4a] high edge lint[0x1])
+kern	info	0.028561	-	ACPI: LAPIC_NMI (acpi_id[0x4b] high edge lint[0x1])
+kern	info	0.028561	-	ACPI: LAPIC_NMI (acpi_id[0x4c] high edge lint[0x1])
+kern	info	0.028561	-	ACPI: LAPIC_NMI (acpi_id[0x4d] high edge lint[0x1])
+kern	info	0.028562	-	ACPI: LAPIC_NMI (acpi_id[0x4e] high edge lint[0x1])
+kern	info	0.028562	-	ACPI: LAPIC_NMI (acpi_id[0x4f] high edge lint[0x1])
+kern	info	0.028563	-	ACPI: LAPIC_NMI (acpi_id[0x50] high edge lint[0x1])
+kern	info	0.028563	-	ACPI: LAPIC_NMI (acpi_id[0x51] high edge lint[0x1])
+kern	info	0.028563	-	ACPI: LAPIC_NMI (acpi_id[0x52] high edge lint[0x1])
+kern	info	0.028564	-	ACPI: LAPIC_NMI (acpi_id[0x53] high edge lint[0x1])
+kern	info	0.028564	-	ACPI: LAPIC_NMI (acpi_id[0x54] high edge lint[0x1])
+kern	info	0.028564	-	ACPI: LAPIC_NMI (acpi_id[0x55] high edge lint[0x1])
+kern	info	0.028565	-	ACPI: LAPIC_NMI (acpi_id[0x56] high edge lint[0x1])
+kern	info	0.028565	-	ACPI: LAPIC_NMI (acpi_id[0x57] high edge lint[0x1])
+kern	info	0.028566	-	ACPI: LAPIC_NMI (acpi_id[0x58] high edge lint[0x1])
+kern	info	0.028566	-	ACPI: LAPIC_NMI (acpi_id[0x59] high edge lint[0x1])
+kern	info	0.028566	-	ACPI: LAPIC_NMI (acpi_id[0x5a] high edge lint[0x1])
+kern	info	0.028567	-	ACPI: LAPIC_NMI (acpi_id[0x5b] high edge lint[0x1])
+kern	info	0.028567	-	ACPI: LAPIC_NMI (acpi_id[0x5c] high edge lint[0x1])
+kern	info	0.028567	-	ACPI: LAPIC_NMI (acpi_id[0x5d] high edge lint[0x1])
+kern	info	0.028568	-	ACPI: LAPIC_NMI (acpi_id[0x5e] high edge lint[0x1])
+kern	info	0.028568	-	ACPI: LAPIC_NMI (acpi_id[0x5f] high edge lint[0x1])
+kern	info	0.028569	-	ACPI: LAPIC_NMI (acpi_id[0x60] high edge lint[0x1])
+kern	info	0.028569	-	ACPI: LAPIC_NMI (acpi_id[0x61] high edge lint[0x1])
+kern	info	0.028569	-	ACPI: LAPIC_NMI (acpi_id[0x62] high edge lint[0x1])
+kern	info	0.028570	-	ACPI: LAPIC_NMI (acpi_id[0x63] high edge lint[0x1])
+kern	info	0.028570	-	ACPI: LAPIC_NMI (acpi_id[0x64] high edge lint[0x1])
+kern	info	0.028571	-	ACPI: LAPIC_NMI (acpi_id[0x65] high edge lint[0x1])
+kern	info	0.028571	-	ACPI: LAPIC_NMI (acpi_id[0x66] high edge lint[0x1])
+kern	info	0.028571	-	ACPI: LAPIC_NMI (acpi_id[0x67] high edge lint[0x1])
+kern	info	0.028572	-	ACPI: LAPIC_NMI (acpi_id[0x68] high edge lint[0x1])
+kern	info	0.028572	-	ACPI: LAPIC_NMI (acpi_id[0x69] high edge lint[0x1])
+kern	info	0.028572	-	ACPI: LAPIC_NMI (acpi_id[0x6a] high edge lint[0x1])
+kern	info	0.028573	-	ACPI: LAPIC_NMI (acpi_id[0x6b] high edge lint[0x1])
+kern	info	0.028573	-	ACPI: LAPIC_NMI (acpi_id[0x6c] high edge lint[0x1])
+kern	info	0.028574	-	ACPI: LAPIC_NMI (acpi_id[0x6d] high edge lint[0x1])
+kern	info	0.028574	-	ACPI: LAPIC_NMI (acpi_id[0x6e] high edge lint[0x1])
+kern	info	0.028574	-	ACPI: LAPIC_NMI (acpi_id[0x6f] high edge lint[0x1])
+kern	info	0.028575	-	ACPI: LAPIC_NMI (acpi_id[0x70] high edge lint[0x1])
+kern	info	0.028575	-	ACPI: LAPIC_NMI (acpi_id[0x71] high edge lint[0x1])
+kern	info	0.028575	-	ACPI: LAPIC_NMI (acpi_id[0x72] high edge lint[0x1])
+kern	info	0.028576	-	ACPI: LAPIC_NMI (acpi_id[0x73] high edge lint[0x1])
+kern	info	0.028576	-	ACPI: LAPIC_NMI (acpi_id[0x74] high edge lint[0x1])
+kern	info	0.028577	-	ACPI: LAPIC_NMI (acpi_id[0x75] high edge lint[0x1])
+kern	info	0.028577	-	ACPI: LAPIC_NMI (acpi_id[0x76] high edge lint[0x1])
+kern	info	0.028577	-	ACPI: LAPIC_NMI (acpi_id[0x77] high edge lint[0x1])
+kern	info	0.028578	-	ACPI: LAPIC_NMI (acpi_id[0x78] high edge lint[0x1])
+kern	info	0.028578	-	ACPI: LAPIC_NMI (acpi_id[0x79] high edge lint[0x1])
+kern	info	0.028579	-	ACPI: LAPIC_NMI (acpi_id[0x7a] high edge lint[0x1])
+kern	info	0.028579	-	ACPI: LAPIC_NMI (acpi_id[0x7b] high edge lint[0x1])
+kern	info	0.028579	-	ACPI: LAPIC_NMI (acpi_id[0x7c] high edge lint[0x1])
+kern	info	0.028580	-	ACPI: LAPIC_NMI (acpi_id[0x7d] high edge lint[0x1])
+kern	info	0.028580	-	ACPI: LAPIC_NMI (acpi_id[0x7e] high edge lint[0x1])
+kern	info	0.028580	-	ACPI: LAPIC_NMI (acpi_id[0x7f] high edge lint[0x1])
+kern	info	0.028602	-	IOAPIC[0]: apic_id 128, version 32, address 0xfec00000, GSI 0-23
+kern	info	0.028604	-	ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 high edge)
+kern	debug	0.028606	-	ACPI: IRQ0 used by override.
+kern	debug	0.028606	-	ACPI: IRQ9 used by override.
+kern	info	0.028608	-	Using ACPI (MADT) for SMP configuration information
+kern	info	0.028610	-	ACPI: HPET id: 0x8086af01 base: 0xfed00000
+kern	info	0.028612	-	TSC deadline timer available
+kern	info	0.028613	-	smpboot: Allowing 128 CPUs, 124 hotplug CPUs
+kern	info	0.028621	-	PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+kern	info	0.028622	-	PM: Registered nosave memory: [mem 0x0009e000-0x0009efff]
+kern	info	0.028622	-	PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+kern	info	0.028623	-	PM: Registered nosave memory: [mem 0x000a0000-0x000dbfff]
+kern	info	0.028623	-	PM: Registered nosave memory: [mem 0x000dc000-0x000fffff]
+kern	info	0.028624	-	PM: Registered nosave memory: [mem 0xbfed0000-0xbfefefff]
+kern	info	0.028624	-	PM: Registered nosave memory: [mem 0xbfeff000-0xbfefffff]
+kern	info	0.028626	-	PM: Registered nosave memory: [mem 0xc0000000-0xefffffff]
+kern	info	0.028627	-	PM: Registered nosave memory: [mem 0xf0000000-0xf7ffffff]
+kern	info	0.028627	-	PM: Registered nosave memory: [mem 0xf8000000-0xfebfffff]
+kern	info	0.028628	-	PM: Registered nosave memory: [mem 0xfec00000-0xfec0ffff]
+kern	info	0.028628	-	PM: Registered nosave memory: [mem 0xfec10000-0xfedfffff]
+kern	info	0.028628	-	PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+kern	info	0.028629	-	PM: Registered nosave memory: [mem 0xfee01000-0xfffdffff]
+kern	info	0.028629	-	PM: Registered nosave memory: [mem 0xfffe0000-0xffffffff]
+kern	info	0.028630	-	[mem 0xc0000000-0xefffffff] available for PCI devices
+kern	info	0.028631	-	Booting paravirtualized kernel on VMware hypervisor
+kern	info	0.028633	-	clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+kern	info	0.028636	-	setup_percpu: NR_CPUS:8192 nr_cpumask_bits:128 nr_cpu_ids:128 nr_node_ids:1
+kern	info	0.038780	-	percpu: Embedded 60 pages/cpu s208896 r8192 d28672 u262144
+kern	debug	0.038787	-	pcpu-alloc: s208896 r8192 d28672 u262144 alloc=1*2097152
+kern	debug	0.038788	-	pcpu-alloc: [0] 000 001 002 003 004 005 006 007 
+kern	debug	0.038789	-	pcpu-alloc: [0] 008 009 010 011 012 013 014 015 
+kern	debug	0.038790	-	pcpu-alloc: [0] 016 017 018 019 020 021 022 023 
+kern	debug	0.038791	-	pcpu-alloc: [0] 024 025 026 027 028 029 030 031 
+kern	debug	0.038792	-	pcpu-alloc: [0] 032 033 034 035 036 037 038 039 
+kern	debug	0.038793	-	pcpu-alloc: [0] 040 041 042 043 044 045 046 047 
+kern	debug	0.038793	-	pcpu-alloc: [0] 048 049 050 051 052 053 054 055 
+kern	debug	0.038794	-	pcpu-alloc: [0] 056 057 058 059 060 061 062 063 
+kern	debug	0.038795	-	pcpu-alloc: [0] 064 065 066 067 068 069 070 071 
+kern	debug	0.038796	-	pcpu-alloc: [0] 072 073 074 075 076 077 078 079 
+kern	debug	0.038797	-	pcpu-alloc: [0] 080 081 082 083 084 085 086 087 
+kern	debug	0.038798	-	pcpu-alloc: [0] 088 089 090 091 092 093 094 095 
+kern	debug	0.038799	-	pcpu-alloc: [0] 096 097 098 099 100 101 102 103 
+kern	debug	0.038800	-	pcpu-alloc: [0] 104 105 106 107 108 109 110 111 
+kern	debug	0.038801	-	pcpu-alloc: [0] 112 113 114 115 116 117 118 119 
+kern	debug	0.038802	-	pcpu-alloc: [0] 120 121 122 123 124 125 126 127 
+kern	info	0.038831	-	Built 1 zonelists, mobility grouping on.  Total pages: 1032024
+kern	info	0.038832	-	Policy zone: Normal
+kern	notice	0.038833	-	Kernel command line: BOOT_IMAGE=/vmlinuz-5.4.0-216-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro debian-installer/custom-installation=/custom find_preseed=/preseed.cfg auto preseed/file=/floppy/preseed.cfg automatic-ubiquity noprompt priority=critical locale=en_US console-setup/modelcode=evdev
+kern	info	0.038905	-	printk: log_buf_len individual max cpu contribution: 4096 bytes
+kern	info	0.038905	-	printk: log_buf_len total cpu_extra contributions: 520192 bytes
+kern	info	0.038906	-	printk: log_buf_len min size: 262144 bytes
+kern	info	0.039183	-	printk: log_buf_len: 1048576 bytes
+kern	info	0.039184	-	printk: early log buf free: 235096(89%)
+kern	info	0.040178	-	Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+kern	info	0.040683	-	Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+kern	info	0.042751	-	mem auto-init: stack:off, heap alloc:on, heap free:off
+kern	debug	0.053745	-	Calgary: detecting Calgary via BIOS EBDA area
+kern	debug	0.053747	-	Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+kern	info	0.060737	-	Memory: 3883020K/4193716K available (14339K kernel code, 2400K rwdata, 9324K rodata, 2772K init, 17216K bss, 310696K reserved, 0K cma-reserved)
+kern	info	0.061105	-	SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=128, Nodes=1
+kern	info	0.061152	-	ftrace: allocating 44784 entries in 175 pages
+kern	info	0.071852	-	ftrace: allocated 175 pages with 6 groups
+kern	info	0.072294	-	rcu: Hierarchical RCU implementation.
+kern	info	0.072295	-	rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=128.
+kern	info	0.072296	-		Tasks RCU enabled.
+kern	info	0.072296	-	rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+kern	info	0.072297	-	rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=128
+kern	info	0.073734	-	NR_IRQS: 524544, nr_irqs: 1448, preallocated irqs: 16
+kern	notice	0.073966	-	random: crng init done
+kern	info	0.075268	-	Console: colour VGA+ 80x25
+kern	info	0.090195	-	printk: console [tty0] enabled
+kern	info	0.090254	-	ACPI: Core revision 20190816
+kern	info	0.090638	-	clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
+kern	info	0.090729	-	APIC: Switch to symmetric I/O mode setup
+kern	info	0.091039	-	x2apic enabled
+kern	info	0.091256	-	Switched APIC routing to physical x2apic.
+kern	info	0.092047	-	..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+kern	info	0.092172	-	clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2df10e7656b, max_idle_ns: 440795364873 ns
+kern	info	0.092359	-	Calibrating delay loop (skipped) preset value.. 6374.40 BogoMIPS (lpj=12748800)
+kern	info	0.100408	-	x86/cpu: User Mode Instruction Prevention (UMIP) activated
+kern	info	0.104414	-	Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+kern	info	0.104511	-	Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+kern	info	0.104647	-	Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+kern	info	0.104820	-	Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+kern	info	0.104941	-	Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+kern	info	0.105114	-	Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+kern	info	0.105264	-	Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+kern	info	0.105428	-	Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+kern	info	0.105617	-	MMIO Stale Data: Unknown: No mitigations
+kern	info	0.105753	-	x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+kern	info	0.105913	-	x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+kern	info	0.106041	-	x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+kern	info	0.106171	-	x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+kern	info	0.106333	-	x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+kern	info	0.106458	-	x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+kern	info	0.106581	-	x86/fpu: Enabled xstate features 0x207, context size is 840 bytes, using 'compacted' format.
+kern	info	0.106994	-	Freeing SMP alternatives memory: 40K
+kern	info	0.109460	-	pid_max: default: 131072 minimum: 1024
+kern	info	0.109611	-	LSM: Security Framework initializing
+kern	info	0.109713	-	Yama: becoming mindful.
+kern	info	0.110456	-	AppArmor: AppArmor initialized
+kern	info	0.110592	-	Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+kern	info	0.110757	-	Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+kern	notice	0.110949	-	*** VALIDATE tmpfs ***
+kern	notice	0.111150	-	*** VALIDATE proc ***
+kern	notice	0.111297	-	*** VALIDATE cgroup1 ***
+kern	notice	0.111375	-	*** VALIDATE cgroup2 ***
+kern	info	0.112527	-	smpboot: CPU0: 13th Gen Intel(R) Core(TM) i5-13500H (family: 0x6, model: 0xba, stepping: 0x2)
+kern	info	0.112824	-	Performance Events: generic architected perfmon v1, core PMU driver.
+kern	warn	0.112984	-	core: CPUID marked event: 'cpu cycles' unavailable
+kern	warn	0.113102	-	core: CPUID marked event: 'instructions' unavailable
+kern	warn	0.113224	-	core: CPUID marked event: 'bus cycles' unavailable
+kern	warn	0.113356	-	core: CPUID marked event: 'cache references' unavailable
+kern	warn	0.113487	-	core: CPUID marked event: 'cache misses' unavailable
+kern	warn	0.113615	-	core: CPUID marked event: 'branch instructions' unavailable
+kern	warn	0.113745	-	core: CPUID marked event: 'branch misses' unavailable
+kern	info	0.113867	-	... version:                1
+kern	info	0.113949	-	... bit width:              48
+kern	info	0.114034	-	... generic registers:      6
+kern	info	0.114117	-	... value mask:             0000ffffffffffff
+kern	info	0.114223	-	... max period:             000000007fffffff
+kern	info	0.114339	-	... fixed-purpose events:   0
+kern	info	0.114425	-	... event mask:             000000000000003f
+kern	info	0.114588	-	rcu: Hierarchical SRCU implementation.
+kern	info	0.114846	-	NMI watchdog: Perf NMI watchdog permanently disabled
+kern	info	0.116357	-	smp: Bringing up secondary CPUs ...
+kern	info	0.116436	-	x86: Booting SMP configuration:
+kern	info	0.116525	-	.... node  #0, CPUs:          #1   #2
+kern	info	0.022400	-	smpboot: CPU 2 Converting physical 0 to logical die 1
+kern	warn	0.117175	-	   #3
+kern	info	0.117175	-	smp: Brought up 1 node, 4 CPUs
+kern	info	0.117175	-	smpboot: Max logical packages: 64
+kern	info	0.117175	-	smpboot: Total of 4 processors activated (25497.60 BogoMIPS)
+kern	info	0.117188	-	devtmpfs: initialized
+kern	info	0.117188	-	x86/mm: Memory block size: 128MB
+kern	info	0.120415	-	PM: Registering ACPI NVS region [mem 0xbfeff000-0xbfefffff] (4096 bytes)
+kern	info	0.120528	-	clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+kern	info	0.121021	-	futex hash table entries: 32768 (order: 9, 2097152 bytes, linear)
+kern	info	0.121233	-	pinctrl core: initialized pinctrl subsystem
+kern	info	0.121386	-	PM: RTC time: 19:02:00, date: 2025-12-27
+kern	info	0.121680	-	NET: Registered protocol family 16
+kern	info	0.121803	-	audit: initializing netlink subsys (disabled)
+kern	notice	0.121876	-	audit: type=2000 audit(1766862120.028:1): state=initialized audit_enabled=0 res=1
+kern	info	0.121876	-	EISA bus registered
+kern	info	0.121876	-	cpuidle: using governor ladder
+kern	info	0.121876	-	cpuidle: using governor menu
+kern	info	0.121876	-	Simple Boot Flag at 0x36 set to 0x80
+kern	info	0.121876	-	ACPI: bus type PCI registered
+kern	info	0.121876	-	acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+kern	info	0.121876	-	PCI: MMCONFIG for domain 0000 [bus 00-7f] at [mem 0xf0000000-0xf7ffffff] (base 0xf0000000)
+kern	info	0.121876	-	PCI: MMCONFIG at [mem 0xf0000000-0xf7ffffff] reserved in E820
+kern	info	0.121876	-	PCI: Using configuration type 1 for base access
+kern	info	0.124369	-	HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+kern	info	0.124457	-	HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+kern	info	0.124559	-	ACPI: Added _OSI(Module Device)
+kern	info	0.124559	-	ACPI: Added _OSI(Processor Device)
+kern	info	0.124559	-	ACPI: Added _OSI(3.0 _SCP Extensions)
+kern	info	0.124610	-	ACPI: Added _OSI(Processor Aggregator Device)
+kern	info	0.124671	-	ACPI: Added _OSI(Linux-Dell-Video)
+kern	info	0.124738	-	ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+kern	info	0.124815	-	ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+kern	info	0.139801	-	ACPI: 1 ACPI AML tables successfully acquired and loaded
+kern	notice	0.141193	-	ACPI: [Firmware Bug]: BIOS _OSI(Linux) query ignored
+kern	info	0.152098	-	ACPI: Interpreter enabled
+kern	info	0.152150	-	ACPI: (supports S0 S1 S4 S5)
+kern	info	0.152201	-	ACPI: Using IOAPIC for interrupt routing
+kern	info	0.152262	-	PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+kern	info	0.153143	-	ACPI: Enabled 4 GPEs in block 00 to 0F
+kern	info	0.234595	-	ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-7f])
+kern	info	0.234665	-	acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+kern	info	0.234665	-	 SUBSYSTEM=acpi
+kern	info	0.234665	-	 DEVICE=+acpi:PNP0A03:00
+kern	info	0.234857	-	acpi PNP0A03:00: _OSC: platform does not support [AER LTR]
+kern	info	0.234857	-	 SUBSYSTEM=acpi
+kern	info	0.234857	-	 DEVICE=+acpi:PNP0A03:00
+kern	info	0.235020	-	acpi PNP0A03:00: _OSC: OS now controls [PCIeHotplug SHPCHotplug PME PCIeCapability]
+kern	info	0.235020	-	 SUBSYSTEM=acpi
+kern	info	0.235020	-	 DEVICE=+acpi:PNP0A03:00
+kern	info	0.236307	-	PCI host bridge to bus 0000:00
+kern	info	0.236351	-	pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+kern	info	0.236351	-	 SUBSYSTEM=pci_bus
+kern	info	0.236351	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236359	-	pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff window]
+kern	info	0.236359	-	 SUBSYSTEM=pci_bus
+kern	info	0.236359	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236426	-	pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff window]
+kern	info	0.236426	-	 SUBSYSTEM=pci_bus
+kern	info	0.236426	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236493	-	pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff window]
+kern	info	0.236493	-	 SUBSYSTEM=pci_bus
+kern	info	0.236493	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236560	-	pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+kern	info	0.236560	-	 SUBSYSTEM=pci_bus
+kern	info	0.236560	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236626	-	pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+kern	info	0.236626	-	 SUBSYSTEM=pci_bus
+kern	info	0.236626	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236686	-	pci_bus 0000:00: root bus resource [io  0x0d00-0xfeff window]
+kern	info	0.236686	-	 SUBSYSTEM=pci_bus
+kern	info	0.236686	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236746	-	pci_bus 0000:00: root bus resource [bus 00-7f]
+kern	info	0.236746	-	 SUBSYSTEM=pci_bus
+kern	info	0.236746	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.236829	-	pci 0000:00:00.0: [8086:7190] type 00 class 0x060000
+kern	info	0.236829	-	 SUBSYSTEM=pci
+kern	info	0.236829	-	 DEVICE=+pci:0000:00:00.0
+kern	info	0.237512	-	pci 0000:00:01.0: [8086:7191] type 01 class 0x060400
+kern	info	0.237512	-	 SUBSYSTEM=pci
+kern	info	0.237512	-	 DEVICE=+pci:0000:00:01.0
+kern	info	0.238916	-	pci 0000:00:07.0: [8086:7110] type 00 class 0x060100
+kern	info	0.238916	-	 SUBSYSTEM=pci
+kern	info	0.238916	-	 DEVICE=+pci:0000:00:07.0
+kern	info	0.239497	-	pci 0000:00:07.1: [8086:7111] type 00 class 0x01018a
+kern	info	0.239497	-	 SUBSYSTEM=pci
+kern	info	0.239497	-	 DEVICE=+pci:0000:00:07.1
+kern	info	0.240449	-	pci 0000:00:07.1: reg 0x20: [io  0x1060-0x106f]
+kern	info	0.240449	-	 SUBSYSTEM=pci
+kern	info	0.240449	-	 DEVICE=+pci:0000:00:07.1
+kern	info	0.240840	-	pci 0000:00:07.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+kern	info	0.240840	-	 SUBSYSTEM=pci
+kern	info	0.240840	-	 DEVICE=+pci:0000:00:07.1
+kern	info	0.240904	-	pci 0000:00:07.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+kern	info	0.240904	-	 SUBSYSTEM=pci
+kern	info	0.240904	-	 DEVICE=+pci:0000:00:07.1
+kern	info	0.240971	-	pci 0000:00:07.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+kern	info	0.240971	-	 SUBSYSTEM=pci
+kern	info	0.240971	-	 DEVICE=+pci:0000:00:07.1
+kern	info	0.241035	-	pci 0000:00:07.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+kern	info	0.241035	-	 SUBSYSTEM=pci
+kern	info	0.241035	-	 DEVICE=+pci:0000:00:07.1
+kern	info	0.241234	-	pci 0000:00:07.3: [8086:7113] type 00 class 0x068000
+kern	info	0.241234	-	 SUBSYSTEM=pci
+kern	info	0.241234	-	 DEVICE=+pci:0000:00:07.3
+kern	info	0.243109	-	pci 0000:00:07.3: quirk: [io  0x1000-0x103f] claimed by PIIX4 ACPI
+kern	info	0.243109	-	 SUBSYSTEM=pci
+kern	info	0.243109	-	 DEVICE=+pci:0000:00:07.3
+kern	info	0.243185	-	pci 0000:00:07.3: quirk: [io  0x1040-0x104f] claimed by PIIX4 SMB
+kern	info	0.243185	-	 SUBSYSTEM=pci
+kern	info	0.243185	-	 DEVICE=+pci:0000:00:07.3
+kern	info	0.243463	-	pci 0000:00:07.7: [15ad:0740] type 00 class 0x088000
+kern	info	0.243463	-	 SUBSYSTEM=pci
+kern	info	0.243463	-	 DEVICE=+pci:0000:00:07.7
+kern	info	0.244252	-	pci 0000:00:07.7: reg 0x10: [io  0x1080-0x10bf]
+kern	info	0.244252	-	 SUBSYSTEM=pci
+kern	info	0.244252	-	 DEVICE=+pci:0000:00:07.7
+kern	info	0.244548	-	pci 0000:00:07.7: reg 0x14: [mem 0xfebc0000-0xfebfffff 64bit]
+kern	info	0.244548	-	 SUBSYSTEM=pci
+kern	info	0.244548	-	 DEVICE=+pci:0000:00:07.7
+kern	info	0.247611	-	pci 0000:00:0f.0: [15ad:0405] type 00 class 0x030000
+kern	info	0.247611	-	 SUBSYSTEM=pci
+kern	info	0.247611	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.248262	-	pci 0000:00:0f.0: reg 0x10: [io  0x1070-0x107f]
+kern	info	0.248262	-	 SUBSYSTEM=pci
+kern	info	0.248262	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.248607	-	pci 0000:00:0f.0: reg 0x14: [mem 0xe8000000-0xefffffff pref]
+kern	info	0.248607	-	 SUBSYSTEM=pci
+kern	info	0.248607	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.249133	-	pci 0000:00:0f.0: reg 0x18: [mem 0xfe000000-0xfe7fffff]
+kern	info	0.249133	-	 SUBSYSTEM=pci
+kern	info	0.249133	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.251089	-	pci 0000:00:0f.0: reg 0x30: [mem 0x00000000-0x00007fff pref]
+kern	info	0.251089	-	 SUBSYSTEM=pci
+kern	info	0.251089	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.251635	-	pci 0000:00:10.0: [1000:0030] type 00 class 0x010000
+kern	info	0.251635	-	 SUBSYSTEM=pci
+kern	info	0.251635	-	 DEVICE=+pci:0000:00:10.0
+kern	info	0.252088	-	pci 0000:00:10.0: reg 0x10: [io  0x1400-0x14ff]
+kern	info	0.252088	-	 SUBSYSTEM=pci
+kern	info	0.252088	-	 DEVICE=+pci:0000:00:10.0
+kern	info	0.252519	-	pci 0000:00:10.0: reg 0x14: [mem 0xfeb80000-0xfeb9ffff 64bit]
+kern	info	0.252519	-	 SUBSYSTEM=pci
+kern	info	0.252519	-	 DEVICE=+pci:0000:00:10.0
+kern	info	0.252907	-	pci 0000:00:10.0: reg 0x1c: [mem 0xfeba0000-0xfebbffff 64bit]
+kern	info	0.252907	-	 SUBSYSTEM=pci
+kern	info	0.252907	-	 DEVICE=+pci:0000:00:10.0
+kern	info	0.253648	-	pci 0000:00:10.0: reg 0x30: [mem 0x00000000-0x00003fff pref]
+kern	info	0.253648	-	 SUBSYSTEM=pci
+kern	info	0.253648	-	 DEVICE=+pci:0000:00:10.0
+kern	info	0.254140	-	pci 0000:00:11.0: [15ad:0790] type 01 class 0x060401
+kern	info	0.254140	-	 SUBSYSTEM=pci
+kern	info	0.254140	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.255403	-	pci 0000:00:15.0: [15ad:07a0] type 01 class 0x060400
+kern	info	0.255403	-	 SUBSYSTEM=pci
+kern	info	0.255403	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.256109	-	pci 0000:00:15.0: PME# supported from D0 D3hot D3cold
+kern	info	0.256109	-	 SUBSYSTEM=pci
+kern	info	0.256109	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.256386	-	pci 0000:00:15.1: [15ad:07a0] type 01 class 0x060400
+kern	info	0.256386	-	 SUBSYSTEM=pci
+kern	info	0.256386	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.257053	-	pci 0000:00:15.1: PME# supported from D0 D3hot D3cold
+kern	info	0.257053	-	 SUBSYSTEM=pci
+kern	info	0.257053	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.257327	-	pci 0000:00:15.2: [15ad:07a0] type 01 class 0x060400
+kern	info	0.257327	-	 SUBSYSTEM=pci
+kern	info	0.257327	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.258000	-	pci 0000:00:15.2: PME# supported from D0 D3hot D3cold
+kern	info	0.258000	-	 SUBSYSTEM=pci
+kern	info	0.258000	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.258281	-	pci 0000:00:15.3: [15ad:07a0] type 01 class 0x060400
+kern	info	0.258281	-	 SUBSYSTEM=pci
+kern	info	0.258281	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.258959	-	pci 0000:00:15.3: PME# supported from D0 D3hot D3cold
+kern	info	0.258959	-	 SUBSYSTEM=pci
+kern	info	0.258959	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.259225	-	pci 0000:00:15.4: [15ad:07a0] type 01 class 0x060400
+kern	info	0.259225	-	 SUBSYSTEM=pci
+kern	info	0.259225	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.259902	-	pci 0000:00:15.4: PME# supported from D0 D3hot D3cold
+kern	info	0.259902	-	 SUBSYSTEM=pci
+kern	info	0.259902	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.260181	-	pci 0000:00:15.5: [15ad:07a0] type 01 class 0x060400
+kern	info	0.260181	-	 SUBSYSTEM=pci
+kern	info	0.260181	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.260867	-	pci 0000:00:15.5: PME# supported from D0 D3hot D3cold
+kern	info	0.260867	-	 SUBSYSTEM=pci
+kern	info	0.260867	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.261134	-	pci 0000:00:15.6: [15ad:07a0] type 01 class 0x060400
+kern	info	0.261134	-	 SUBSYSTEM=pci
+kern	info	0.261134	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.261805	-	pci 0000:00:15.6: PME# supported from D0 D3hot D3cold
+kern	info	0.261805	-	 SUBSYSTEM=pci
+kern	info	0.261805	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.262092	-	pci 0000:00:15.7: [15ad:07a0] type 01 class 0x060400
+kern	info	0.262092	-	 SUBSYSTEM=pci
+kern	info	0.262092	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.262765	-	pci 0000:00:15.7: PME# supported from D0 D3hot D3cold
+kern	info	0.262765	-	 SUBSYSTEM=pci
+kern	info	0.262765	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.263195	-	pci 0000:00:16.0: [15ad:07a0] type 01 class 0x060400
+kern	info	0.263195	-	 SUBSYSTEM=pci
+kern	info	0.263195	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.263881	-	pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+kern	info	0.263881	-	 SUBSYSTEM=pci
+kern	info	0.263881	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.264154	-	pci 0000:00:16.1: [15ad:07a0] type 01 class 0x060400
+kern	info	0.264154	-	 SUBSYSTEM=pci
+kern	info	0.264154	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.264833	-	pci 0000:00:16.1: PME# supported from D0 D3hot D3cold
+kern	info	0.264833	-	 SUBSYSTEM=pci
+kern	info	0.264833	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.265099	-	pci 0000:00:16.2: [15ad:07a0] type 01 class 0x060400
+kern	info	0.265099	-	 SUBSYSTEM=pci
+kern	info	0.265099	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.265764	-	pci 0000:00:16.2: PME# supported from D0 D3hot D3cold
+kern	info	0.265764	-	 SUBSYSTEM=pci
+kern	info	0.265764	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.266035	-	pci 0000:00:16.3: [15ad:07a0] type 01 class 0x060400
+kern	info	0.266035	-	 SUBSYSTEM=pci
+kern	info	0.266035	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.266703	-	pci 0000:00:16.3: PME# supported from D0 D3hot D3cold
+kern	info	0.266703	-	 SUBSYSTEM=pci
+kern	info	0.266703	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.266977	-	pci 0000:00:16.4: [15ad:07a0] type 01 class 0x060400
+kern	info	0.266977	-	 SUBSYSTEM=pci
+kern	info	0.266977	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.267672	-	pci 0000:00:16.4: PME# supported from D0 D3hot D3cold
+kern	info	0.267672	-	 SUBSYSTEM=pci
+kern	info	0.267672	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.267953	-	pci 0000:00:16.5: [15ad:07a0] type 01 class 0x060400
+kern	info	0.267953	-	 SUBSYSTEM=pci
+kern	info	0.267953	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.268641	-	pci 0000:00:16.5: PME# supported from D0 D3hot D3cold
+kern	info	0.268641	-	 SUBSYSTEM=pci
+kern	info	0.268641	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.268920	-	pci 0000:00:16.6: [15ad:07a0] type 01 class 0x060400
+kern	info	0.268920	-	 SUBSYSTEM=pci
+kern	info	0.268920	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.269593	-	pci 0000:00:16.6: PME# supported from D0 D3hot D3cold
+kern	info	0.269593	-	 SUBSYSTEM=pci
+kern	info	0.269593	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.269877	-	pci 0000:00:16.7: [15ad:07a0] type 01 class 0x060400
+kern	info	0.269877	-	 SUBSYSTEM=pci
+kern	info	0.269877	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.270562	-	pci 0000:00:16.7: PME# supported from D0 D3hot D3cold
+kern	info	0.270562	-	 SUBSYSTEM=pci
+kern	info	0.270562	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.270996	-	pci 0000:00:17.0: [15ad:07a0] type 01 class 0x060400
+kern	info	0.270996	-	 SUBSYSTEM=pci
+kern	info	0.270996	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.271664	-	pci 0000:00:17.0: PME# supported from D0 D3hot D3cold
+kern	info	0.271664	-	 SUBSYSTEM=pci
+kern	info	0.271664	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.271942	-	pci 0000:00:17.1: [15ad:07a0] type 01 class 0x060400
+kern	info	0.271942	-	 SUBSYSTEM=pci
+kern	info	0.271942	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.272618	-	pci 0000:00:17.1: PME# supported from D0 D3hot D3cold
+kern	info	0.272618	-	 SUBSYSTEM=pci
+kern	info	0.272618	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.272898	-	pci 0000:00:17.2: [15ad:07a0] type 01 class 0x060400
+kern	info	0.272898	-	 SUBSYSTEM=pci
+kern	info	0.272898	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.273585	-	pci 0000:00:17.2: PME# supported from D0 D3hot D3cold
+kern	info	0.273585	-	 SUBSYSTEM=pci
+kern	info	0.273585	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.273863	-	pci 0000:00:17.3: [15ad:07a0] type 01 class 0x060400
+kern	info	0.273863	-	 SUBSYSTEM=pci
+kern	info	0.273863	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.274535	-	pci 0000:00:17.3: PME# supported from D0 D3hot D3cold
+kern	info	0.274535	-	 SUBSYSTEM=pci
+kern	info	0.274535	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.274819	-	pci 0000:00:17.4: [15ad:07a0] type 01 class 0x060400
+kern	info	0.274819	-	 SUBSYSTEM=pci
+kern	info	0.274819	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.275487	-	pci 0000:00:17.4: PME# supported from D0 D3hot D3cold
+kern	info	0.275487	-	 SUBSYSTEM=pci
+kern	info	0.275487	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.275765	-	pci 0000:00:17.5: [15ad:07a0] type 01 class 0x060400
+kern	info	0.275765	-	 SUBSYSTEM=pci
+kern	info	0.275765	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.276452	-	pci 0000:00:17.5: PME# supported from D0 D3hot D3cold
+kern	info	0.276452	-	 SUBSYSTEM=pci
+kern	info	0.276452	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.276732	-	pci 0000:00:17.6: [15ad:07a0] type 01 class 0x060400
+kern	info	0.276732	-	 SUBSYSTEM=pci
+kern	info	0.276732	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.277393	-	pci 0000:00:17.6: PME# supported from D0 D3hot D3cold
+kern	info	0.277393	-	 SUBSYSTEM=pci
+kern	info	0.277393	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.277695	-	pci 0000:00:17.7: [15ad:07a0] type 01 class 0x060400
+kern	info	0.277695	-	 SUBSYSTEM=pci
+kern	info	0.277695	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.278369	-	pci 0000:00:17.7: PME# supported from D0 D3hot D3cold
+kern	info	0.278369	-	 SUBSYSTEM=pci
+kern	info	0.278369	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.278813	-	pci 0000:00:18.0: [15ad:07a0] type 01 class 0x060400
+kern	info	0.278813	-	 SUBSYSTEM=pci
+kern	info	0.278813	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.279485	-	pci 0000:00:18.0: PME# supported from D0 D3hot D3cold
+kern	info	0.279485	-	 SUBSYSTEM=pci
+kern	info	0.279485	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.279766	-	pci 0000:00:18.1: [15ad:07a0] type 01 class 0x060400
+kern	info	0.279766	-	 SUBSYSTEM=pci
+kern	info	0.279766	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.280430	-	pci 0000:00:18.1: PME# supported from D0 D3hot D3cold
+kern	info	0.280430	-	 SUBSYSTEM=pci
+kern	info	0.280430	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.280717	-	pci 0000:00:18.2: [15ad:07a0] type 01 class 0x060400
+kern	info	0.280717	-	 SUBSYSTEM=pci
+kern	info	0.280717	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.281382	-	pci 0000:00:18.2: PME# supported from D0 D3hot D3cold
+kern	info	0.281382	-	 SUBSYSTEM=pci
+kern	info	0.281382	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.281664	-	pci 0000:00:18.3: [15ad:07a0] type 01 class 0x060400
+kern	info	0.281664	-	 SUBSYSTEM=pci
+kern	info	0.281664	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.282334	-	pci 0000:00:18.3: PME# supported from D0 D3hot D3cold
+kern	info	0.282334	-	 SUBSYSTEM=pci
+kern	info	0.282334	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.282617	-	pci 0000:00:18.4: [15ad:07a0] type 01 class 0x060400
+kern	info	0.282617	-	 SUBSYSTEM=pci
+kern	info	0.282617	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.283297	-	pci 0000:00:18.4: PME# supported from D0 D3hot D3cold
+kern	info	0.283297	-	 SUBSYSTEM=pci
+kern	info	0.283297	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.283581	-	pci 0000:00:18.5: [15ad:07a0] type 01 class 0x060400
+kern	info	0.283581	-	 SUBSYSTEM=pci
+kern	info	0.283581	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.284260	-	pci 0000:00:18.5: PME# supported from D0 D3hot D3cold
+kern	info	0.284260	-	 SUBSYSTEM=pci
+kern	info	0.284260	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.284552	-	pci 0000:00:18.6: [15ad:07a0] type 01 class 0x060400
+kern	info	0.284552	-	 SUBSYSTEM=pci
+kern	info	0.284552	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.285225	-	pci 0000:00:18.6: PME# supported from D0 D3hot D3cold
+kern	info	0.285225	-	 SUBSYSTEM=pci
+kern	info	0.285225	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.285519	-	pci 0000:00:18.7: [15ad:07a0] type 01 class 0x060400
+kern	info	0.285519	-	 SUBSYSTEM=pci
+kern	info	0.285519	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.286183	-	pci 0000:00:18.7: PME# supported from D0 D3hot D3cold
+kern	info	0.286183	-	 SUBSYSTEM=pci
+kern	info	0.286183	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.287759	-	pci_bus 0000:01: extended config space not accessible
+kern	info	0.287759	-	 SUBSYSTEM=pci_bus
+kern	info	0.287759	-	 DEVICE=+pci_bus:0000:01
+kern	info	0.292978	-	pci 0000:00:01.0: PCI bridge to [bus 01]
+kern	info	0.292978	-	 SUBSYSTEM=pci
+kern	info	0.292978	-	 DEVICE=+pci:0000:00:01.0
+kern	info	0.293175	-	pci_bus 0000:02: extended config space not accessible
+kern	info	0.293175	-	 SUBSYSTEM=pci_bus
+kern	info	0.293175	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.293330	-	acpiphp: Slot [32] registered
+kern	info	0.293384	-	acpiphp: Slot [33] registered
+kern	info	0.293446	-	acpiphp: Slot [34] registered
+kern	info	0.293502	-	acpiphp: Slot [35] registered
+kern	info	0.293554	-	acpiphp: Slot [36] registered
+kern	info	0.293607	-	acpiphp: Slot [37] registered
+kern	info	0.293662	-	acpiphp: Slot [38] registered
+kern	info	0.293713	-	acpiphp: Slot [39] registered
+kern	info	0.293767	-	acpiphp: Slot [40] registered
+kern	info	0.293818	-	acpiphp: Slot [41] registered
+kern	info	0.293868	-	acpiphp: Slot [42] registered
+kern	info	0.293919	-	acpiphp: Slot [43] registered
+kern	info	0.293969	-	acpiphp: Slot [44] registered
+kern	info	0.294020	-	acpiphp: Slot [45] registered
+kern	info	0.294070	-	acpiphp: Slot [46] registered
+kern	info	0.294121	-	acpiphp: Slot [47] registered
+kern	info	0.294171	-	acpiphp: Slot [48] registered
+kern	info	0.294222	-	acpiphp: Slot [49] registered
+kern	info	0.294275	-	acpiphp: Slot [50] registered
+kern	info	0.294325	-	acpiphp: Slot [51] registered
+kern	info	0.294376	-	acpiphp: Slot [52] registered
+kern	info	0.294436	-	acpiphp: Slot [53] registered
+kern	info	0.294487	-	acpiphp: Slot [54] registered
+kern	info	0.294539	-	acpiphp: Slot [55] registered
+kern	info	0.294601	-	acpiphp: Slot [56] registered
+kern	info	0.294653	-	acpiphp: Slot [57] registered
+kern	info	0.294705	-	acpiphp: Slot [58] registered
+kern	info	0.294757	-	acpiphp: Slot [59] registered
+kern	info	0.294810	-	acpiphp: Slot [60] registered
+kern	info	0.294860	-	acpiphp: Slot [61] registered
+kern	info	0.294914	-	acpiphp: Slot [62] registered
+kern	info	0.294964	-	acpiphp: Slot [63] registered
+kern	info	0.295052	-	pci 0000:02:00.0: [15ad:0774] type 00 class 0x0c0300
+kern	info	0.295052	-	 SUBSYSTEM=pci
+kern	info	0.295052	-	 DEVICE=+pci:0000:02:00.0
+kern	info	0.296056	-	pci 0000:02:00.0: reg 0x20: [io  0x20c0-0x20df]
+kern	info	0.296056	-	 SUBSYSTEM=pci
+kern	info	0.296056	-	 DEVICE=+pci:0000:02:00.0
+kern	info	0.296942	-	pci 0000:02:01.0: [8086:100f] type 00 class 0x020000
+kern	info	0.296942	-	 SUBSYSTEM=pci
+kern	info	0.296942	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.297398	-	pci 0000:02:01.0: reg 0x10: [mem 0xfd5c0000-0xfd5dffff 64bit]
+kern	info	0.297398	-	 SUBSYSTEM=pci
+kern	info	0.297398	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.297789	-	pci 0000:02:01.0: reg 0x18: [mem 0xfdff0000-0xfdffffff 64bit]
+kern	info	0.297789	-	 SUBSYSTEM=pci
+kern	info	0.297789	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.298185	-	pci 0000:02:01.0: reg 0x20: [io  0x2000-0x203f]
+kern	info	0.298185	-	 SUBSYSTEM=pci
+kern	info	0.298185	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.298865	-	pci 0000:02:01.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+kern	info	0.298865	-	 SUBSYSTEM=pci
+kern	info	0.298865	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.299138	-	pci 0000:02:01.0: PME# supported from D0 D3hot D3cold
+kern	info	0.299138	-	 SUBSYSTEM=pci
+kern	info	0.299138	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.299545	-	pci 0000:02:02.0: [8086:100f] type 00 class 0x020000
+kern	info	0.299545	-	 SUBSYSTEM=pci
+kern	info	0.299545	-	 DEVICE=+pci:0000:02:02.0
+kern	info	0.300013	-	pci 0000:02:02.0: reg 0x10: [mem 0xfd5a0000-0xfd5bffff 64bit]
+kern	info	0.300013	-	 SUBSYSTEM=pci
+kern	info	0.300013	-	 DEVICE=+pci:0000:02:02.0
+kern	info	0.300360	-	pci 0000:02:02.0: reg 0x18: [mem 0xfdfe0000-0xfdfeffff 64bit]
+kern	info	0.300360	-	 SUBSYSTEM=pci
+kern	info	0.300360	-	 DEVICE=+pci:0000:02:02.0
+kern	info	0.300812	-	pci 0000:02:02.0: reg 0x20: [io  0x2040-0x207f]
+kern	info	0.300812	-	 SUBSYSTEM=pci
+kern	info	0.300812	-	 DEVICE=+pci:0000:02:02.0
+kern	info	0.301584	-	pci 0000:02:02.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+kern	info	0.301584	-	 SUBSYSTEM=pci
+kern	info	0.301584	-	 DEVICE=+pci:0000:02:02.0
+kern	info	0.301844	-	pci 0000:02:02.0: PME# supported from D0 D3hot D3cold
+kern	info	0.301844	-	 SUBSYSTEM=pci
+kern	info	0.301844	-	 DEVICE=+pci:0000:02:02.0
+kern	info	0.302222	-	pci 0000:02:03.0: [1274:1371] type 00 class 0x040100
+kern	info	0.302222	-	 SUBSYSTEM=pci
+kern	info	0.302222	-	 DEVICE=+pci:0000:02:03.0
+kern	info	0.302537	-	pci 0000:02:03.0: reg 0x10: [io  0x2080-0x20bf]
+kern	info	0.302537	-	 SUBSYSTEM=pci
+kern	info	0.302537	-	 DEVICE=+pci:0000:02:03.0
+kern	info	0.304161	-	pci 0000:02:04.0: [15ad:07e0] type 00 class 0x010601
+kern	info	0.304161	-	 SUBSYSTEM=pci
+kern	info	0.304161	-	 DEVICE=+pci:0000:02:04.0
+kern	info	0.305880	-	pci 0000:02:04.0: reg 0x24: [mem 0xfd59f000-0xfd59ffff]
+kern	info	0.305880	-	 SUBSYSTEM=pci
+kern	info	0.305880	-	 DEVICE=+pci:0000:02:04.0
+kern	info	0.306206	-	pci 0000:02:04.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+kern	info	0.306206	-	 SUBSYSTEM=pci
+kern	info	0.306206	-	 DEVICE=+pci:0000:02:04.0
+kern	info	0.306545	-	pci 0000:02:04.0: PME# supported from D3hot
+kern	info	0.306545	-	 SUBSYSTEM=pci
+kern	info	0.306545	-	 DEVICE=+pci:0000:02:04.0
+kern	info	0.311415	-	pci 0000:00:11.0: PCI bridge to [bus 02] (subtractive decode)
+kern	info	0.311415	-	 SUBSYSTEM=pci
+kern	info	0.311415	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.311492	-	pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+kern	info	0.311492	-	 SUBSYSTEM=pci
+kern	info	0.311492	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.311562	-	pci 0000:00:11.0:   bridge window [mem 0xfd500000-0xfdffffff]
+kern	info	0.311562	-	 SUBSYSTEM=pci
+kern	info	0.311562	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.311652	-	pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+kern	info	0.311652	-	 SUBSYSTEM=pci
+kern	info	0.311652	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.311721	-	pci 0000:00:11.0:   bridge window [mem 0x000a0000-0x000bffff window] (subtractive decode)
+kern	info	0.311721	-	 SUBSYSTEM=pci
+kern	info	0.311721	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.311805	-	pci 0000:00:11.0:   bridge window [mem 0x000d0000-0x000d3fff window] (subtractive decode)
+kern	info	0.311805	-	 SUBSYSTEM=pci
+kern	info	0.311805	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.311883	-	pci 0000:00:11.0:   bridge window [mem 0x000d4000-0x000d7fff window] (subtractive decode)
+kern	info	0.311883	-	 SUBSYSTEM=pci
+kern	info	0.311883	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.311965	-	pci 0000:00:11.0:   bridge window [mem 0x000d8000-0x000dbfff window] (subtractive decode)
+kern	info	0.311965	-	 SUBSYSTEM=pci
+kern	info	0.311965	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.312046	-	pci 0000:00:11.0:   bridge window [mem 0xc0000000-0xfebfffff window] (subtractive decode)
+kern	info	0.312046	-	 SUBSYSTEM=pci
+kern	info	0.312046	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.312129	-	pci 0000:00:11.0:   bridge window [io  0x0000-0x0cf7 window] (subtractive decode)
+kern	info	0.312129	-	 SUBSYSTEM=pci
+kern	info	0.312129	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.312207	-	pci 0000:00:11.0:   bridge window [io  0x0d00-0xfeff window] (subtractive decode)
+kern	info	0.312207	-	 SUBSYSTEM=pci
+kern	info	0.312207	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.317591	-	pci 0000:00:15.0: PCI bridge to [bus 03]
+kern	info	0.317591	-	 SUBSYSTEM=pci
+kern	info	0.317591	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.317657	-	pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+kern	info	0.317657	-	 SUBSYSTEM=pci
+kern	info	0.317657	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.317729	-	pci 0000:00:15.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+kern	info	0.317729	-	 SUBSYSTEM=pci
+kern	info	0.317729	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.317815	-	pci 0000:00:15.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+kern	info	0.317815	-	 SUBSYSTEM=pci
+kern	info	0.317815	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.323281	-	pci 0000:00:15.1: PCI bridge to [bus 04]
+kern	info	0.323281	-	 SUBSYSTEM=pci
+kern	info	0.323281	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.323344	-	pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+kern	info	0.323344	-	 SUBSYSTEM=pci
+kern	info	0.323344	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.323417	-	pci 0000:00:15.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+kern	info	0.323417	-	 SUBSYSTEM=pci
+kern	info	0.323417	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.323508	-	pci 0000:00:15.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+kern	info	0.323508	-	 SUBSYSTEM=pci
+kern	info	0.323508	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.328883	-	pci 0000:00:15.2: PCI bridge to [bus 05]
+kern	info	0.328883	-	 SUBSYSTEM=pci
+kern	info	0.328883	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.328949	-	pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+kern	info	0.328949	-	 SUBSYSTEM=pci
+kern	info	0.328949	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.329017	-	pci 0000:00:15.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+kern	info	0.329017	-	 SUBSYSTEM=pci
+kern	info	0.329017	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.329103	-	pci 0000:00:15.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+kern	info	0.329103	-	 SUBSYSTEM=pci
+kern	info	0.329103	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.334481	-	pci 0000:00:15.3: PCI bridge to [bus 06]
+kern	info	0.334481	-	 SUBSYSTEM=pci
+kern	info	0.334481	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.334557	-	pci 0000:00:15.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+kern	info	0.334557	-	 SUBSYSTEM=pci
+kern	info	0.334557	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.334644	-	pci 0000:00:15.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+kern	info	0.334644	-	 SUBSYSTEM=pci
+kern	info	0.334644	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.340020	-	pci 0000:00:15.4: PCI bridge to [bus 07]
+kern	info	0.340020	-	 SUBSYSTEM=pci
+kern	info	0.340020	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.340095	-	pci 0000:00:15.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+kern	info	0.340095	-	 SUBSYSTEM=pci
+kern	info	0.340095	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.340181	-	pci 0000:00:15.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+kern	info	0.340181	-	 SUBSYSTEM=pci
+kern	info	0.340181	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.345555	-	pci 0000:00:15.5: PCI bridge to [bus 08]
+kern	info	0.345555	-	 SUBSYSTEM=pci
+kern	info	0.345555	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.345633	-	pci 0000:00:15.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+kern	info	0.345633	-	 SUBSYSTEM=pci
+kern	info	0.345633	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.346320	-	pci 0000:00:15.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+kern	info	0.346320	-	 SUBSYSTEM=pci
+kern	info	0.346320	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.351704	-	pci 0000:00:15.6: PCI bridge to [bus 09]
+kern	info	0.351704	-	 SUBSYSTEM=pci
+kern	info	0.351704	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.351779	-	pci 0000:00:15.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+kern	info	0.351779	-	 SUBSYSTEM=pci
+kern	info	0.351779	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.351865	-	pci 0000:00:15.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+kern	info	0.351865	-	 SUBSYSTEM=pci
+kern	info	0.351865	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.357277	-	pci 0000:00:15.7: PCI bridge to [bus 0a]
+kern	info	0.357277	-	 SUBSYSTEM=pci
+kern	info	0.357277	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.357358	-	pci 0000:00:15.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+kern	info	0.357358	-	 SUBSYSTEM=pci
+kern	info	0.357358	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.357446	-	pci 0000:00:15.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+kern	info	0.357446	-	 SUBSYSTEM=pci
+kern	info	0.357446	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.362812	-	pci 0000:00:16.0: PCI bridge to [bus 0b]
+kern	info	0.362812	-	 SUBSYSTEM=pci
+kern	info	0.362812	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.362874	-	pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+kern	info	0.362874	-	 SUBSYSTEM=pci
+kern	info	0.362874	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.362943	-	pci 0000:00:16.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+kern	info	0.362943	-	 SUBSYSTEM=pci
+kern	info	0.362943	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.363033	-	pci 0000:00:16.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+kern	info	0.363033	-	 SUBSYSTEM=pci
+kern	info	0.363033	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.368405	-	pci 0000:00:16.1: PCI bridge to [bus 0c]
+kern	info	0.368405	-	 SUBSYSTEM=pci
+kern	info	0.368405	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.368471	-	pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+kern	info	0.368471	-	 SUBSYSTEM=pci
+kern	info	0.368471	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.368543	-	pci 0000:00:16.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+kern	info	0.368543	-	 SUBSYSTEM=pci
+kern	info	0.368543	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.368629	-	pci 0000:00:16.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+kern	info	0.368629	-	 SUBSYSTEM=pci
+kern	info	0.368629	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.374074	-	pci 0000:00:16.2: PCI bridge to [bus 0d]
+kern	info	0.374074	-	 SUBSYSTEM=pci
+kern	info	0.374074	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.374137	-	pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+kern	info	0.374137	-	 SUBSYSTEM=pci
+kern	info	0.374137	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.374212	-	pci 0000:00:16.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+kern	info	0.374212	-	 SUBSYSTEM=pci
+kern	info	0.374212	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.374301	-	pci 0000:00:16.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+kern	info	0.374301	-	 SUBSYSTEM=pci
+kern	info	0.374301	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.379907	-	pci 0000:00:16.3: PCI bridge to [bus 0e]
+kern	info	0.379907	-	 SUBSYSTEM=pci
+kern	info	0.379907	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.379985	-	pci 0000:00:16.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+kern	info	0.379985	-	 SUBSYSTEM=pci
+kern	info	0.379985	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.380071	-	pci 0000:00:16.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+kern	info	0.380071	-	 SUBSYSTEM=pci
+kern	info	0.380071	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.385438	-	pci 0000:00:16.4: PCI bridge to [bus 0f]
+kern	info	0.385438	-	 SUBSYSTEM=pci
+kern	info	0.385438	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.385515	-	pci 0000:00:16.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+kern	info	0.385515	-	 SUBSYSTEM=pci
+kern	info	0.385515	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.385602	-	pci 0000:00:16.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+kern	info	0.385602	-	 SUBSYSTEM=pci
+kern	info	0.385602	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.390963	-	pci 0000:00:16.5: PCI bridge to [bus 10]
+kern	info	0.390963	-	 SUBSYSTEM=pci
+kern	info	0.390963	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.391043	-	pci 0000:00:16.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+kern	info	0.391043	-	 SUBSYSTEM=pci
+kern	info	0.391043	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.391133	-	pci 0000:00:16.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+kern	info	0.391133	-	 SUBSYSTEM=pci
+kern	info	0.391133	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.396474	-	pci 0000:00:16.6: PCI bridge to [bus 11]
+kern	info	0.396474	-	 SUBSYSTEM=pci
+kern	info	0.396474	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.396551	-	pci 0000:00:16.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+kern	info	0.396551	-	 SUBSYSTEM=pci
+kern	info	0.396551	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.396637	-	pci 0000:00:16.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+kern	info	0.396637	-	 SUBSYSTEM=pci
+kern	info	0.396637	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.401970	-	pci 0000:00:16.7: PCI bridge to [bus 12]
+kern	info	0.401970	-	 SUBSYSTEM=pci
+kern	info	0.401970	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.402046	-	pci 0000:00:16.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+kern	info	0.402046	-	 SUBSYSTEM=pci
+kern	info	0.402046	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.402132	-	pci 0000:00:16.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+kern	info	0.402132	-	 SUBSYSTEM=pci
+kern	info	0.402132	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.403483	-	pci 0000:00:17.0: PCI bridge to [bus 13]
+kern	info	0.403483	-	 SUBSYSTEM=pci
+kern	info	0.403483	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.403549	-	pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+kern	info	0.403549	-	 SUBSYSTEM=pci
+kern	info	0.403549	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.403617	-	pci 0000:00:17.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+kern	info	0.403617	-	 SUBSYSTEM=pci
+kern	info	0.403617	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.403704	-	pci 0000:00:17.0:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+kern	info	0.403704	-	 SUBSYSTEM=pci
+kern	info	0.403704	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.409050	-	pci 0000:00:17.1: PCI bridge to [bus 14]
+kern	info	0.409050	-	 SUBSYSTEM=pci
+kern	info	0.409050	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.409111	-	pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+kern	info	0.409111	-	 SUBSYSTEM=pci
+kern	info	0.409111	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.409182	-	pci 0000:00:17.1:   bridge window [mem 0xfce00000-0xfcefffff]
+kern	info	0.409182	-	 SUBSYSTEM=pci
+kern	info	0.409182	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.409276	-	pci 0000:00:17.1:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+kern	info	0.409276	-	 SUBSYSTEM=pci
+kern	info	0.409276	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.414633	-	pci 0000:00:17.2: PCI bridge to [bus 15]
+kern	info	0.414633	-	 SUBSYSTEM=pci
+kern	info	0.414633	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.414700	-	pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+kern	info	0.414700	-	 SUBSYSTEM=pci
+kern	info	0.414700	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.414768	-	pci 0000:00:17.2:   bridge window [mem 0xfca00000-0xfcafffff]
+kern	info	0.414768	-	 SUBSYSTEM=pci
+kern	info	0.414768	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.414854	-	pci 0000:00:17.2:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+kern	info	0.414854	-	 SUBSYSTEM=pci
+kern	info	0.414854	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.420214	-	pci 0000:00:17.3: PCI bridge to [bus 16]
+kern	info	0.420214	-	 SUBSYSTEM=pci
+kern	info	0.420214	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.420293	-	pci 0000:00:17.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+kern	info	0.420293	-	 SUBSYSTEM=pci
+kern	info	0.420293	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.420379	-	pci 0000:00:17.3:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+kern	info	0.420379	-	 SUBSYSTEM=pci
+kern	info	0.420379	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.425722	-	pci 0000:00:17.4: PCI bridge to [bus 17]
+kern	info	0.425722	-	 SUBSYSTEM=pci
+kern	info	0.425722	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.425798	-	pci 0000:00:17.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+kern	info	0.425798	-	 SUBSYSTEM=pci
+kern	info	0.425798	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.425884	-	pci 0000:00:17.4:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+kern	info	0.425884	-	 SUBSYSTEM=pci
+kern	info	0.425884	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.431253	-	pci 0000:00:17.5: PCI bridge to [bus 18]
+kern	info	0.431253	-	 SUBSYSTEM=pci
+kern	info	0.431253	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.431329	-	pci 0000:00:17.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+kern	info	0.431329	-	 SUBSYSTEM=pci
+kern	info	0.431329	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.431421	-	pci 0000:00:17.5:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+kern	info	0.431421	-	 SUBSYSTEM=pci
+kern	info	0.431421	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.436833	-	pci 0000:00:17.6: PCI bridge to [bus 19]
+kern	info	0.436833	-	 SUBSYSTEM=pci
+kern	info	0.436833	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.436907	-	pci 0000:00:17.6:   bridge window [mem 0xfba00000-0xfbafffff]
+kern	info	0.436907	-	 SUBSYSTEM=pci
+kern	info	0.436907	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.436993	-	pci 0000:00:17.6:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+kern	info	0.436993	-	 SUBSYSTEM=pci
+kern	info	0.436993	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.442828	-	pci 0000:00:17.7: PCI bridge to [bus 1a]
+kern	info	0.442828	-	 SUBSYSTEM=pci
+kern	info	0.442828	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.442908	-	pci 0000:00:17.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+kern	info	0.442908	-	 SUBSYSTEM=pci
+kern	info	0.442908	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.442995	-	pci 0000:00:17.7:   bridge window [mem 0xe5c00000-0xe5cfffff 64bit pref]
+kern	info	0.442995	-	 SUBSYSTEM=pci
+kern	info	0.442995	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.448416	-	pci 0000:00:18.0: PCI bridge to [bus 1b]
+kern	info	0.448416	-	 SUBSYSTEM=pci
+kern	info	0.448416	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.448480	-	pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+kern	info	0.448480	-	 SUBSYSTEM=pci
+kern	info	0.448480	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.448553	-	pci 0000:00:18.0:   bridge window [mem 0xfd100000-0xfd1fffff]
+kern	info	0.448553	-	 SUBSYSTEM=pci
+kern	info	0.448553	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.448639	-	pci 0000:00:18.0:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+kern	info	0.448639	-	 SUBSYSTEM=pci
+kern	info	0.448639	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.454301	-	pci 0000:00:18.1: PCI bridge to [bus 1c]
+kern	info	0.454301	-	 SUBSYSTEM=pci
+kern	info	0.454301	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.454370	-	pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+kern	info	0.454370	-	 SUBSYSTEM=pci
+kern	info	0.454370	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.454445	-	pci 0000:00:18.1:   bridge window [mem 0xfcd00000-0xfcdfffff]
+kern	info	0.454445	-	 SUBSYSTEM=pci
+kern	info	0.454445	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.454535	-	pci 0000:00:18.1:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+kern	info	0.454535	-	 SUBSYSTEM=pci
+kern	info	0.454535	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.460060	-	pci 0000:00:18.2: PCI bridge to [bus 1d]
+kern	info	0.460060	-	 SUBSYSTEM=pci
+kern	info	0.460060	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.460142	-	pci 0000:00:18.2:   bridge window [mem 0xfc900000-0xfc9fffff]
+kern	info	0.460142	-	 SUBSYSTEM=pci
+kern	info	0.460142	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.460240	-	pci 0000:00:18.2:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+kern	info	0.460240	-	 SUBSYSTEM=pci
+kern	info	0.460240	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.465634	-	pci 0000:00:18.3: PCI bridge to [bus 1e]
+kern	info	0.465634	-	 SUBSYSTEM=pci
+kern	info	0.465634	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.465717	-	pci 0000:00:18.3:   bridge window [mem 0xfc500000-0xfc5fffff]
+kern	info	0.465717	-	 SUBSYSTEM=pci
+kern	info	0.465717	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.465805	-	pci 0000:00:18.3:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+kern	info	0.465805	-	 SUBSYSTEM=pci
+kern	info	0.465805	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.471812	-	pci 0000:00:18.4: PCI bridge to [bus 1f]
+kern	info	0.471812	-	 SUBSYSTEM=pci
+kern	info	0.471812	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.471887	-	pci 0000:00:18.4:   bridge window [mem 0xfc100000-0xfc1fffff]
+kern	info	0.471887	-	 SUBSYSTEM=pci
+kern	info	0.471887	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.471977	-	pci 0000:00:18.4:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+kern	info	0.471977	-	 SUBSYSTEM=pci
+kern	info	0.471977	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.477396	-	pci 0000:00:18.5: PCI bridge to [bus 20]
+kern	info	0.477396	-	 SUBSYSTEM=pci
+kern	info	0.477396	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.477474	-	pci 0000:00:18.5:   bridge window [mem 0xfbd00000-0xfbdfffff]
+kern	info	0.477474	-	 SUBSYSTEM=pci
+kern	info	0.477474	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.477561	-	pci 0000:00:18.5:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+kern	info	0.477561	-	 SUBSYSTEM=pci
+kern	info	0.477561	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.482990	-	pci 0000:00:18.6: PCI bridge to [bus 21]
+kern	info	0.482990	-	 SUBSYSTEM=pci
+kern	info	0.482990	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.483065	-	pci 0000:00:18.6:   bridge window [mem 0xfb900000-0xfb9fffff]
+kern	info	0.483065	-	 SUBSYSTEM=pci
+kern	info	0.483065	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.483160	-	pci 0000:00:18.6:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+kern	info	0.483160	-	 SUBSYSTEM=pci
+kern	info	0.483160	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.488961	-	pci 0000:00:18.7: PCI bridge to [bus 22]
+kern	info	0.488961	-	 SUBSYSTEM=pci
+kern	info	0.488961	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.489040	-	pci 0000:00:18.7:   bridge window [mem 0xfb500000-0xfb5fffff]
+kern	info	0.489040	-	 SUBSYSTEM=pci
+kern	info	0.489040	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.489140	-	pci 0000:00:18.7:   bridge window [mem 0xe5b00000-0xe5bfffff 64bit pref]
+kern	info	0.489140	-	 SUBSYSTEM=pci
+kern	info	0.489140	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.490623	-	ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 7 *9 10 11 14 15)
+kern	info	0.490738	-	ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 9 10 *11 14 15)
+kern	info	0.490847	-	ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 7 9 *10 11 14 15)
+kern	info	0.490955	-	ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 *7 9 10 11 14 15)
+kern	info	0.512384	-	iommu: Default domain type: Translated 
+kern	notice	0.512557	-	SCSI subsystem initialized
+kern	debug	0.512618	-	libata version 3.00 loaded.
+kern	info	0.512618	-	pci 0000:00:0f.0: vgaarb: setting as boot VGA device
+kern	info	0.512618	-	 SUBSYSTEM=pci
+kern	info	0.512618	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.512618	-	pci 0000:00:0f.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+kern	info	0.512618	-	 SUBSYSTEM=pci
+kern	info	0.512618	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.512618	-	pci 0000:00:0f.0: vgaarb: bridge control possible
+kern	info	0.512618	-	 SUBSYSTEM=pci
+kern	info	0.512618	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.512618	-	vgaarb: loaded
+kern	info	0.512618	-	ACPI: bus type USB registered
+kern	info	0.512659	-	usbcore: registered new interface driver usbfs
+kern	info	0.512711	-	usbcore: registered new interface driver hub
+kern	info	0.512776	-	usbcore: registered new device driver usb
+kern	info	0.512837	-	pps_core: LinuxPPS API ver. 1 registered
+kern	info	0.512883	-	pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+kern	info	0.512966	-	PTP clock support registered
+kern	info	0.513026	-	EDAC MC: Ver: 3.0.0
+kern	info	0.513340	-	PCI: Using ACPI for IRQ routing
+kern	debug	0.538937	-	PCI: pci_cache_line_size set to 64 bytes
+kern	debug	0.539579	-	e820: reserve RAM buffer [mem 0x0009e800-0x0009ffff]
+kern	debug	0.539580	-	e820: reserve RAM buffer [mem 0xbfed0000-0xbfffffff]
+kern	info	0.539671	-	NetLabel: Initializing
+kern	info	0.539714	-	NetLabel:  domain hash size = 128
+kern	info	0.539761	-	NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+kern	info	0.539818	-	NetLabel:  unlabeled traffic allowed by default
+kern	info	0.541311	-	hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+kern	info	0.541392	-	hpet0: 16 comparators, 64-bit 14.318180 MHz counter
+kern	info	0.543566	-	clocksource: Switched to clocksource tsc-early
+kern	notice	0.548329	-	*** VALIDATE bpf ***
+kern	notice	0.548433	-	VFS: Disk quotas dquot_6.6.0
+kern	info	0.548488	-	VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+kern	notice	0.548570	-	*** VALIDATE ramfs ***
+kern	notice	0.548609	-	*** VALIDATE hugetlbfs ***
+kern	info	0.548746	-	AppArmor: AppArmor Filesystem Enabled
+kern	info	0.548810	-	pnp: PnP ACPI init
+kern	info	0.548983	-	system 00:00: [io  0x1000-0x103f] has been reserved
+kern	info	0.548983	-	 SUBSYSTEM=pnp
+kern	info	0.548983	-	 DEVICE=+pnp:00:00
+kern	info	0.549043	-	system 00:00: [io  0x1040-0x104f] has been reserved
+kern	info	0.549043	-	 SUBSYSTEM=pnp
+kern	info	0.549043	-	 DEVICE=+pnp:00:00
+kern	info	0.549100	-	system 00:00: [io  0x0cf0-0x0cf1] has been reserved
+kern	info	0.549100	-	 SUBSYSTEM=pnp
+kern	info	0.549100	-	 DEVICE=+pnp:00:00
+kern	debug	0.549172	-	system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+kern	debug	0.549172	-	 SUBSYSTEM=pnp
+kern	debug	0.549172	-	 DEVICE=+pnp:00:00
+kern	debug	0.549185	-	pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+kern	debug	0.549185	-	 SUBSYSTEM=pnp
+kern	debug	0.549185	-	 DEVICE=+pnp:00:01
+kern	debug	0.549193	-	pnp 00:02: Plug and Play ACPI device, IDs PNP0303 (active)
+kern	debug	0.549193	-	 SUBSYSTEM=pnp
+kern	debug	0.549193	-	 DEVICE=+pnp:00:02
+kern	debug	0.549203	-	pnp 00:03: Plug and Play ACPI device, IDs VMW0003 PNP0f13 (active)
+kern	debug	0.549203	-	 SUBSYSTEM=pnp
+kern	debug	0.549203	-	 DEVICE=+pnp:00:03
+kern	info	0.549330	-	system 00:04: [mem 0xfed00000-0xfed003ff] has been reserved
+kern	info	0.549330	-	 SUBSYSTEM=pnp
+kern	info	0.549330	-	 DEVICE=+pnp:00:04
+kern	debug	0.549390	-	system 00:04: Plug and Play ACPI device, IDs PNP0103 PNP0c01 (active)
+kern	debug	0.549390	-	 SUBSYSTEM=pnp
+kern	debug	0.549390	-	 DEVICE=+pnp:00:04
+kern	debug	0.550370	-	pnp 00:05: [dma 2]
+kern	debug	0.550370	-	 SUBSYSTEM=pnp
+kern	debug	0.550370	-	 DEVICE=+pnp:00:05
+kern	debug	0.550385	-	pnp 00:05: Plug and Play ACPI device, IDs PNP0700 (active)
+kern	debug	0.550385	-	 SUBSYSTEM=pnp
+kern	debug	0.550385	-	 DEVICE=+pnp:00:05
+kern	info	0.550506	-	system 00:06: [io  0xfce0-0xfcff] has been reserved
+kern	info	0.550506	-	 SUBSYSTEM=pnp
+kern	info	0.550506	-	 DEVICE=+pnp:00:06
+kern	info	0.550564	-	system 00:06: [mem 0xf0000000-0xf7ffffff] has been reserved
+kern	info	0.550564	-	 SUBSYSTEM=pnp
+kern	info	0.550564	-	 DEVICE=+pnp:00:06
+kern	info	0.550623	-	system 00:06: [mem 0xfe800000-0xfe9fffff] has been reserved
+kern	info	0.550623	-	 SUBSYSTEM=pnp
+kern	info	0.550623	-	 DEVICE=+pnp:00:06
+kern	debug	0.550683	-	system 00:06: Plug and Play ACPI device, IDs PNP0c02 (active)
+kern	debug	0.550683	-	 SUBSYSTEM=pnp
+kern	debug	0.550683	-	 DEVICE=+pnp:00:06
+kern	info	0.564299	-	pnp: PnP ACPI: found 7 devices
+kern	info	0.566781	-	thermal_sys: Registered thermal governor 'fair_share'
+kern	info	0.566781	-	thermal_sys: Registered thermal governor 'bang_bang'
+kern	info	0.566839	-	thermal_sys: Registered thermal governor 'step_wise'
+kern	info	0.566895	-	thermal_sys: Registered thermal governor 'user_space'
+kern	info	0.566956	-	thermal_sys: Registered thermal governor 'power_allocator'
+kern	info	0.571573	-	clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+kern	info	0.571735	-	pci 0000:00:15.3: bridge window [io  0x1000-0x0fff] to [bus 06] add_size 1000
+kern	info	0.571735	-	 SUBSYSTEM=pci
+kern	info	0.571735	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.571808	-	pci 0000:00:15.4: bridge window [io  0x1000-0x0fff] to [bus 07] add_size 1000
+kern	info	0.571808	-	 SUBSYSTEM=pci
+kern	info	0.571808	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.571886	-	pci 0000:00:15.5: bridge window [io  0x1000-0x0fff] to [bus 08] add_size 1000
+kern	info	0.571886	-	 SUBSYSTEM=pci
+kern	info	0.571886	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.571959	-	pci 0000:00:15.6: bridge window [io  0x1000-0x0fff] to [bus 09] add_size 1000
+kern	info	0.571959	-	 SUBSYSTEM=pci
+kern	info	0.571959	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.572034	-	pci 0000:00:15.7: bridge window [io  0x1000-0x0fff] to [bus 0a] add_size 1000
+kern	info	0.572034	-	 SUBSYSTEM=pci
+kern	info	0.572034	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.572106	-	pci 0000:00:16.3: bridge window [io  0x1000-0x0fff] to [bus 0e] add_size 1000
+kern	info	0.572106	-	 SUBSYSTEM=pci
+kern	info	0.572106	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.572178	-	pci 0000:00:16.4: bridge window [io  0x1000-0x0fff] to [bus 0f] add_size 1000
+kern	info	0.572178	-	 SUBSYSTEM=pci
+kern	info	0.572178	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.572250	-	pci 0000:00:16.5: bridge window [io  0x1000-0x0fff] to [bus 10] add_size 1000
+kern	info	0.572250	-	 SUBSYSTEM=pci
+kern	info	0.572250	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.572935	-	pci 0000:00:16.6: bridge window [io  0x1000-0x0fff] to [bus 11] add_size 1000
+kern	info	0.572935	-	 SUBSYSTEM=pci
+kern	info	0.572935	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.573008	-	pci 0000:00:16.7: bridge window [io  0x1000-0x0fff] to [bus 12] add_size 1000
+kern	info	0.573008	-	 SUBSYSTEM=pci
+kern	info	0.573008	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.573083	-	pci 0000:00:17.3: bridge window [io  0x1000-0x0fff] to [bus 16] add_size 1000
+kern	info	0.573083	-	 SUBSYSTEM=pci
+kern	info	0.573083	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.573155	-	pci 0000:00:17.4: bridge window [io  0x1000-0x0fff] to [bus 17] add_size 1000
+kern	info	0.573155	-	 SUBSYSTEM=pci
+kern	info	0.573155	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.573227	-	pci 0000:00:17.5: bridge window [io  0x1000-0x0fff] to [bus 18] add_size 1000
+kern	info	0.573227	-	 SUBSYSTEM=pci
+kern	info	0.573227	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.573299	-	pci 0000:00:17.6: bridge window [io  0x1000-0x0fff] to [bus 19] add_size 1000
+kern	info	0.573299	-	 SUBSYSTEM=pci
+kern	info	0.573299	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.573373	-	pci 0000:00:17.7: bridge window [io  0x1000-0x0fff] to [bus 1a] add_size 1000
+kern	info	0.573373	-	 SUBSYSTEM=pci
+kern	info	0.573373	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.573449	-	pci 0000:00:18.2: bridge window [io  0x1000-0x0fff] to [bus 1d] add_size 1000
+kern	info	0.573449	-	 SUBSYSTEM=pci
+kern	info	0.573449	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.573521	-	pci 0000:00:18.3: bridge window [io  0x1000-0x0fff] to [bus 1e] add_size 1000
+kern	info	0.573521	-	 SUBSYSTEM=pci
+kern	info	0.573521	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.573592	-	pci 0000:00:18.4: bridge window [io  0x1000-0x0fff] to [bus 1f] add_size 1000
+kern	info	0.573592	-	 SUBSYSTEM=pci
+kern	info	0.573592	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.573664	-	pci 0000:00:18.5: bridge window [io  0x1000-0x0fff] to [bus 20] add_size 1000
+kern	info	0.573664	-	 SUBSYSTEM=pci
+kern	info	0.573664	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.573744	-	pci 0000:00:18.6: bridge window [io  0x1000-0x0fff] to [bus 21] add_size 1000
+kern	info	0.573744	-	 SUBSYSTEM=pci
+kern	info	0.573744	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.573816	-	pci 0000:00:18.7: bridge window [io  0x1000-0x0fff] to [bus 22] add_size 1000
+kern	info	0.573816	-	 SUBSYSTEM=pci
+kern	info	0.573816	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.573896	-	pci 0000:00:0f.0: BAR 6: assigned [mem 0xc0000000-0xc0007fff pref]
+kern	info	0.573896	-	 SUBSYSTEM=pci
+kern	info	0.573896	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.573962	-	pci 0000:00:10.0: BAR 6: assigned [mem 0xc0008000-0xc000bfff pref]
+kern	info	0.573962	-	 SUBSYSTEM=pci
+kern	info	0.573962	-	 DEVICE=+pci:0000:00:10.0
+kern	info	0.574028	-	pci 0000:00:15.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574028	-	 SUBSYSTEM=pci
+kern	info	0.574028	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.574089	-	pci 0000:00:15.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574089	-	 SUBSYSTEM=pci
+kern	info	0.574089	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.574148	-	pci 0000:00:15.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574148	-	 SUBSYSTEM=pci
+kern	info	0.574148	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.574205	-	pci 0000:00:15.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574205	-	 SUBSYSTEM=pci
+kern	info	0.574205	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.574265	-	pci 0000:00:15.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574265	-	 SUBSYSTEM=pci
+kern	info	0.574265	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.574321	-	pci 0000:00:15.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574321	-	 SUBSYSTEM=pci
+kern	info	0.574321	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.574381	-	pci 0000:00:15.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574381	-	 SUBSYSTEM=pci
+kern	info	0.574381	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.574442	-	pci 0000:00:15.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574442	-	 SUBSYSTEM=pci
+kern	info	0.574442	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.574506	-	pci 0000:00:15.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574506	-	 SUBSYSTEM=pci
+kern	info	0.574506	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.574563	-	pci 0000:00:15.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574563	-	 SUBSYSTEM=pci
+kern	info	0.574563	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.574622	-	pci 0000:00:16.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574622	-	 SUBSYSTEM=pci
+kern	info	0.574622	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.574679	-	pci 0000:00:16.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574679	-	 SUBSYSTEM=pci
+kern	info	0.574679	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.574747	-	pci 0000:00:16.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574747	-	 SUBSYSTEM=pci
+kern	info	0.574747	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.574803	-	pci 0000:00:16.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574803	-	 SUBSYSTEM=pci
+kern	info	0.574803	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.574863	-	pci 0000:00:16.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574863	-	 SUBSYSTEM=pci
+kern	info	0.574863	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.574920	-	pci 0000:00:16.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.574920	-	 SUBSYSTEM=pci
+kern	info	0.574920	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.574979	-	pci 0000:00:16.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.574979	-	 SUBSYSTEM=pci
+kern	info	0.574979	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.575036	-	pci 0000:00:16.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575036	-	 SUBSYSTEM=pci
+kern	info	0.575036	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.575095	-	pci 0000:00:16.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575095	-	 SUBSYSTEM=pci
+kern	info	0.575095	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.575152	-	pci 0000:00:16.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575152	-	 SUBSYSTEM=pci
+kern	info	0.575152	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.575211	-	pci 0000:00:17.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575211	-	 SUBSYSTEM=pci
+kern	info	0.575211	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.575268	-	pci 0000:00:17.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575268	-	 SUBSYSTEM=pci
+kern	info	0.575268	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.575328	-	pci 0000:00:17.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575328	-	 SUBSYSTEM=pci
+kern	info	0.575328	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.575384	-	pci 0000:00:17.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575384	-	 SUBSYSTEM=pci
+kern	info	0.575384	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.575444	-	pci 0000:00:17.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575444	-	 SUBSYSTEM=pci
+kern	info	0.575444	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.575501	-	pci 0000:00:17.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575501	-	 SUBSYSTEM=pci
+kern	info	0.575501	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.575560	-	pci 0000:00:17.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575560	-	 SUBSYSTEM=pci
+kern	info	0.575560	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.575617	-	pci 0000:00:17.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575617	-	 SUBSYSTEM=pci
+kern	info	0.575617	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.575676	-	pci 0000:00:17.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575676	-	 SUBSYSTEM=pci
+kern	info	0.575676	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.575740	-	pci 0000:00:17.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575740	-	 SUBSYSTEM=pci
+kern	info	0.575740	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.575803	-	pci 0000:00:18.2: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575803	-	 SUBSYSTEM=pci
+kern	info	0.575803	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.575861	-	pci 0000:00:18.2: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575861	-	 SUBSYSTEM=pci
+kern	info	0.575861	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.575922	-	pci 0000:00:18.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.575922	-	 SUBSYSTEM=pci
+kern	info	0.575922	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.575980	-	pci 0000:00:18.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.575980	-	 SUBSYSTEM=pci
+kern	info	0.575980	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.576041	-	pci 0000:00:18.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576041	-	 SUBSYSTEM=pci
+kern	info	0.576041	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.576101	-	pci 0000:00:18.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576101	-	 SUBSYSTEM=pci
+kern	info	0.576101	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.576160	-	pci 0000:00:18.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576160	-	 SUBSYSTEM=pci
+kern	info	0.576160	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.576217	-	pci 0000:00:18.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576217	-	 SUBSYSTEM=pci
+kern	info	0.576217	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.576276	-	pci 0000:00:18.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576276	-	 SUBSYSTEM=pci
+kern	info	0.576276	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.576333	-	pci 0000:00:18.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576333	-	 SUBSYSTEM=pci
+kern	info	0.576333	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.576392	-	pci 0000:00:18.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576392	-	 SUBSYSTEM=pci
+kern	info	0.576392	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.576449	-	pci 0000:00:18.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576449	-	 SUBSYSTEM=pci
+kern	info	0.576449	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.576510	-	pci 0000:00:18.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576510	-	 SUBSYSTEM=pci
+kern	info	0.576510	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.576567	-	pci 0000:00:18.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576567	-	 SUBSYSTEM=pci
+kern	info	0.576567	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.576626	-	pci 0000:00:18.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576626	-	 SUBSYSTEM=pci
+kern	info	0.576626	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.576683	-	pci 0000:00:18.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576683	-	 SUBSYSTEM=pci
+kern	info	0.576683	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.576750	-	pci 0000:00:18.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576750	-	 SUBSYSTEM=pci
+kern	info	0.576750	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.576807	-	pci 0000:00:18.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576807	-	 SUBSYSTEM=pci
+kern	info	0.576807	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.576867	-	pci 0000:00:18.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576867	-	 SUBSYSTEM=pci
+kern	info	0.576867	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.576924	-	pci 0000:00:18.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.576924	-	 SUBSYSTEM=pci
+kern	info	0.576924	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.576983	-	pci 0000:00:18.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.576983	-	 SUBSYSTEM=pci
+kern	info	0.576983	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.577040	-	pci 0000:00:18.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577040	-	 SUBSYSTEM=pci
+kern	info	0.577040	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.577100	-	pci 0000:00:18.2: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577100	-	 SUBSYSTEM=pci
+kern	info	0.577100	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.577156	-	pci 0000:00:18.2: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577156	-	 SUBSYSTEM=pci
+kern	info	0.577156	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.577216	-	pci 0000:00:17.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577216	-	 SUBSYSTEM=pci
+kern	info	0.577216	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.577272	-	pci 0000:00:17.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577272	-	 SUBSYSTEM=pci
+kern	info	0.577272	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.577332	-	pci 0000:00:17.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577332	-	 SUBSYSTEM=pci
+kern	info	0.577332	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.577389	-	pci 0000:00:17.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577389	-	 SUBSYSTEM=pci
+kern	info	0.577389	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.577448	-	pci 0000:00:17.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577448	-	 SUBSYSTEM=pci
+kern	info	0.577448	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.577505	-	pci 0000:00:17.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577505	-	 SUBSYSTEM=pci
+kern	info	0.577505	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.577565	-	pci 0000:00:17.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577565	-	 SUBSYSTEM=pci
+kern	info	0.577565	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.577622	-	pci 0000:00:17.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577622	-	 SUBSYSTEM=pci
+kern	info	0.577622	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.577682	-	pci 0000:00:17.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577682	-	 SUBSYSTEM=pci
+kern	info	0.577682	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.577746	-	pci 0000:00:17.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577746	-	 SUBSYSTEM=pci
+kern	info	0.577746	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.577806	-	pci 0000:00:16.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577806	-	 SUBSYSTEM=pci
+kern	info	0.577806	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.577863	-	pci 0000:00:16.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577863	-	 SUBSYSTEM=pci
+kern	info	0.577863	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.577922	-	pci 0000:00:16.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.577922	-	 SUBSYSTEM=pci
+kern	info	0.577922	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.577979	-	pci 0000:00:16.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.577979	-	 SUBSYSTEM=pci
+kern	info	0.577979	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.578038	-	pci 0000:00:16.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578038	-	 SUBSYSTEM=pci
+kern	info	0.578038	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.578095	-	pci 0000:00:16.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578095	-	 SUBSYSTEM=pci
+kern	info	0.578095	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.578154	-	pci 0000:00:16.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578154	-	 SUBSYSTEM=pci
+kern	info	0.578154	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.578211	-	pci 0000:00:16.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578211	-	 SUBSYSTEM=pci
+kern	info	0.578211	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.578271	-	pci 0000:00:16.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578271	-	 SUBSYSTEM=pci
+kern	info	0.578271	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.578328	-	pci 0000:00:16.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578328	-	 SUBSYSTEM=pci
+kern	info	0.578328	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.578387	-	pci 0000:00:15.7: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578387	-	 SUBSYSTEM=pci
+kern	info	0.578387	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.578447	-	pci 0000:00:15.7: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578447	-	 SUBSYSTEM=pci
+kern	info	0.578447	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.578507	-	pci 0000:00:15.6: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578507	-	 SUBSYSTEM=pci
+kern	info	0.578507	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.578564	-	pci 0000:00:15.6: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578564	-	 SUBSYSTEM=pci
+kern	info	0.578564	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.578623	-	pci 0000:00:15.5: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578623	-	 SUBSYSTEM=pci
+kern	info	0.578623	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.578680	-	pci 0000:00:15.5: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578680	-	 SUBSYSTEM=pci
+kern	info	0.578680	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.578746	-	pci 0000:00:15.4: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578746	-	 SUBSYSTEM=pci
+kern	info	0.578746	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.578803	-	pci 0000:00:15.4: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578803	-	 SUBSYSTEM=pci
+kern	info	0.578803	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.578863	-	pci 0000:00:15.3: BAR 13: no space for [io  size 0x1000]
+kern	info	0.578863	-	 SUBSYSTEM=pci
+kern	info	0.578863	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.578927	-	pci 0000:00:15.3: BAR 13: failed to assign [io  size 0x1000]
+kern	info	0.578927	-	 SUBSYSTEM=pci
+kern	info	0.578927	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.578987	-	pci 0000:00:01.0: PCI bridge to [bus 01]
+kern	info	0.578987	-	 SUBSYSTEM=pci
+kern	info	0.578987	-	 DEVICE=+pci:0000:00:01.0
+kern	info	0.579101	-	pci 0000:02:01.0: BAR 6: assigned [mem 0xfd500000-0xfd50ffff pref]
+kern	info	0.579101	-	 SUBSYSTEM=pci
+kern	info	0.579101	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.579167	-	pci 0000:02:02.0: BAR 6: assigned [mem 0xfd510000-0xfd51ffff pref]
+kern	info	0.579167	-	 SUBSYSTEM=pci
+kern	info	0.579167	-	 DEVICE=+pci:0000:02:02.0
+kern	info	0.579233	-	pci 0000:02:04.0: BAR 6: assigned [mem 0xfd520000-0xfd52ffff pref]
+kern	info	0.579233	-	 SUBSYSTEM=pci
+kern	info	0.579233	-	 DEVICE=+pci:0000:02:04.0
+kern	info	0.579298	-	pci 0000:00:11.0: PCI bridge to [bus 02]
+kern	info	0.579298	-	 SUBSYSTEM=pci
+kern	info	0.579298	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.579356	-	pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+kern	info	0.579356	-	 SUBSYSTEM=pci
+kern	info	0.579356	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.579438	-	pci 0000:00:11.0:   bridge window [mem 0xfd500000-0xfdffffff]
+kern	info	0.579438	-	 SUBSYSTEM=pci
+kern	info	0.579438	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.579511	-	pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+kern	info	0.579511	-	 SUBSYSTEM=pci
+kern	info	0.579511	-	 DEVICE=+pci:0000:00:11.0
+kern	info	0.579606	-	pci 0000:00:15.0: PCI bridge to [bus 03]
+kern	info	0.579606	-	 SUBSYSTEM=pci
+kern	info	0.579606	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.579661	-	pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+kern	info	0.579661	-	 SUBSYSTEM=pci
+kern	info	0.579661	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.579744	-	pci 0000:00:15.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+kern	info	0.579744	-	 SUBSYSTEM=pci
+kern	info	0.579744	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.579821	-	pci 0000:00:15.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+kern	info	0.579821	-	 SUBSYSTEM=pci
+kern	info	0.579821	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.579918	-	pci 0000:00:15.1: PCI bridge to [bus 04]
+kern	info	0.579918	-	 SUBSYSTEM=pci
+kern	info	0.579918	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.579977	-	pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+kern	info	0.579977	-	 SUBSYSTEM=pci
+kern	info	0.579977	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.580056	-	pci 0000:00:15.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+kern	info	0.580056	-	 SUBSYSTEM=pci
+kern	info	0.580056	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.580129	-	pci 0000:00:15.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+kern	info	0.580129	-	 SUBSYSTEM=pci
+kern	info	0.580129	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.580224	-	pci 0000:00:15.2: PCI bridge to [bus 05]
+kern	info	0.580224	-	 SUBSYSTEM=pci
+kern	info	0.580224	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.580278	-	pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+kern	info	0.580278	-	 SUBSYSTEM=pci
+kern	info	0.580278	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.580353	-	pci 0000:00:15.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+kern	info	0.580353	-	 SUBSYSTEM=pci
+kern	info	0.580353	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.580430	-	pci 0000:00:15.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+kern	info	0.580430	-	 SUBSYSTEM=pci
+kern	info	0.580430	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.580525	-	pci 0000:00:15.3: PCI bridge to [bus 06]
+kern	info	0.580525	-	 SUBSYSTEM=pci
+kern	info	0.580525	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.580593	-	pci 0000:00:15.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+kern	info	0.580593	-	 SUBSYSTEM=pci
+kern	info	0.580593	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.580666	-	pci 0000:00:15.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+kern	info	0.580666	-	 SUBSYSTEM=pci
+kern	info	0.580666	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.580796	-	pci 0000:00:15.4: PCI bridge to [bus 07]
+kern	info	0.580796	-	 SUBSYSTEM=pci
+kern	info	0.580796	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.580890	-	pci 0000:00:15.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+kern	info	0.580890	-	 SUBSYSTEM=pci
+kern	info	0.580890	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.580992	-	pci 0000:00:15.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+kern	info	0.580992	-	 SUBSYSTEM=pci
+kern	info	0.580992	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.581102	-	pci 0000:00:15.5: PCI bridge to [bus 08]
+kern	info	0.581102	-	 SUBSYSTEM=pci
+kern	info	0.581102	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.581170	-	pci 0000:00:15.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+kern	info	0.581170	-	 SUBSYSTEM=pci
+kern	info	0.581170	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.581246	-	pci 0000:00:15.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+kern	info	0.581246	-	 SUBSYSTEM=pci
+kern	info	0.581246	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.581350	-	pci 0000:00:15.6: PCI bridge to [bus 09]
+kern	info	0.581350	-	 SUBSYSTEM=pci
+kern	info	0.581350	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.581418	-	pci 0000:00:15.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+kern	info	0.581418	-	 SUBSYSTEM=pci
+kern	info	0.581418	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.581494	-	pci 0000:00:15.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+kern	info	0.581494	-	 SUBSYSTEM=pci
+kern	info	0.581494	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.581589	-	pci 0000:00:15.7: PCI bridge to [bus 0a]
+kern	info	0.581589	-	 SUBSYSTEM=pci
+kern	info	0.581589	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.581656	-	pci 0000:00:15.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+kern	info	0.581656	-	 SUBSYSTEM=pci
+kern	info	0.581656	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.581740	-	pci 0000:00:15.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+kern	info	0.581740	-	 SUBSYSTEM=pci
+kern	info	0.581740	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.581838	-	pci 0000:00:16.0: PCI bridge to [bus 0b]
+kern	info	0.581838	-	 SUBSYSTEM=pci
+kern	info	0.581838	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.581894	-	pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+kern	info	0.581894	-	 SUBSYSTEM=pci
+kern	info	0.581894	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.581971	-	pci 0000:00:16.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+kern	info	0.581971	-	 SUBSYSTEM=pci
+kern	info	0.581971	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.582047	-	pci 0000:00:16.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+kern	info	0.582047	-	 SUBSYSTEM=pci
+kern	info	0.582047	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.582146	-	pci 0000:00:16.1: PCI bridge to [bus 0c]
+kern	info	0.582146	-	 SUBSYSTEM=pci
+kern	info	0.582146	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.582201	-	pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+kern	info	0.582201	-	 SUBSYSTEM=pci
+kern	info	0.582201	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.582276	-	pci 0000:00:16.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+kern	info	0.582276	-	 SUBSYSTEM=pci
+kern	info	0.582276	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.582349	-	pci 0000:00:16.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+kern	info	0.582349	-	 SUBSYSTEM=pci
+kern	info	0.582349	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.582449	-	pci 0000:00:16.2: PCI bridge to [bus 0d]
+kern	info	0.582449	-	 SUBSYSTEM=pci
+kern	info	0.582449	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.582504	-	pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+kern	info	0.582504	-	 SUBSYSTEM=pci
+kern	info	0.582504	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.582584	-	pci 0000:00:16.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+kern	info	0.582584	-	 SUBSYSTEM=pci
+kern	info	0.582584	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.582658	-	pci 0000:00:16.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+kern	info	0.582658	-	 SUBSYSTEM=pci
+kern	info	0.582658	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.582764	-	pci 0000:00:16.3: PCI bridge to [bus 0e]
+kern	info	0.582764	-	 SUBSYSTEM=pci
+kern	info	0.582764	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.582832	-	pci 0000:00:16.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+kern	info	0.582832	-	 SUBSYSTEM=pci
+kern	info	0.582832	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.582907	-	pci 0000:00:16.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+kern	info	0.582907	-	 SUBSYSTEM=pci
+kern	info	0.582907	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.583610	-	pci 0000:00:16.4: PCI bridge to [bus 0f]
+kern	info	0.583610	-	 SUBSYSTEM=pci
+kern	info	0.583610	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.583678	-	pci 0000:00:16.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+kern	info	0.583678	-	 SUBSYSTEM=pci
+kern	info	0.583678	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.583759	-	pci 0000:00:16.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+kern	info	0.583759	-	 SUBSYSTEM=pci
+kern	info	0.583759	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.583856	-	pci 0000:00:16.5: PCI bridge to [bus 10]
+kern	info	0.583856	-	 SUBSYSTEM=pci
+kern	info	0.583856	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.583926	-	pci 0000:00:16.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+kern	info	0.583926	-	 SUBSYSTEM=pci
+kern	info	0.583926	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.583999	-	pci 0000:00:16.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+kern	info	0.583999	-	 SUBSYSTEM=pci
+kern	info	0.583999	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.584095	-	pci 0000:00:16.6: PCI bridge to [bus 11]
+kern	info	0.584095	-	 SUBSYSTEM=pci
+kern	info	0.584095	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.584163	-	pci 0000:00:16.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+kern	info	0.584163	-	 SUBSYSTEM=pci
+kern	info	0.584163	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.584238	-	pci 0000:00:16.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+kern	info	0.584238	-	 SUBSYSTEM=pci
+kern	info	0.584238	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.584333	-	pci 0000:00:16.7: PCI bridge to [bus 12]
+kern	info	0.584333	-	 SUBSYSTEM=pci
+kern	info	0.584333	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.584399	-	pci 0000:00:16.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+kern	info	0.584399	-	 SUBSYSTEM=pci
+kern	info	0.584399	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.584473	-	pci 0000:00:16.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+kern	info	0.584473	-	 SUBSYSTEM=pci
+kern	info	0.584473	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.584570	-	pci 0000:00:17.0: PCI bridge to [bus 13]
+kern	info	0.584570	-	 SUBSYSTEM=pci
+kern	info	0.584570	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.584624	-	pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+kern	info	0.584624	-	 SUBSYSTEM=pci
+kern	info	0.584624	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.584698	-	pci 0000:00:17.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+kern	info	0.584698	-	 SUBSYSTEM=pci
+kern	info	0.584698	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.584784	-	pci 0000:00:17.0:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+kern	info	0.584784	-	 SUBSYSTEM=pci
+kern	info	0.584784	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.584885	-	pci 0000:00:17.1: PCI bridge to [bus 14]
+kern	info	0.584885	-	 SUBSYSTEM=pci
+kern	info	0.584885	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.584939	-	pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+kern	info	0.584939	-	 SUBSYSTEM=pci
+kern	info	0.584939	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.585014	-	pci 0000:00:17.1:   bridge window [mem 0xfce00000-0xfcefffff]
+kern	info	0.585014	-	 SUBSYSTEM=pci
+kern	info	0.585014	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.585087	-	pci 0000:00:17.1:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+kern	info	0.585087	-	 SUBSYSTEM=pci
+kern	info	0.585087	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.585182	-	pci 0000:00:17.2: PCI bridge to [bus 15]
+kern	info	0.585182	-	 SUBSYSTEM=pci
+kern	info	0.585182	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.585236	-	pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+kern	info	0.585236	-	 SUBSYSTEM=pci
+kern	info	0.585236	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.585310	-	pci 0000:00:17.2:   bridge window [mem 0xfca00000-0xfcafffff]
+kern	info	0.585310	-	 SUBSYSTEM=pci
+kern	info	0.585310	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.585384	-	pci 0000:00:17.2:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+kern	info	0.585384	-	 SUBSYSTEM=pci
+kern	info	0.585384	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.585479	-	pci 0000:00:17.3: PCI bridge to [bus 16]
+kern	info	0.585479	-	 SUBSYSTEM=pci
+kern	info	0.585479	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.585547	-	pci 0000:00:17.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+kern	info	0.585547	-	 SUBSYSTEM=pci
+kern	info	0.585547	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.585620	-	pci 0000:00:17.3:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+kern	info	0.585620	-	 SUBSYSTEM=pci
+kern	info	0.585620	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.585722	-	pci 0000:00:17.4: PCI bridge to [bus 17]
+kern	info	0.585722	-	 SUBSYSTEM=pci
+kern	info	0.585722	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.585790	-	pci 0000:00:17.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+kern	info	0.585790	-	 SUBSYSTEM=pci
+kern	info	0.585790	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.585863	-	pci 0000:00:17.4:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+kern	info	0.585863	-	 SUBSYSTEM=pci
+kern	info	0.585863	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.585959	-	pci 0000:00:17.5: PCI bridge to [bus 18]
+kern	info	0.585959	-	 SUBSYSTEM=pci
+kern	info	0.585959	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.586026	-	pci 0000:00:17.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+kern	info	0.586026	-	 SUBSYSTEM=pci
+kern	info	0.586026	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.586100	-	pci 0000:00:17.5:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+kern	info	0.586100	-	 SUBSYSTEM=pci
+kern	info	0.586100	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.586195	-	pci 0000:00:17.6: PCI bridge to [bus 19]
+kern	info	0.586195	-	 SUBSYSTEM=pci
+kern	info	0.586195	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.586262	-	pci 0000:00:17.6:   bridge window [mem 0xfba00000-0xfbafffff]
+kern	info	0.586262	-	 SUBSYSTEM=pci
+kern	info	0.586262	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.586336	-	pci 0000:00:17.6:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+kern	info	0.586336	-	 SUBSYSTEM=pci
+kern	info	0.586336	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.586435	-	pci 0000:00:17.7: PCI bridge to [bus 1a]
+kern	info	0.586435	-	 SUBSYSTEM=pci
+kern	info	0.586435	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.586502	-	pci 0000:00:17.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+kern	info	0.586502	-	 SUBSYSTEM=pci
+kern	info	0.586502	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.586575	-	pci 0000:00:17.7:   bridge window [mem 0xe5c00000-0xe5cfffff 64bit pref]
+kern	info	0.586575	-	 SUBSYSTEM=pci
+kern	info	0.586575	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.586671	-	pci 0000:00:18.0: PCI bridge to [bus 1b]
+kern	info	0.586671	-	 SUBSYSTEM=pci
+kern	info	0.586671	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.586732	-	pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+kern	info	0.586732	-	 SUBSYSTEM=pci
+kern	info	0.586732	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.586807	-	pci 0000:00:18.0:   bridge window [mem 0xfd100000-0xfd1fffff]
+kern	info	0.586807	-	 SUBSYSTEM=pci
+kern	info	0.586807	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.586881	-	pci 0000:00:18.0:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+kern	info	0.586881	-	 SUBSYSTEM=pci
+kern	info	0.586881	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.586976	-	pci 0000:00:18.1: PCI bridge to [bus 1c]
+kern	info	0.586976	-	 SUBSYSTEM=pci
+kern	info	0.586976	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.587030	-	pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+kern	info	0.587030	-	 SUBSYSTEM=pci
+kern	info	0.587030	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.587105	-	pci 0000:00:18.1:   bridge window [mem 0xfcd00000-0xfcdfffff]
+kern	info	0.587105	-	 SUBSYSTEM=pci
+kern	info	0.587105	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.587179	-	pci 0000:00:18.1:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+kern	info	0.587179	-	 SUBSYSTEM=pci
+kern	info	0.587179	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.587274	-	pci 0000:00:18.2: PCI bridge to [bus 1d]
+kern	info	0.587274	-	 SUBSYSTEM=pci
+kern	info	0.587274	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.587341	-	pci 0000:00:18.2:   bridge window [mem 0xfc900000-0xfc9fffff]
+kern	info	0.587341	-	 SUBSYSTEM=pci
+kern	info	0.587341	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.587414	-	pci 0000:00:18.2:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+kern	info	0.587414	-	 SUBSYSTEM=pci
+kern	info	0.587414	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.587510	-	pci 0000:00:18.3: PCI bridge to [bus 1e]
+kern	info	0.587510	-	 SUBSYSTEM=pci
+kern	info	0.587510	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.587581	-	pci 0000:00:18.3:   bridge window [mem 0xfc500000-0xfc5fffff]
+kern	info	0.587581	-	 SUBSYSTEM=pci
+kern	info	0.587581	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.587656	-	pci 0000:00:18.3:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+kern	info	0.587656	-	 SUBSYSTEM=pci
+kern	info	0.587656	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.587761	-	pci 0000:00:18.4: PCI bridge to [bus 1f]
+kern	info	0.587761	-	 SUBSYSTEM=pci
+kern	info	0.587761	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.587829	-	pci 0000:00:18.4:   bridge window [mem 0xfc100000-0xfc1fffff]
+kern	info	0.587829	-	 SUBSYSTEM=pci
+kern	info	0.587829	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.587904	-	pci 0000:00:18.4:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+kern	info	0.587904	-	 SUBSYSTEM=pci
+kern	info	0.587904	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.588001	-	pci 0000:00:18.5: PCI bridge to [bus 20]
+kern	info	0.588001	-	 SUBSYSTEM=pci
+kern	info	0.588001	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.588069	-	pci 0000:00:18.5:   bridge window [mem 0xfbd00000-0xfbdfffff]
+kern	info	0.588069	-	 SUBSYSTEM=pci
+kern	info	0.588069	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.588142	-	pci 0000:00:18.5:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+kern	info	0.588142	-	 SUBSYSTEM=pci
+kern	info	0.588142	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.588237	-	pci 0000:00:18.6: PCI bridge to [bus 21]
+kern	info	0.588237	-	 SUBSYSTEM=pci
+kern	info	0.588237	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.588304	-	pci 0000:00:18.6:   bridge window [mem 0xfb900000-0xfb9fffff]
+kern	info	0.588304	-	 SUBSYSTEM=pci
+kern	info	0.588304	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.588377	-	pci 0000:00:18.6:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+kern	info	0.588377	-	 SUBSYSTEM=pci
+kern	info	0.588377	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.588472	-	pci 0000:00:18.7: PCI bridge to [bus 22]
+kern	info	0.588472	-	 SUBSYSTEM=pci
+kern	info	0.588472	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.588539	-	pci 0000:00:18.7:   bridge window [mem 0xfb500000-0xfb5fffff]
+kern	info	0.588539	-	 SUBSYSTEM=pci
+kern	info	0.588539	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.588612	-	pci 0000:00:18.7:   bridge window [mem 0xe5b00000-0xe5bfffff 64bit pref]
+kern	info	0.588612	-	 SUBSYSTEM=pci
+kern	info	0.588612	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.588708	-	pci_bus 0000:00: resource 4 [mem 0x000a0000-0x000bffff window]
+kern	info	0.588708	-	 SUBSYSTEM=pci_bus
+kern	info	0.588708	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.588777	-	pci_bus 0000:00: resource 5 [mem 0x000d0000-0x000d3fff window]
+kern	info	0.588777	-	 SUBSYSTEM=pci_bus
+kern	info	0.588777	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.588839	-	pci_bus 0000:00: resource 6 [mem 0x000d4000-0x000d7fff window]
+kern	info	0.588839	-	 SUBSYSTEM=pci_bus
+kern	info	0.588839	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.588901	-	pci_bus 0000:00: resource 7 [mem 0x000d8000-0x000dbfff window]
+kern	info	0.588901	-	 SUBSYSTEM=pci_bus
+kern	info	0.588901	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.588963	-	pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]
+kern	info	0.588963	-	 SUBSYSTEM=pci_bus
+kern	info	0.588963	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.589025	-	pci_bus 0000:00: resource 9 [io  0x0000-0x0cf7 window]
+kern	info	0.589025	-	 SUBSYSTEM=pci_bus
+kern	info	0.589025	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.589084	-	pci_bus 0000:00: resource 10 [io  0x0d00-0xfeff window]
+kern	info	0.589084	-	 SUBSYSTEM=pci_bus
+kern	info	0.589084	-	 DEVICE=+pci_bus:0000:00
+kern	info	0.589145	-	pci_bus 0000:02: resource 0 [io  0x2000-0x3fff]
+kern	info	0.589145	-	 SUBSYSTEM=pci_bus
+kern	info	0.589145	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589196	-	pci_bus 0000:02: resource 1 [mem 0xfd500000-0xfdffffff]
+kern	info	0.589196	-	 SUBSYSTEM=pci_bus
+kern	info	0.589196	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589253	-	pci_bus 0000:02: resource 2 [mem 0xe7b00000-0xe7ffffff 64bit pref]
+kern	info	0.589253	-	 SUBSYSTEM=pci_bus
+kern	info	0.589253	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589318	-	pci_bus 0000:02: resource 4 [mem 0x000a0000-0x000bffff window]
+kern	info	0.589318	-	 SUBSYSTEM=pci_bus
+kern	info	0.589318	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589378	-	pci_bus 0000:02: resource 5 [mem 0x000d0000-0x000d3fff window]
+kern	info	0.589378	-	 SUBSYSTEM=pci_bus
+kern	info	0.589378	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589439	-	pci_bus 0000:02: resource 6 [mem 0x000d4000-0x000d7fff window]
+kern	info	0.589439	-	 SUBSYSTEM=pci_bus
+kern	info	0.589439	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589500	-	pci_bus 0000:02: resource 7 [mem 0x000d8000-0x000dbfff window]
+kern	info	0.589500	-	 SUBSYSTEM=pci_bus
+kern	info	0.589500	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589560	-	pci_bus 0000:02: resource 8 [mem 0xc0000000-0xfebfffff window]
+kern	info	0.589560	-	 SUBSYSTEM=pci_bus
+kern	info	0.589560	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589621	-	pci_bus 0000:02: resource 9 [io  0x0000-0x0cf7 window]
+kern	info	0.589621	-	 SUBSYSTEM=pci_bus
+kern	info	0.589621	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589676	-	pci_bus 0000:02: resource 10 [io  0x0d00-0xfeff window]
+kern	info	0.589676	-	 SUBSYSTEM=pci_bus
+kern	info	0.589676	-	 DEVICE=+pci_bus:0000:02
+kern	info	0.589740	-	pci_bus 0000:03: resource 0 [io  0x4000-0x4fff]
+kern	info	0.589740	-	 SUBSYSTEM=pci_bus
+kern	info	0.589740	-	 DEVICE=+pci_bus:0000:03
+kern	info	0.589795	-	pci_bus 0000:03: resource 1 [mem 0xfd400000-0xfd4fffff]
+kern	info	0.589795	-	 SUBSYSTEM=pci_bus
+kern	info	0.589795	-	 DEVICE=+pci_bus:0000:03
+kern	info	0.589852	-	pci_bus 0000:03: resource 2 [mem 0xe7a00000-0xe7afffff 64bit pref]
+kern	info	0.589852	-	 SUBSYSTEM=pci_bus
+kern	info	0.589852	-	 DEVICE=+pci_bus:0000:03
+kern	info	0.589919	-	pci_bus 0000:04: resource 0 [io  0x8000-0x8fff]
+kern	info	0.589919	-	 SUBSYSTEM=pci_bus
+kern	info	0.589919	-	 DEVICE=+pci_bus:0000:04
+kern	info	0.589971	-	pci_bus 0000:04: resource 1 [mem 0xfd000000-0xfd0fffff]
+kern	info	0.589971	-	 SUBSYSTEM=pci_bus
+kern	info	0.589971	-	 DEVICE=+pci_bus:0000:04
+kern	info	0.590032	-	pci_bus 0000:04: resource 2 [mem 0xe7600000-0xe76fffff 64bit pref]
+kern	info	0.590032	-	 SUBSYSTEM=pci_bus
+kern	info	0.590032	-	 DEVICE=+pci_bus:0000:04
+kern	info	0.590097	-	pci_bus 0000:05: resource 0 [io  0xc000-0xcfff]
+kern	info	0.590097	-	 SUBSYSTEM=pci_bus
+kern	info	0.590097	-	 DEVICE=+pci_bus:0000:05
+kern	info	0.590148	-	pci_bus 0000:05: resource 1 [mem 0xfcc00000-0xfccfffff]
+kern	info	0.590148	-	 SUBSYSTEM=pci_bus
+kern	info	0.590148	-	 DEVICE=+pci_bus:0000:05
+kern	info	0.590204	-	pci_bus 0000:05: resource 2 [mem 0xe7200000-0xe72fffff 64bit pref]
+kern	info	0.590204	-	 SUBSYSTEM=pci_bus
+kern	info	0.590204	-	 DEVICE=+pci_bus:0000:05
+kern	info	0.590269	-	pci_bus 0000:06: resource 1 [mem 0xfc800000-0xfc8fffff]
+kern	info	0.590269	-	 SUBSYSTEM=pci_bus
+kern	info	0.590269	-	 DEVICE=+pci_bus:0000:06
+kern	info	0.590325	-	pci_bus 0000:06: resource 2 [mem 0xe6e00000-0xe6efffff 64bit pref]
+kern	info	0.590325	-	 SUBSYSTEM=pci_bus
+kern	info	0.590325	-	 DEVICE=+pci_bus:0000:06
+kern	info	0.590390	-	pci_bus 0000:07: resource 1 [mem 0xfc400000-0xfc4fffff]
+kern	info	0.590390	-	 SUBSYSTEM=pci_bus
+kern	info	0.590390	-	 DEVICE=+pci_bus:0000:07
+kern	info	0.590450	-	pci_bus 0000:07: resource 2 [mem 0xe6a00000-0xe6afffff 64bit pref]
+kern	info	0.590450	-	 SUBSYSTEM=pci_bus
+kern	info	0.590450	-	 DEVICE=+pci_bus:0000:07
+kern	info	0.590515	-	pci_bus 0000:08: resource 1 [mem 0xfc000000-0xfc0fffff]
+kern	info	0.590515	-	 SUBSYSTEM=pci_bus
+kern	info	0.590515	-	 DEVICE=+pci_bus:0000:08
+kern	info	0.590571	-	pci_bus 0000:08: resource 2 [mem 0xe6600000-0xe66fffff 64bit pref]
+kern	info	0.590571	-	 SUBSYSTEM=pci_bus
+kern	info	0.590571	-	 DEVICE=+pci_bus:0000:08
+kern	info	0.590636	-	pci_bus 0000:09: resource 1 [mem 0xfbc00000-0xfbcfffff]
+kern	info	0.590636	-	 SUBSYSTEM=pci_bus
+kern	info	0.590636	-	 DEVICE=+pci_bus:0000:09
+kern	info	0.590692	-	pci_bus 0000:09: resource 2 [mem 0xe6200000-0xe62fffff 64bit pref]
+kern	info	0.590692	-	 SUBSYSTEM=pci_bus
+kern	info	0.590692	-	 DEVICE=+pci_bus:0000:09
+kern	info	0.590765	-	pci_bus 0000:0a: resource 1 [mem 0xfb800000-0xfb8fffff]
+kern	info	0.590765	-	 SUBSYSTEM=pci_bus
+kern	info	0.590765	-	 DEVICE=+pci_bus:0000:0a
+kern	info	0.590821	-	pci_bus 0000:0a: resource 2 [mem 0xe5e00000-0xe5efffff 64bit pref]
+kern	info	0.590821	-	 SUBSYSTEM=pci_bus
+kern	info	0.590821	-	 DEVICE=+pci_bus:0000:0a
+kern	info	0.590890	-	pci_bus 0000:0b: resource 0 [io  0x5000-0x5fff]
+kern	info	0.590890	-	 SUBSYSTEM=pci_bus
+kern	info	0.590890	-	 DEVICE=+pci_bus:0000:0b
+kern	info	0.590941	-	pci_bus 0000:0b: resource 1 [mem 0xfd300000-0xfd3fffff]
+kern	info	0.590941	-	 SUBSYSTEM=pci_bus
+kern	info	0.590941	-	 DEVICE=+pci_bus:0000:0b
+kern	info	0.590997	-	pci_bus 0000:0b: resource 2 [mem 0xe7900000-0xe79fffff 64bit pref]
+kern	info	0.590997	-	 SUBSYSTEM=pci_bus
+kern	info	0.590997	-	 DEVICE=+pci_bus:0000:0b
+kern	info	0.591062	-	pci_bus 0000:0c: resource 0 [io  0x9000-0x9fff]
+kern	info	0.591062	-	 SUBSYSTEM=pci_bus
+kern	info	0.591062	-	 DEVICE=+pci_bus:0000:0c
+kern	info	0.591113	-	pci_bus 0000:0c: resource 1 [mem 0xfcf00000-0xfcffffff]
+kern	info	0.591113	-	 SUBSYSTEM=pci_bus
+kern	info	0.591113	-	 DEVICE=+pci_bus:0000:0c
+kern	info	0.591169	-	pci_bus 0000:0c: resource 2 [mem 0xe7500000-0xe75fffff 64bit pref]
+kern	info	0.591169	-	 SUBSYSTEM=pci_bus
+kern	info	0.591169	-	 DEVICE=+pci_bus:0000:0c
+kern	info	0.591234	-	pci_bus 0000:0d: resource 0 [io  0xd000-0xdfff]
+kern	info	0.591234	-	 SUBSYSTEM=pci_bus
+kern	info	0.591234	-	 DEVICE=+pci_bus:0000:0d
+kern	info	0.591289	-	pci_bus 0000:0d: resource 1 [mem 0xfcb00000-0xfcbfffff]
+kern	info	0.591289	-	 SUBSYSTEM=pci_bus
+kern	info	0.591289	-	 DEVICE=+pci_bus:0000:0d
+kern	info	0.591345	-	pci_bus 0000:0d: resource 2 [mem 0xe7100000-0xe71fffff 64bit pref]
+kern	info	0.591345	-	 SUBSYSTEM=pci_bus
+kern	info	0.591345	-	 DEVICE=+pci_bus:0000:0d
+kern	info	0.591410	-	pci_bus 0000:0e: resource 1 [mem 0xfc700000-0xfc7fffff]
+kern	info	0.591410	-	 SUBSYSTEM=pci_bus
+kern	info	0.591410	-	 DEVICE=+pci_bus:0000:0e
+kern	info	0.591466	-	pci_bus 0000:0e: resource 2 [mem 0xe6d00000-0xe6dfffff 64bit pref]
+kern	info	0.591466	-	 SUBSYSTEM=pci_bus
+kern	info	0.591466	-	 DEVICE=+pci_bus:0000:0e
+kern	info	0.591531	-	pci_bus 0000:0f: resource 1 [mem 0xfc300000-0xfc3fffff]
+kern	info	0.591531	-	 SUBSYSTEM=pci_bus
+kern	info	0.591531	-	 DEVICE=+pci_bus:0000:0f
+kern	info	0.591587	-	pci_bus 0000:0f: resource 2 [mem 0xe6900000-0xe69fffff 64bit pref]
+kern	info	0.591587	-	 SUBSYSTEM=pci_bus
+kern	info	0.591587	-	 DEVICE=+pci_bus:0000:0f
+kern	info	0.591652	-	pci_bus 0000:10: resource 1 [mem 0xfbf00000-0xfbffffff]
+kern	info	0.591652	-	 SUBSYSTEM=pci_bus
+kern	info	0.591652	-	 DEVICE=+pci_bus:0000:10
+kern	info	0.591708	-	pci_bus 0000:10: resource 2 [mem 0xe6500000-0xe65fffff 64bit pref]
+kern	info	0.591708	-	 SUBSYSTEM=pci_bus
+kern	info	0.591708	-	 DEVICE=+pci_bus:0000:10
+kern	info	0.591783	-	pci_bus 0000:11: resource 1 [mem 0xfbb00000-0xfbbfffff]
+kern	info	0.591783	-	 SUBSYSTEM=pci_bus
+kern	info	0.591783	-	 DEVICE=+pci_bus:0000:11
+kern	info	0.591840	-	pci_bus 0000:11: resource 2 [mem 0xe6100000-0xe61fffff 64bit pref]
+kern	info	0.591840	-	 SUBSYSTEM=pci_bus
+kern	info	0.591840	-	 DEVICE=+pci_bus:0000:11
+kern	info	0.591907	-	pci_bus 0000:12: resource 1 [mem 0xfb700000-0xfb7fffff]
+kern	info	0.591907	-	 SUBSYSTEM=pci_bus
+kern	info	0.591907	-	 DEVICE=+pci_bus:0000:12
+kern	info	0.591964	-	pci_bus 0000:12: resource 2 [mem 0xe5d00000-0xe5dfffff 64bit pref]
+kern	info	0.591964	-	 SUBSYSTEM=pci_bus
+kern	info	0.591964	-	 DEVICE=+pci_bus:0000:12
+kern	info	0.592030	-	pci_bus 0000:13: resource 0 [io  0x6000-0x6fff]
+kern	info	0.592030	-	 SUBSYSTEM=pci_bus
+kern	info	0.592030	-	 DEVICE=+pci_bus:0000:13
+kern	info	0.592085	-	pci_bus 0000:13: resource 1 [mem 0xfd200000-0xfd2fffff]
+kern	info	0.592085	-	 SUBSYSTEM=pci_bus
+kern	info	0.592085	-	 DEVICE=+pci_bus:0000:13
+kern	info	0.592141	-	pci_bus 0000:13: resource 2 [mem 0xe7800000-0xe78fffff 64bit pref]
+kern	info	0.592141	-	 SUBSYSTEM=pci_bus
+kern	info	0.592141	-	 DEVICE=+pci_bus:0000:13
+kern	info	0.592206	-	pci_bus 0000:14: resource 0 [io  0xa000-0xafff]
+kern	info	0.592206	-	 SUBSYSTEM=pci_bus
+kern	info	0.592206	-	 DEVICE=+pci_bus:0000:14
+kern	info	0.592257	-	pci_bus 0000:14: resource 1 [mem 0xfce00000-0xfcefffff]
+kern	info	0.592257	-	 SUBSYSTEM=pci_bus
+kern	info	0.592257	-	 DEVICE=+pci_bus:0000:14
+kern	info	0.592313	-	pci_bus 0000:14: resource 2 [mem 0xe7400000-0xe74fffff 64bit pref]
+kern	info	0.592313	-	 SUBSYSTEM=pci_bus
+kern	info	0.592313	-	 DEVICE=+pci_bus:0000:14
+kern	info	0.592378	-	pci_bus 0000:15: resource 0 [io  0xe000-0xefff]
+kern	info	0.592378	-	 SUBSYSTEM=pci_bus
+kern	info	0.592378	-	 DEVICE=+pci_bus:0000:15
+kern	info	0.592429	-	pci_bus 0000:15: resource 1 [mem 0xfca00000-0xfcafffff]
+kern	info	0.592429	-	 SUBSYSTEM=pci_bus
+kern	info	0.592429	-	 DEVICE=+pci_bus:0000:15
+kern	info	0.592485	-	pci_bus 0000:15: resource 2 [mem 0xe7000000-0xe70fffff 64bit pref]
+kern	info	0.592485	-	 SUBSYSTEM=pci_bus
+kern	info	0.592485	-	 DEVICE=+pci_bus:0000:15
+kern	info	0.592550	-	pci_bus 0000:16: resource 1 [mem 0xfc600000-0xfc6fffff]
+kern	info	0.592550	-	 SUBSYSTEM=pci_bus
+kern	info	0.592550	-	 DEVICE=+pci_bus:0000:16
+kern	info	0.592606	-	pci_bus 0000:16: resource 2 [mem 0xe6c00000-0xe6cfffff 64bit pref]
+kern	info	0.592606	-	 SUBSYSTEM=pci_bus
+kern	info	0.592606	-	 DEVICE=+pci_bus:0000:16
+kern	info	0.592671	-	pci_bus 0000:17: resource 1 [mem 0xfc200000-0xfc2fffff]
+kern	info	0.592671	-	 SUBSYSTEM=pci_bus
+kern	info	0.592671	-	 DEVICE=+pci_bus:0000:17
+kern	info	0.592735	-	pci_bus 0000:17: resource 2 [mem 0xe6800000-0xe68fffff 64bit pref]
+kern	info	0.592735	-	 SUBSYSTEM=pci_bus
+kern	info	0.592735	-	 DEVICE=+pci_bus:0000:17
+kern	info	0.592800	-	pci_bus 0000:18: resource 1 [mem 0xfbe00000-0xfbefffff]
+kern	info	0.592800	-	 SUBSYSTEM=pci_bus
+kern	info	0.592800	-	 DEVICE=+pci_bus:0000:18
+kern	info	0.592860	-	pci_bus 0000:18: resource 2 [mem 0xe6400000-0xe64fffff 64bit pref]
+kern	info	0.592860	-	 SUBSYSTEM=pci_bus
+kern	info	0.592860	-	 DEVICE=+pci_bus:0000:18
+kern	info	0.592925	-	pci_bus 0000:19: resource 1 [mem 0xfba00000-0xfbafffff]
+kern	info	0.592925	-	 SUBSYSTEM=pci_bus
+kern	info	0.592925	-	 DEVICE=+pci_bus:0000:19
+kern	info	0.593585	-	pci_bus 0000:19: resource 2 [mem 0xe6000000-0xe60fffff 64bit pref]
+kern	info	0.593585	-	 SUBSYSTEM=pci_bus
+kern	info	0.593585	-	 DEVICE=+pci_bus:0000:19
+kern	info	0.593651	-	pci_bus 0000:1a: resource 1 [mem 0xfb600000-0xfb6fffff]
+kern	info	0.593651	-	 SUBSYSTEM=pci_bus
+kern	info	0.593651	-	 DEVICE=+pci_bus:0000:1a
+kern	info	0.593707	-	pci_bus 0000:1a: resource 2 [mem 0xe5c00000-0xe5cfffff 64bit pref]
+kern	info	0.593707	-	 SUBSYSTEM=pci_bus
+kern	info	0.593707	-	 DEVICE=+pci_bus:0000:1a
+kern	info	0.593779	-	pci_bus 0000:1b: resource 0 [io  0x7000-0x7fff]
+kern	info	0.593779	-	 SUBSYSTEM=pci_bus
+kern	info	0.593779	-	 DEVICE=+pci_bus:0000:1b
+kern	info	0.593830	-	pci_bus 0000:1b: resource 1 [mem 0xfd100000-0xfd1fffff]
+kern	info	0.593830	-	 SUBSYSTEM=pci_bus
+kern	info	0.593830	-	 DEVICE=+pci_bus:0000:1b
+kern	info	0.593886	-	pci_bus 0000:1b: resource 2 [mem 0xe7700000-0xe77fffff 64bit pref]
+kern	info	0.593886	-	 SUBSYSTEM=pci_bus
+kern	info	0.593886	-	 DEVICE=+pci_bus:0000:1b
+kern	info	0.593955	-	pci_bus 0000:1c: resource 0 [io  0xb000-0xbfff]
+kern	info	0.593955	-	 SUBSYSTEM=pci_bus
+kern	info	0.593955	-	 DEVICE=+pci_bus:0000:1c
+kern	info	0.594006	-	pci_bus 0000:1c: resource 1 [mem 0xfcd00000-0xfcdfffff]
+kern	info	0.594006	-	 SUBSYSTEM=pci_bus
+kern	info	0.594006	-	 DEVICE=+pci_bus:0000:1c
+kern	info	0.594062	-	pci_bus 0000:1c: resource 2 [mem 0xe7300000-0xe73fffff 64bit pref]
+kern	info	0.594062	-	 SUBSYSTEM=pci_bus
+kern	info	0.594062	-	 DEVICE=+pci_bus:0000:1c
+kern	info	0.594127	-	pci_bus 0000:1d: resource 1 [mem 0xfc900000-0xfc9fffff]
+kern	info	0.594127	-	 SUBSYSTEM=pci_bus
+kern	info	0.594127	-	 DEVICE=+pci_bus:0000:1d
+kern	info	0.594183	-	pci_bus 0000:1d: resource 2 [mem 0xe6f00000-0xe6ffffff 64bit pref]
+kern	info	0.594183	-	 SUBSYSTEM=pci_bus
+kern	info	0.594183	-	 DEVICE=+pci_bus:0000:1d
+kern	info	0.594248	-	pci_bus 0000:1e: resource 1 [mem 0xfc500000-0xfc5fffff]
+kern	info	0.594248	-	 SUBSYSTEM=pci_bus
+kern	info	0.594248	-	 DEVICE=+pci_bus:0000:1e
+kern	info	0.594304	-	pci_bus 0000:1e: resource 2 [mem 0xe6b00000-0xe6bfffff 64bit pref]
+kern	info	0.594304	-	 SUBSYSTEM=pci_bus
+kern	info	0.594304	-	 DEVICE=+pci_bus:0000:1e
+kern	info	0.594369	-	pci_bus 0000:1f: resource 1 [mem 0xfc100000-0xfc1fffff]
+kern	info	0.594369	-	 SUBSYSTEM=pci_bus
+kern	info	0.594369	-	 DEVICE=+pci_bus:0000:1f
+kern	info	0.594428	-	pci_bus 0000:1f: resource 2 [mem 0xe6700000-0xe67fffff 64bit pref]
+kern	info	0.594428	-	 SUBSYSTEM=pci_bus
+kern	info	0.594428	-	 DEVICE=+pci_bus:0000:1f
+kern	info	0.594493	-	pci_bus 0000:20: resource 1 [mem 0xfbd00000-0xfbdfffff]
+kern	info	0.594493	-	 SUBSYSTEM=pci_bus
+kern	info	0.594493	-	 DEVICE=+pci_bus:0000:20
+kern	info	0.594557	-	pci_bus 0000:20: resource 2 [mem 0xe6300000-0xe63fffff 64bit pref]
+kern	info	0.594557	-	 SUBSYSTEM=pci_bus
+kern	info	0.594557	-	 DEVICE=+pci_bus:0000:20
+kern	info	0.594622	-	pci_bus 0000:21: resource 1 [mem 0xfb900000-0xfb9fffff]
+kern	info	0.594622	-	 SUBSYSTEM=pci_bus
+kern	info	0.594622	-	 DEVICE=+pci_bus:0000:21
+kern	info	0.594678	-	pci_bus 0000:21: resource 2 [mem 0xe5f00000-0xe5ffffff 64bit pref]
+kern	info	0.594678	-	 SUBSYSTEM=pci_bus
+kern	info	0.594678	-	 DEVICE=+pci_bus:0000:21
+kern	info	0.594751	-	pci_bus 0000:22: resource 1 [mem 0xfb500000-0xfb5fffff]
+kern	info	0.594751	-	 SUBSYSTEM=pci_bus
+kern	info	0.594751	-	 DEVICE=+pci_bus:0000:22
+kern	info	0.594807	-	pci_bus 0000:22: resource 2 [mem 0xe5b00000-0xe5bfffff 64bit pref]
+kern	info	0.594807	-	 SUBSYSTEM=pci_bus
+kern	info	0.594807	-	 DEVICE=+pci_bus:0000:22
+kern	info	0.595015	-	NET: Registered protocol family 2
+kern	info	0.595255	-	IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+kern	info	0.596312	-	tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+kern	info	0.596588	-	TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+kern	info	0.596826	-	TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+kern	info	0.596910	-	TCP: Hash tables configured (established 32768 bind 32768)
+kern	info	0.597138	-	UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+kern	info	0.597218	-	UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+kern	info	0.597389	-	NET: Registered protocol family 1
+kern	info	0.597435	-	NET: Registered protocol family 44
+kern	info	0.597481	-	pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+kern	info	0.597481	-	 SUBSYSTEM=pci
+kern	info	0.597481	-	 DEVICE=+pci:0000:00:00.0
+kern	info	0.597608	-	pci 0000:00:0f.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+kern	info	0.597608	-	 SUBSYSTEM=pci
+kern	info	0.597608	-	 DEVICE=+pci:0000:00:0f.0
+kern	info	0.598505	-	pci 0000:02:01.0: CLS mismatch (32 != 64), using 64 bytes
+kern	info	0.598505	-	 SUBSYSTEM=pci
+kern	info	0.598505	-	 DEVICE=+pci:0000:02:01.0
+kern	info	0.598610	-	Trying to unpack rootfs image as initramfs...
+kern	info	0.755918	-	Freeing initrd memory: 90800K
+kern	info	0.756014	-	PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+kern	info	0.756075	-	software IO TLB: mapped [mem 0xbbed0000-0xbfed0000] (64MB)
+kern	info	0.756251	-	check: Scanning for low memory corruption every 60 seconds
+kern	notice	0.757388	-	Initialise system trusted keyrings
+kern	notice	0.757438	-	Key type blacklist registered
+kern	info	0.757766	-	workingset: timestamp_bits=36 max_order=20 bucket_order=0
+kern	info	0.758250	-	zbud: loaded
+kern	info	0.758444	-	squashfs: version 4.0 (2009/01/31) Phillip Lougher
+kern	info	0.758941	-	fuse: init (API version 7.31)
+kern	notice	0.758988	-	*** VALIDATE fuse ***
+kern	notice	0.759023	-	*** VALIDATE fuse ***
+kern	notice	0.759217	-	Platform Keyring initialized
+kern	notice	0.760945	-	Key type asymmetric registered
+kern	notice	0.760987	-	Asymmetric key parser 'x509' registered
+kern	info	0.761036	-	Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+kern	info	0.761215	-	io scheduler mq-deadline registered
+kern	info	0.762065	-	pcieport 0000:00:15.0: PME: Signaling with IRQ 24
+kern	info	0.762065	-	 SUBSYSTEM=pci
+kern	info	0.762065	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.762173	-	pcieport 0000:00:15.0: pciehp: Slot #160 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.762173	-	 SUBSYSTEM=pci
+kern	info	0.762173	-	 DEVICE=+pci:0000:00:15.0
+kern	info	0.763174	-	pcieport 0000:00:15.1: PME: Signaling with IRQ 25
+kern	info	0.763174	-	 SUBSYSTEM=pci
+kern	info	0.763174	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.763283	-	pcieport 0000:00:15.1: pciehp: Slot #161 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.763283	-	 SUBSYSTEM=pci
+kern	info	0.763283	-	 DEVICE=+pci:0000:00:15.1
+kern	info	0.764181	-	pcieport 0000:00:15.2: PME: Signaling with IRQ 26
+kern	info	0.764181	-	 SUBSYSTEM=pci
+kern	info	0.764181	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.764286	-	pcieport 0000:00:15.2: pciehp: Slot #162 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.764286	-	 SUBSYSTEM=pci
+kern	info	0.764286	-	 DEVICE=+pci:0000:00:15.2
+kern	info	0.765141	-	pcieport 0000:00:15.3: PME: Signaling with IRQ 27
+kern	info	0.765141	-	 SUBSYSTEM=pci
+kern	info	0.765141	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.765246	-	pcieport 0000:00:15.3: pciehp: Slot #163 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.765246	-	 SUBSYSTEM=pci
+kern	info	0.765246	-	 DEVICE=+pci:0000:00:15.3
+kern	info	0.766093	-	pcieport 0000:00:15.4: PME: Signaling with IRQ 28
+kern	info	0.766093	-	 SUBSYSTEM=pci
+kern	info	0.766093	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.766198	-	pcieport 0000:00:15.4: pciehp: Slot #164 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.766198	-	 SUBSYSTEM=pci
+kern	info	0.766198	-	 DEVICE=+pci:0000:00:15.4
+kern	info	0.767077	-	pcieport 0000:00:15.5: PME: Signaling with IRQ 29
+kern	info	0.767077	-	 SUBSYSTEM=pci
+kern	info	0.767077	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.767184	-	pcieport 0000:00:15.5: pciehp: Slot #165 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.767184	-	 SUBSYSTEM=pci
+kern	info	0.767184	-	 DEVICE=+pci:0000:00:15.5
+kern	info	0.768159	-	pcieport 0000:00:15.6: PME: Signaling with IRQ 30
+kern	info	0.768159	-	 SUBSYSTEM=pci
+kern	info	0.768159	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.768299	-	pcieport 0000:00:15.6: pciehp: Slot #166 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.768299	-	 SUBSYSTEM=pci
+kern	info	0.768299	-	 DEVICE=+pci:0000:00:15.6
+kern	info	0.769125	-	pcieport 0000:00:15.7: PME: Signaling with IRQ 31
+kern	info	0.769125	-	 SUBSYSTEM=pci
+kern	info	0.769125	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.769234	-	pcieport 0000:00:15.7: pciehp: Slot #167 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.769234	-	 SUBSYSTEM=pci
+kern	info	0.769234	-	 DEVICE=+pci:0000:00:15.7
+kern	info	0.770148	-	pcieport 0000:00:16.0: PME: Signaling with IRQ 32
+kern	info	0.770148	-	 SUBSYSTEM=pci
+kern	info	0.770148	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.770260	-	pcieport 0000:00:16.0: pciehp: Slot #192 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.770260	-	 SUBSYSTEM=pci
+kern	info	0.770260	-	 DEVICE=+pci:0000:00:16.0
+kern	info	0.771069	-	pcieport 0000:00:16.1: PME: Signaling with IRQ 33
+kern	info	0.771069	-	 SUBSYSTEM=pci
+kern	info	0.771069	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.771178	-	pcieport 0000:00:16.1: pciehp: Slot #193 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.771178	-	 SUBSYSTEM=pci
+kern	info	0.771178	-	 DEVICE=+pci:0000:00:16.1
+kern	info	0.772046	-	pcieport 0000:00:16.2: PME: Signaling with IRQ 34
+kern	info	0.772046	-	 SUBSYSTEM=pci
+kern	info	0.772046	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.772150	-	pcieport 0000:00:16.2: pciehp: Slot #194 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.772150	-	 SUBSYSTEM=pci
+kern	info	0.772150	-	 DEVICE=+pci:0000:00:16.2
+kern	info	0.772946	-	pcieport 0000:00:16.3: PME: Signaling with IRQ 35
+kern	info	0.772946	-	 SUBSYSTEM=pci
+kern	info	0.772946	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.773057	-	pcieport 0000:00:16.3: pciehp: Slot #195 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.773057	-	 SUBSYSTEM=pci
+kern	info	0.773057	-	 DEVICE=+pci:0000:00:16.3
+kern	info	0.773852	-	pcieport 0000:00:16.4: PME: Signaling with IRQ 36
+kern	info	0.773852	-	 SUBSYSTEM=pci
+kern	info	0.773852	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.773958	-	pcieport 0000:00:16.4: pciehp: Slot #196 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.773958	-	 SUBSYSTEM=pci
+kern	info	0.773958	-	 DEVICE=+pci:0000:00:16.4
+kern	info	0.774770	-	pcieport 0000:00:16.5: PME: Signaling with IRQ 37
+kern	info	0.774770	-	 SUBSYSTEM=pci
+kern	info	0.774770	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.774879	-	pcieport 0000:00:16.5: pciehp: Slot #197 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.774879	-	 SUBSYSTEM=pci
+kern	info	0.774879	-	 DEVICE=+pci:0000:00:16.5
+kern	info	0.775685	-	pcieport 0000:00:16.6: PME: Signaling with IRQ 38
+kern	info	0.775685	-	 SUBSYSTEM=pci
+kern	info	0.775685	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.775795	-	pcieport 0000:00:16.6: pciehp: Slot #198 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.775795	-	 SUBSYSTEM=pci
+kern	info	0.775795	-	 DEVICE=+pci:0000:00:16.6
+kern	info	0.776551	-	pcieport 0000:00:16.7: PME: Signaling with IRQ 39
+kern	info	0.776551	-	 SUBSYSTEM=pci
+kern	info	0.776551	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.776656	-	pcieport 0000:00:16.7: pciehp: Slot #199 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.776656	-	 SUBSYSTEM=pci
+kern	info	0.776656	-	 DEVICE=+pci:0000:00:16.7
+kern	info	0.777416	-	pcieport 0000:00:17.0: PME: Signaling with IRQ 40
+kern	info	0.777416	-	 SUBSYSTEM=pci
+kern	info	0.777416	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.777521	-	pcieport 0000:00:17.0: pciehp: Slot #224 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.777521	-	 SUBSYSTEM=pci
+kern	info	0.777521	-	 DEVICE=+pci:0000:00:17.0
+kern	info	0.778292	-	pcieport 0000:00:17.1: PME: Signaling with IRQ 41
+kern	info	0.778292	-	 SUBSYSTEM=pci
+kern	info	0.778292	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.778397	-	pcieport 0000:00:17.1: pciehp: Slot #225 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.778397	-	 SUBSYSTEM=pci
+kern	info	0.778397	-	 DEVICE=+pci:0000:00:17.1
+kern	info	0.779191	-	pcieport 0000:00:17.2: PME: Signaling with IRQ 42
+kern	info	0.779191	-	 SUBSYSTEM=pci
+kern	info	0.779191	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.779296	-	pcieport 0000:00:17.2: pciehp: Slot #226 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.779296	-	 SUBSYSTEM=pci
+kern	info	0.779296	-	 DEVICE=+pci:0000:00:17.2
+kern	info	0.780088	-	pcieport 0000:00:17.3: PME: Signaling with IRQ 43
+kern	info	0.780088	-	 SUBSYSTEM=pci
+kern	info	0.780088	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.780192	-	pcieport 0000:00:17.3: pciehp: Slot #227 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.780192	-	 SUBSYSTEM=pci
+kern	info	0.780192	-	 DEVICE=+pci:0000:00:17.3
+kern	info	0.780987	-	pcieport 0000:00:17.4: PME: Signaling with IRQ 44
+kern	info	0.780987	-	 SUBSYSTEM=pci
+kern	info	0.780987	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.781093	-	pcieport 0000:00:17.4: pciehp: Slot #228 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.781093	-	 SUBSYSTEM=pci
+kern	info	0.781093	-	 DEVICE=+pci:0000:00:17.4
+kern	info	0.781889	-	pcieport 0000:00:17.5: PME: Signaling with IRQ 45
+kern	info	0.781889	-	 SUBSYSTEM=pci
+kern	info	0.781889	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.782003	-	pcieport 0000:00:17.5: pciehp: Slot #229 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.782003	-	 SUBSYSTEM=pci
+kern	info	0.782003	-	 DEVICE=+pci:0000:00:17.5
+kern	info	0.782841	-	pcieport 0000:00:17.6: PME: Signaling with IRQ 46
+kern	info	0.782841	-	 SUBSYSTEM=pci
+kern	info	0.782841	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.782953	-	pcieport 0000:00:17.6: pciehp: Slot #230 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.782953	-	 SUBSYSTEM=pci
+kern	info	0.782953	-	 DEVICE=+pci:0000:00:17.6
+kern	info	0.783727	-	pcieport 0000:00:17.7: PME: Signaling with IRQ 47
+kern	info	0.783727	-	 SUBSYSTEM=pci
+kern	info	0.783727	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.783834	-	pcieport 0000:00:17.7: pciehp: Slot #231 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.783834	-	 SUBSYSTEM=pci
+kern	info	0.783834	-	 DEVICE=+pci:0000:00:17.7
+kern	info	0.784622	-	pcieport 0000:00:18.0: PME: Signaling with IRQ 48
+kern	info	0.784622	-	 SUBSYSTEM=pci
+kern	info	0.784622	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.784735	-	pcieport 0000:00:18.0: pciehp: Slot #256 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.784735	-	 SUBSYSTEM=pci
+kern	info	0.784735	-	 DEVICE=+pci:0000:00:18.0
+kern	info	0.785480	-	pcieport 0000:00:18.1: PME: Signaling with IRQ 49
+kern	info	0.785480	-	 SUBSYSTEM=pci
+kern	info	0.785480	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.785586	-	pcieport 0000:00:18.1: pciehp: Slot #257 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.785586	-	 SUBSYSTEM=pci
+kern	info	0.785586	-	 DEVICE=+pci:0000:00:18.1
+kern	info	0.786351	-	pcieport 0000:00:18.2: PME: Signaling with IRQ 50
+kern	info	0.786351	-	 SUBSYSTEM=pci
+kern	info	0.786351	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.786471	-	pcieport 0000:00:18.2: pciehp: Slot #258 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.786471	-	 SUBSYSTEM=pci
+kern	info	0.786471	-	 DEVICE=+pci:0000:00:18.2
+kern	info	0.787217	-	pcieport 0000:00:18.3: PME: Signaling with IRQ 51
+kern	info	0.787217	-	 SUBSYSTEM=pci
+kern	info	0.787217	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.787324	-	pcieport 0000:00:18.3: pciehp: Slot #259 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.787324	-	 SUBSYSTEM=pci
+kern	info	0.787324	-	 DEVICE=+pci:0000:00:18.3
+kern	info	0.788126	-	pcieport 0000:00:18.4: PME: Signaling with IRQ 52
+kern	info	0.788126	-	 SUBSYSTEM=pci
+kern	info	0.788126	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.788236	-	pcieport 0000:00:18.4: pciehp: Slot #260 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.788236	-	 SUBSYSTEM=pci
+kern	info	0.788236	-	 DEVICE=+pci:0000:00:18.4
+kern	info	0.789023	-	pcieport 0000:00:18.5: PME: Signaling with IRQ 53
+kern	info	0.789023	-	 SUBSYSTEM=pci
+kern	info	0.789023	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.789133	-	pcieport 0000:00:18.5: pciehp: Slot #261 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.789133	-	 SUBSYSTEM=pci
+kern	info	0.789133	-	 DEVICE=+pci:0000:00:18.5
+kern	info	0.790050	-	pcieport 0000:00:18.6: PME: Signaling with IRQ 54
+kern	info	0.790050	-	 SUBSYSTEM=pci
+kern	info	0.790050	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.790154	-	pcieport 0000:00:18.6: pciehp: Slot #262 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.790154	-	 SUBSYSTEM=pci
+kern	info	0.790154	-	 DEVICE=+pci:0000:00:18.6
+kern	info	0.790970	-	pcieport 0000:00:18.7: PME: Signaling with IRQ 55
+kern	info	0.790970	-	 SUBSYSTEM=pci
+kern	info	0.790970	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.791081	-	pcieport 0000:00:18.7: pciehp: Slot #263 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+kern	info	0.791081	-	 SUBSYSTEM=pci
+kern	info	0.791081	-	 DEVICE=+pci:0000:00:18.7
+kern	info	0.791572	-	shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+kern	debug	0.791682	-	intel_idle: does not run on family 6 model 186
+kern	info	0.791975	-	ACPI: AC Adapter [ACAD] (on-line)
+kern	info	0.792115	-	input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+kern	info	0.792209	-	ACPI: Power Button [PWRF]
+kern	info	0.792763	-	Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+kern	info	0.794548	-	Linux agpgart interface v0.103
+kern	info	0.794687	-	agpgart-intel 0000:00:00.0: Intel 440BX Chipset
+kern	info	0.794687	-	 SUBSYSTEM=pci
+kern	info	0.794687	-	 DEVICE=+pci:0000:00:00.0
+kern	info	0.795332	-	agpgart-intel 0000:00:00.0: AGP aperture is 256M @ 0x0
+kern	info	0.795332	-	 SUBSYSTEM=pci
+kern	info	0.795332	-	 DEVICE=+pci:0000:00:00.0
+kern	info	0.926576	-	loop: module loaded
+kern	debug	0.926875	-	ata_piix 0000:00:07.1: version 2.13
+kern	debug	0.926875	-	 SUBSYSTEM=pci
+kern	debug	0.926875	-	 DEVICE=+pci:0000:00:07.1
+kern	info	0.927269	-	scsi host0: ata_piix
+kern	info	0.927269	-	 SUBSYSTEM=scsi
+kern	info	0.927269	-	 DEVICE=+scsi:host0
+kern	info	0.927711	-	scsi host1: ata_piix
+kern	info	0.927711	-	 SUBSYSTEM=scsi
+kern	info	0.927711	-	 DEVICE=+scsi:host1
+kern	info	0.927777	-	ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0x1060 irq 14
+kern	info	0.927847	-	ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0x1068 irq 15
+kern	info	0.927974	-	tun: Universal TUN/TAP device driver, 1.6
+kern	info	0.928072	-	PPP generic driver version 2.4.2
+kern	info	0.928873	-	VFIO - User Level meta-driver version: 0.3
+kern	info	0.929130	-	ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+kern	info	0.929191	-	ehci-pci: EHCI PCI platform driver
+kern	info	0.929245	-	ehci-platform: EHCI generic platform driver
+kern	info	0.929296	-	ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+kern	info	0.929352	-	ohci-pci: OHCI PCI platform driver
+kern	info	0.929399	-	ohci-platform: OHCI generic platform driver
+kern	info	0.929450	-	uhci_hcd: USB Universal Host Controller Interface driver
+kern	info	0.929808	-	uhci_hcd 0000:02:00.0: UHCI Host Controller
+kern	info	0.929808	-	 SUBSYSTEM=pci
+kern	info	0.929808	-	 DEVICE=+pci:0000:02:00.0
+kern	info	0.929861	-	uhci_hcd 0000:02:00.0: new USB bus registered, assigned bus number 1
+kern	info	0.929861	-	 SUBSYSTEM=pci
+kern	info	0.929861	-	 DEVICE=+pci:0000:02:00.0
+kern	info	0.929956	-	uhci_hcd 0000:02:00.0: detected 2 ports
+kern	info	0.929956	-	 SUBSYSTEM=pci
+kern	info	0.929956	-	 DEVICE=+pci:0000:02:00.0
+kern	info	0.930099	-	uhci_hcd 0000:02:00.0: irq 18, io base 0x000020c0
+kern	info	0.930099	-	 SUBSYSTEM=pci
+kern	info	0.930099	-	 DEVICE=+pci:0000:02:00.0
+kern	info	0.930220	-	usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.04
+kern	info	0.930220	-	 SUBSYSTEM=usb
+kern	info	0.930220	-	 DEVICE=c189:0
+kern	info	0.930293	-	usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+kern	info	0.930293	-	 SUBSYSTEM=usb
+kern	info	0.930293	-	 DEVICE=c189:0
+kern	info	0.930358	-	usb usb1: Product: UHCI Host Controller
+kern	info	0.930358	-	 SUBSYSTEM=usb
+kern	info	0.930358	-	 DEVICE=c189:0
+kern	info	0.930418	-	usb usb1: Manufacturer: Linux 5.4.0-216-generic uhci_hcd
+kern	info	0.930418	-	 SUBSYSTEM=usb
+kern	info	0.930418	-	 DEVICE=c189:0
+kern	info	0.930476	-	usb usb1: SerialNumber: 0000:02:00.0
+kern	info	0.930476	-	 SUBSYSTEM=usb
+kern	info	0.930476	-	 DEVICE=c189:0
+kern	info	0.930614	-	hub 1-0:1.0: USB hub found
+kern	info	0.930614	-	 SUBSYSTEM=usb
+kern	info	0.930614	-	 DEVICE=+usb:1-0:1.0
+kern	info	0.930663	-	hub 1-0:1.0: 2 ports detected
+kern	info	0.930663	-	 SUBSYSTEM=usb
+kern	info	0.930663	-	 DEVICE=+usb:1-0:1.0
+kern	info	0.930823	-	i8042: PNP: PS/2 Controller [PNP0303:KBC,PNP0f13:MOUS] at 0x60,0x64 irq 1,12
+kern	info	0.931395	-	serio: i8042 KBD port at 0x60,0x64 irq 1
+kern	info	0.931445	-	serio: i8042 AUX port at 0x60,0x64 irq 12
+kern	info	0.931730	-	mousedev: PS/2 mouse device common for all mice
+kern	info	0.932262	-	rtc_cmos 00:01: registered as rtc0
+kern	info	0.932262	-	 SUBSYSTEM=pnp
+kern	info	0.932262	-	 DEVICE=+pnp:00:01
+kern	info	0.932343	-	rtc_cmos 00:01: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+kern	info	0.932343	-	 SUBSYSTEM=pnp
+kern	info	0.932343	-	 DEVICE=+pnp:00:01
+kern	info	0.932435	-	i2c /dev entries driver
+kern	info	0.932493	-	device-mapper: uevent: version 1.0.3
+kern	info	0.932615	-	device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+kern	info	0.932730	-	platform eisa.0: Probing EISA bus 0
+kern	info	0.932730	-	 SUBSYSTEM=platform
+kern	info	0.932730	-	 DEVICE=+platform:eisa.0
+kern	warn	0.932778	-	platform eisa.0: EISA: Cannot allocate resource for mainboard
+kern	warn	0.932778	-	 SUBSYSTEM=platform
+kern	warn	0.932778	-	 DEVICE=+platform:eisa.0
+kern	warn	0.932863	-	platform eisa.0: Cannot allocate resource for EISA slot 1
+kern	warn	0.932863	-	 SUBSYSTEM=platform
+kern	warn	0.932863	-	 DEVICE=+platform:eisa.0
+kern	warn	0.932939	-	platform eisa.0: Cannot allocate resource for EISA slot 2
+kern	warn	0.932939	-	 SUBSYSTEM=platform
+kern	warn	0.932939	-	 DEVICE=+platform:eisa.0
+kern	info	0.932966	-	input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+kern	warn	0.932998	-	platform eisa.0: Cannot allocate resource for EISA slot 3
+kern	warn	0.932998	-	 SUBSYSTEM=platform
+kern	warn	0.932998	-	 DEVICE=+platform:eisa.0
+kern	warn	0.933135	-	platform eisa.0: Cannot allocate resource for EISA slot 4
+kern	warn	0.933135	-	 SUBSYSTEM=platform
+kern	warn	0.933135	-	 DEVICE=+platform:eisa.0
+kern	warn	0.933196	-	platform eisa.0: Cannot allocate resource for EISA slot 5
+kern	warn	0.933196	-	 SUBSYSTEM=platform
+kern	warn	0.933196	-	 DEVICE=+platform:eisa.0
+kern	warn	0.933254	-	platform eisa.0: Cannot allocate resource for EISA slot 6
+kern	warn	0.933254	-	 SUBSYSTEM=platform
+kern	warn	0.933254	-	 DEVICE=+platform:eisa.0
+kern	warn	0.933311	-	platform eisa.0: Cannot allocate resource for EISA slot 7
+kern	warn	0.933311	-	 SUBSYSTEM=platform
+kern	warn	0.933311	-	 DEVICE=+platform:eisa.0
+kern	warn	0.933368	-	platform eisa.0: Cannot allocate resource for EISA slot 8
+kern	warn	0.933368	-	 SUBSYSTEM=platform
+kern	warn	0.933368	-	 DEVICE=+platform:eisa.0
+kern	info	0.933426	-	platform eisa.0: EISA: Detected 0 cards
+kern	info	0.933426	-	 SUBSYSTEM=platform
+kern	info	0.933426	-	 DEVICE=+platform:eisa.0
+kern	info	0.933473	-	intel_pstate: CPU model not supported
+kern	info	0.933696	-	ledtrig-cpu: registered to indicate activity on CPUs
+kern	info	0.933905	-	drop_monitor: Initializing network drop monitor service
+kern	info	0.934061	-	NET: Registered protocol family 10
+kern	info	0.937861	-	Segment Routing with IPv6
+kern	info	0.937916	-	NET: Registered protocol family 17
+kern	notice	0.938005	-	Key type dns_resolver registered
+kern	info	0.938393	-	RAS: Correctable Errors collector initialized.
+kern	info	0.938461	-	IPI shorthand broadcast: enabled
+kern	info	0.938512	-	sched_clock: Marking stable (920047588, 18400443)->(948855880, -10407849)
+kern	info	0.938723	-	registered taskstats version 1
+kern	notice	0.938771	-	Loading compiled-in X.509 certificates
+kern	notice	0.939242	-	Loaded X.509 cert 'Build time autogenerated kernel key: 14c36717ad359583ee32ae03fbd4065176a861b3'
+kern	notice	0.939574	-	Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+kern	notice	0.939916	-	Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+kern	notice	0.940003	-	blacklist: Loading compiled-in revocation X.509 certificates
+kern	notice	0.940071	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+kern	notice	0.940165	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+kern	notice	0.940263	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+kern	notice	0.940359	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+kern	notice	0.940452	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+kern	notice	0.940547	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+kern	notice	0.940658	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+kern	notice	0.940759	-	Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+kern	info	0.940908	-	zswap: loaded using pool lzo/zbud
+kern	notice	0.941192	-	Key type ._fscrypt registered
+kern	notice	0.941234	-	Key type .fscrypt registered
+kern	notice	0.945043	-	Key type big_key registered
+kern	notice	0.946612	-	Key type encrypted registered
+kern	info	0.946695	-	AppArmor: AppArmor sha1 policy hashing enabled
+kern	info	0.946779	-	ima: No TPM chip found, activating TPM-bypass!
+kern	info	0.946857	-	ima: Allocated hash algorithm: sha1
+kern	info	0.946927	-	ima: No architecture policies found
+kern	info	0.947003	-	evm: Initialising EVM extended attributes:
+kern	info	0.947075	-	evm: security.selinux
+kern	info	0.947126	-	evm: security.SMACK64
+kern	info	0.947177	-	evm: security.SMACK64EXEC
+kern	info	0.947232	-	evm: security.SMACK64TRANSMUTE
+kern	info	0.947291	-	evm: security.SMACK64MMAP
+kern	info	0.947346	-	evm: security.apparmor
+kern	info	0.947398	-	evm: security.ima
+kern	info	0.947446	-	evm: security.capability
+kern	info	0.947500	-	evm: HMAC attrs: 0x1
+kern	info	0.949019	-	PM:   Magic number: 5:46:42
+kern	info	0.949080	-	PM:   hash matches drivers/base/power/main.c:1563
+kern	info	0.949165	-	bdi 7:7: hash matches
+kern	info	0.949165	-	 SUBSYSTEM=bdi
+kern	info	0.949165	-	 DEVICE=+bdi:7:7
+kern	info	0.949560	-	rtc_cmos 00:01: setting system clock to 2025-12-27T19:02:01 UTC (1766862121)
+kern	info	0.949560	-	 SUBSYSTEM=pnp
+kern	info	0.949560	-	 DEVICE=+pnp:00:01
+kern	info	0.949900	-	clk: Disabling unused clocks
+kern	info	1.110225	-	Freeing unused decrypted memory: 2040K
+kern	info	1.110818	-	Freeing unused kernel image memory: 2772K
+kern	info	1.110880	-	Write protecting the kernel read-only data: 26624k
+kern	info	1.111552	-	Freeing unused kernel image memory: 2036K
+kern	info	1.111831	-	Freeing unused kernel image memory: 916K
+kern	info	1.116099	-	x86/mm: Checked W+X mappings: passed, no W+X pages found.
+kern	info	1.116160	-	Run /init as init process
+kern	info	1.170623	-	usb 1-1: new full-speed USB device number 2 using uhci_hcd
+kern	info	1.170623	-	 SUBSYSTEM=usb
+kern	info	1.170623	-	 DEVICE=+usb:1-1
+kern	info	1.328473	-	usb 1-1: New USB device found, idVendor=0e0f, idProduct=0003, bcdDevice= 1.03
+kern	info	1.328473	-	 SUBSYSTEM=usb
+kern	info	1.328473	-	 DEVICE=c189:1
+kern	info	1.328603	-	usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+kern	info	1.328603	-	 SUBSYSTEM=usb
+kern	info	1.328603	-	 DEVICE=c189:1
+kern	info	1.328674	-	usb 1-1: Product: VMware Virtual USB Mouse
+kern	info	1.328674	-	 SUBSYSTEM=usb
+kern	info	1.328674	-	 DEVICE=c189:1
+kern	info	1.328726	-	usb 1-1: Manufacturer: VMware
+kern	info	1.328726	-	 SUBSYSTEM=usb
+kern	info	1.328726	-	 DEVICE=c189:1
+kern	info	1.458563	-	usb 1-2: new full-speed USB device number 3 using uhci_hcd
+kern	info	1.458563	-	 SUBSYSTEM=usb
+kern	info	1.458563	-	 DEVICE=+usb:1-2
+kern	info	1.616412	-	usb 1-2: New USB device found, idVendor=0e0f, idProduct=0002, bcdDevice= 1.00
+kern	info	1.616412	-	 SUBSYSTEM=usb
+kern	info	1.616412	-	 DEVICE=c189:2
+kern	info	1.616502	-	usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+kern	info	1.616502	-	 SUBSYSTEM=usb
+kern	info	1.616502	-	 DEVICE=c189:2
+kern	info	1.616574	-	usb 1-2: Product: VMware Virtual USB Hub
+kern	info	1.616574	-	 SUBSYSTEM=usb
+kern	info	1.616574	-	 DEVICE=c189:2
+kern	info	1.616621	-	usb 1-2: Manufacturer: VMware, Inc.
+kern	info	1.616621	-	 SUBSYSTEM=usb
+kern	info	1.616621	-	 DEVICE=c189:2
+kern	info	1.621776	-	hub 1-2:1.0: USB hub found
+kern	info	1.621776	-	 SUBSYSTEM=usb
+kern	info	1.621776	-	 DEVICE=+usb:1-2:1.0
+kern	info	1.623866	-	hub 1-2:1.0: 7 ports detected
+kern	info	1.623866	-	 SUBSYSTEM=usb
+kern	info	1.623866	-	 DEVICE=+usb:1-2:1.0
+kern	info	1.635684	-	hidraw: raw HID events driver (C) Jiri Kosina
+kern	info	1.638660	-	usbcore: registered new interface driver usbhid
+kern	info	1.638716	-	usbhid: USB HID core driver
+kern	info	1.639961	-	input: VMware VMware Virtual USB Mouse as /devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb1/1-1/1-1:1.0/0003:0E0F:0003.0001/input/input3
+kern	info	1.640158	-	hid-generic 0003:0E0F:0003.0001: input,hidraw0: USB HID v1.10 Mouse [VMware VMware Virtual USB Mouse] on usb-0000:02:00.0-1/input0
+kern	info	1.640158	-	 SUBSYSTEM=hid
+kern	info	1.640158	-	 DEVICE=+hid:0003:0E0F:0003.0001
+kern	info	1.691492	-	Floppy drive(s): fd0 is 1.44M
+kern	info	1.711287	-	FDC 0 is a post-1991 82077
+kern	info	1.725574	-	Fusion MPT base driver 3.04.20
+kern	info	1.725635	-	Copyright (c) 1999-2008 LSI Corporation
+kern	info	1.751674	-	Fusion MPT SPI Host driver 3.04.20
+kern	err	1.751699	-	piix4_smbus 0000:00:07.3: SMBus Host Controller not enabled!
+kern	err	1.751699	-	 SUBSYSTEM=pci
+kern	err	1.751699	-	 DEVICE=+pci:0000:00:07.3
+kern	info	1.752610	-	e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+kern	info	1.752701	-	e1000: Copyright (c) 1999-2006 Intel Corporation.
+kern	info	1.753106	-	input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input5
+kern	debug	1.753252	-	ahci 0000:02:04.0: version 3.0
+kern	debug	1.753252	-	 SUBSYSTEM=pci
+kern	debug	1.753252	-	 DEVICE=+pci:0000:02:04.0
+kern	info	1.753549	-	input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+kern	info	1.754171	-	ahci 0000:02:04.0: AHCI 0001.0300 32 slots 30 ports 6 Gbps 0x3fffffff impl SATA mode
+kern	info	1.754171	-	 SUBSYSTEM=pci
+kern	info	1.754171	-	 DEVICE=+pci:0000:02:04.0
+kern	info	1.754282	-	ahci 0000:02:04.0: flags: 64bit ncq clo only 
+kern	info	1.754282	-	 SUBSYSTEM=pci
+kern	info	1.754282	-	 DEVICE=+pci:0000:02:04.0
+kern	info	1.754564	-	mptbase: ioc0: Initiating bringup
+kern	info	1.756755	-	cryptd: max_cpu_qlen set to 1000
+kern	info	1.759659	-	AVX2 version of gcm_enc/dec engaged.
+kern	info	1.759723	-	AES CTR mode by8 optimization enabled
+kern	info	1.760411	-	scsi host2: ahci
+kern	info	1.760411	-	 SUBSYSTEM=scsi
+kern	info	1.760411	-	 DEVICE=+scsi:host2
+kern	info	1.760567	-	scsi host3: ahci
+kern	info	1.760567	-	 SUBSYSTEM=scsi
+kern	info	1.760567	-	 DEVICE=+scsi:host3
+kern	info	1.760789	-	scsi host4: ahci
+kern	info	1.760789	-	 SUBSYSTEM=scsi
+kern	info	1.760789	-	 DEVICE=+scsi:host4
+kern	info	1.761337	-	scsi host5: ahci
+kern	info	1.761337	-	 SUBSYSTEM=scsi
+kern	info	1.761337	-	 DEVICE=+scsi:host5
+kern	info	1.761509	-	scsi host6: ahci
+kern	info	1.761509	-	 SUBSYSTEM=scsi
+kern	info	1.761509	-	 DEVICE=+scsi:host6
+kern	info	1.763411	-	scsi host7: ahci
+kern	info	1.763411	-	 SUBSYSTEM=scsi
+kern	info	1.763411	-	 DEVICE=+scsi:host7
+kern	info	1.765206	-	[drm] DMA map mode: Caching DMA mappings.
+kern	info	1.765379	-	[drm] Capabilities:
+kern	info	1.765422	-	[drm]   Rect copy.
+kern	info	1.765474	-	[drm]   Cursor.
+kern	info	1.765523	-	[drm]   Cursor bypass.
+kern	info	1.765567	-	[drm]   Cursor bypass 2.
+kern	info	1.765614	-	[drm]   8bit emulation.
+kern	info	1.765659	-	[drm]   Alpha cursor.
+kern	info	1.765703	-	[drm]   3D.
+kern	info	1.765740	-	[drm]   Extended Fifo.
+kern	info	1.765784	-	[drm]   Multimon.
+kern	info	1.765825	-	[drm]   Pitchlock.
+kern	info	1.765867	-	[drm]   Irq mask.
+kern	info	1.765908	-	[drm]   Display Topology.
+kern	info	1.765955	-	[drm]   GMR.
+kern	info	1.765992	-	[drm]   Traces.
+kern	info	1.766031	-	[drm]   GMR2.
+kern	info	1.766847	-	[drm]   Screen Object 2.
+kern	info	1.766894	-	[drm]   Command Buffers.
+kern	info	1.766941	-	[drm]   Command Buffers 2.
+kern	info	1.766989	-	[drm]   Guest Backed Resources.
+kern	info	1.767041	-	[drm]   DX Features.
+kern	info	1.767084	-	[drm]   HP Command Queue.
+kern	info	1.767131	-	[drm] Capabilities2:
+kern	info	1.767174	-	[drm]   Grow oTable.
+kern	info	1.767217	-	[drm]   IntraSurface copy.
+kern	info	1.767266	-	[drm] Max GMR ids is 64
+kern	info	1.767311	-	[drm] Max number of GMR pages is 65536
+kern	info	1.767369	-	[drm] Max dedicated hypervisor surface memory is 0 kiB
+kern	info	1.767439	-	[drm] Maximum display memory size is 262144 kiB
+kern	info	1.767513	-	[drm] VRAM at 0xe8000000 size is 131072 kiB
+kern	info	1.767575	-	[drm] MMIO at 0xfe000000 size is 256 kiB
+kern	info	1.767661	-	scsi host8: ahci
+kern	info	1.767661	-	 SUBSYSTEM=scsi
+kern	info	1.767661	-	 DEVICE=+scsi:host8
+kern	info	1.767875	-	scsi host9: ahci
+kern	info	1.767875	-	 SUBSYSTEM=scsi
+kern	info	1.767875	-	 DEVICE=+scsi:host9
+kern	info	1.767928	-	[TTM] Zone  kernel: Available graphics memory: 1990816 KiB
+kern	info	1.768008	-	[TTM] Initializing pool allocator
+kern	info	1.768063	-	[TTM] Initializing DMA pool allocator
+kern	info	1.768183	-	[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+kern	info	1.768258	-	[drm] No driver support for vblank timestamp query.
+kern	info	1.768514	-	[drm] Screen Target Display device initialized
+kern	info	1.768681	-	[drm] width 640
+kern	info	1.768727	-	[drm] height 480
+kern	info	1.768771	-	[drm] bpp 32
+kern	info	1.783907	-	[drm] Fifo max 0x00040000 min 0x00001000 cap 0x0000077f
+kern	info	1.784023	-	scsi host10: ahci
+kern	info	1.784023	-	 SUBSYSTEM=scsi
+kern	info	1.784023	-	 DEVICE=+scsi:host10
+kern	info	1.784326	-	scsi host11: ahci
+kern	info	1.784326	-	 SUBSYSTEM=scsi
+kern	info	1.784326	-	 DEVICE=+scsi:host11
+kern	info	1.784556	-	scsi host12: ahci
+kern	info	1.784556	-	 SUBSYSTEM=scsi
+kern	info	1.784556	-	 DEVICE=+scsi:host12
+kern	info	1.785608	-	[drm] Using command buffers with DMA pool.
+kern	info	1.785678	-	[drm] Atomic: yes.
+kern	info	1.785718	-	[drm] SM4_1 support available.
+kern	info	1.796635	-	scsi host13: ahci
+kern	info	1.796635	-	 SUBSYSTEM=scsi
+kern	info	1.796635	-	 DEVICE=+scsi:host13
+kern	info	1.796845	-	scsi host14: ahci
+kern	info	1.796845	-	 SUBSYSTEM=scsi
+kern	info	1.796845	-	 DEVICE=+scsi:host14
+kern	info	1.798552	-	tsc: Refined TSC clocksource calibration: 3187.201 MHz
+kern	info	1.798572	-	scsi host15: ahci
+kern	info	1.798572	-	 SUBSYSTEM=scsi
+kern	info	1.798572	-	 DEVICE=+scsi:host15
+kern	info	1.798657	-	clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2df10f7e2b0, max_idle_ns: 440795327577 ns
+kern	info	1.802814	-	clocksource: Switched to clocksource tsc
+kern	info	1.806186	-	scsi host16: ahci
+kern	info	1.806186	-	 SUBSYSTEM=scsi
+kern	info	1.806186	-	 DEVICE=+scsi:host16
+kern	info	1.806249	-	fbcon: svgadrmfb (fb0) is primary device
+kern	info	1.806690	-	scsi host17: ahci
+kern	info	1.806690	-	 SUBSYSTEM=scsi
+kern	info	1.806690	-	 DEVICE=+scsi:host17
+kern	info	1.806844	-	scsi host18: ahci
+kern	info	1.806844	-	 SUBSYSTEM=scsi
+kern	info	1.806844	-	 DEVICE=+scsi:host18
+kern	info	1.806990	-	scsi host19: ahci
+kern	info	1.806990	-	 SUBSYSTEM=scsi
+kern	info	1.806990	-	 DEVICE=+scsi:host19
+kern	info	1.807451	-	Console: switching to colour frame buffer device 100x37
+kern	info	1.808868	-	[drm] Initialized vmwgfx 2.15.0 20180704 for 0000:00:0f.0 on minor 0
+kern	info	1.809059	-	scsi host20: ahci
+kern	info	1.809059	-	 SUBSYSTEM=scsi
+kern	info	1.809059	-	 DEVICE=+scsi:host20
+kern	info	1.809837	-	scsi host21: ahci
+kern	info	1.809837	-	 SUBSYSTEM=scsi
+kern	info	1.809837	-	 DEVICE=+scsi:host21
+kern	info	1.810230	-	scsi host22: ahci
+kern	info	1.810230	-	 SUBSYSTEM=scsi
+kern	info	1.810230	-	 DEVICE=+scsi:host22
+kern	info	1.810469	-	scsi host23: ahci
+kern	info	1.810469	-	 SUBSYSTEM=scsi
+kern	info	1.810469	-	 DEVICE=+scsi:host23
+kern	info	1.810831	-	scsi host24: ahci
+kern	info	1.810831	-	 SUBSYSTEM=scsi
+kern	info	1.810831	-	 DEVICE=+scsi:host24
+kern	info	1.811039	-	scsi host25: ahci
+kern	info	1.811039	-	 SUBSYSTEM=scsi
+kern	info	1.811039	-	 DEVICE=+scsi:host25
+kern	info	1.811341	-	scsi host26: ahci
+kern	info	1.811341	-	 SUBSYSTEM=scsi
+kern	info	1.811341	-	 DEVICE=+scsi:host26
+kern	info	1.811933	-	scsi host27: ahci
+kern	info	1.811933	-	 SUBSYSTEM=scsi
+kern	info	1.811933	-	 DEVICE=+scsi:host27
+kern	info	1.812544	-	scsi host28: ahci
+kern	info	1.812544	-	 SUBSYSTEM=scsi
+kern	info	1.812544	-	 DEVICE=+scsi:host28
+kern	info	1.813074	-	scsi host29: ahci
+kern	info	1.813074	-	 SUBSYSTEM=scsi
+kern	info	1.813074	-	 DEVICE=+scsi:host29
+kern	info	1.813578	-	scsi host30: ahci
+kern	info	1.813578	-	 SUBSYSTEM=scsi
+kern	info	1.813578	-	 DEVICE=+scsi:host30
+kern	info	1.813809	-	scsi host31: ahci
+kern	info	1.813809	-	 SUBSYSTEM=scsi
+kern	info	1.813809	-	 DEVICE=+scsi:host31
+kern	info	1.813996	-	ata3: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f100 irq 56
+kern	info	1.814140	-	ata4: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f180 irq 56
+kern	info	1.814279	-	ata5: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f200 irq 56
+kern	info	1.814433	-	ata6: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f280 irq 56
+kern	info	1.814608	-	ata7: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f300 irq 56
+kern	info	1.814730	-	ata8: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f380 irq 56
+kern	info	1.814849	-	ata9: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f400 irq 56
+kern	info	1.814969	-	ata10: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f480 irq 56
+kern	info	1.815092	-	ata11: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f500 irq 56
+kern	info	1.815211	-	ata12: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f580 irq 56
+kern	info	1.815327	-	ata13: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f600 irq 56
+kern	info	1.815442	-	ata14: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f680 irq 56
+kern	info	1.815570	-	ata15: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f700 irq 56
+kern	info	1.815679	-	ata16: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f780 irq 56
+kern	info	1.815782	-	ata17: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f800 irq 56
+kern	info	1.815879	-	ata18: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f880 irq 56
+kern	info	1.815968	-	ata19: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f900 irq 56
+kern	info	1.816054	-	ata20: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59f980 irq 56
+kern	info	1.816135	-	ata21: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fa00 irq 56
+kern	info	1.816213	-	ata22: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fa80 irq 56
+kern	info	1.816286	-	ata23: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fb00 irq 56
+kern	info	1.816360	-	ata24: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fb80 irq 56
+kern	info	1.816433	-	ata25: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fc00 irq 56
+kern	info	1.816516	-	ata26: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fc80 irq 56
+kern	info	1.816581	-	ata27: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fd00 irq 56
+kern	info	1.816638	-	ata28: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fd80 irq 56
+kern	info	1.816695	-	ata29: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fe00 irq 56
+kern	info	1.816752	-	ata30: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59fe80 irq 56
+kern	info	1.816810	-	ata31: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59ff00 irq 56
+kern	info	1.816870	-	ata32: SATA max UDMA/133 abar m4096@0xfd59f000 port 0xfd59ff80 irq 56
+kern	info	1.874678	-	ioc0: LSI53C1030 B0: Capabilities={Initiator}
+kern	info	2.126955	-	scsi host32: ioc0: LSI53C1030 B0, FwRev=01032920h, Ports=1, MaxQ=128, IRQ=17
+kern	info	2.126955	-	 SUBSYSTEM=scsi
+kern	info	2.126955	-	 DEVICE=+scsi:host32
+kern	info	2.130498	-	ata5: SATA link down (SStatus 0 SControl 300)
+kern	info	2.130615	-	ata3: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+kern	info	2.130756	-	ata3.00: ATAPI: VMware Virtual SATA CDRW Drive, 00000001, max UDMA/33
+kern	info	2.130927	-	ata3.00: configured for UDMA/33
+kern	notice	2.131213	-	scsi 2:0:0:0: CD-ROM            NECVMWar VMware SATA CD00 1.00 PQ: 0 ANSI: 5
+kern	notice	2.131213	-	 SUBSYSTEM=scsi
+kern	notice	2.131213	-	 DEVICE=+scsi:2:0:0:0
+kern	info	2.131546	-	sr 2:0:0:0: [sr0] scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+kern	info	2.131546	-	 SUBSYSTEM=scsi
+kern	info	2.131546	-	 DEVICE=+scsi:2:0:0:0
+kern	info	2.131652	-	cdrom: Uniform CD-ROM driver Revision: 3.20
+kern	info	2.134471	-	ata21: SATA link down (SStatus 0 SControl 300)
+kern	info	2.134714	-	ata14: SATA link down (SStatus 0 SControl 300)
+kern	info	2.134871	-	ata9: SATA link down (SStatus 0 SControl 300)
+kern	info	2.135023	-	ata28: SATA link down (SStatus 0 SControl 300)
+kern	info	2.135025	-	e1000 0000:02:01.0 eth0: (PCI:66MHz:32-bit) 00:0c:29:3a:ab:ca
+kern	info	2.135025	-	 SUBSYSTEM=pci
+kern	info	2.135025	-	 DEVICE=+pci:0000:02:01.0
+kern	info	2.135183	-	ata15: SATA link down (SStatus 0 SControl 300)
+kern	info	2.135305	-	e1000 0000:02:01.0 eth0: Intel(R) PRO/1000 Network Connection
+kern	info	2.135305	-	 SUBSYSTEM=pci
+kern	info	2.135305	-	 DEVICE=+pci:0000:02:01.0
+kern	info	2.135454	-	ata8: SATA link down (SStatus 0 SControl 300)
+kern	info	2.135733	-	ata30: SATA link down (SStatus 0 SControl 300)
+kern	info	2.135899	-	ata23: SATA link down (SStatus 0 SControl 300)
+kern	info	2.136064	-	ata25: SATA link down (SStatus 0 SControl 300)
+kern	info	2.136230	-	ata27: SATA link down (SStatus 0 SControl 300)
+kern	info	2.136395	-	ata32: SATA link down (SStatus 0 SControl 300)
+kern	info	2.136566	-	ata16: SATA link down (SStatus 0 SControl 300)
+kern	info	2.136728	-	ata22: SATA link down (SStatus 0 SControl 300)
+kern	info	2.136885	-	ata12: SATA link down (SStatus 0 SControl 300)
+kern	info	2.137048	-	ata7: SATA link down (SStatus 0 SControl 300)
+kern	info	2.137209	-	ata18: SATA link down (SStatus 0 SControl 300)
+kern	info	2.137377	-	ata19: SATA link down (SStatus 0 SControl 300)
+kern	info	2.137554	-	ata13: SATA link down (SStatus 0 SControl 300)
+kern	info	2.137742	-	ata24: SATA link down (SStatus 0 SControl 300)
+kern	info	2.137904	-	ata4: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+kern	info	2.138085	-	ata4.00: ATAPI: VMware Virtual SATA CDRW Drive, 00000001, max UDMA/33
+kern	info	2.138279	-	ata4.00: configured for UDMA/33
+kern	info	2.138552	-	ata26: SATA link down (SStatus 0 SControl 300)
+kern	info	2.138736	-	ata31: SATA link down (SStatus 0 SControl 300)
+kern	info	2.138928	-	ata29: SATA link down (SStatus 0 SControl 300)
+kern	info	2.139098	-	ata10: SATA link down (SStatus 0 SControl 300)
+kern	info	2.139276	-	ata11: SATA link down (SStatus 0 SControl 300)
+kern	info	2.139462	-	ata17: SATA link down (SStatus 0 SControl 300)
+kern	info	2.139683	-	ata20: SATA link down (SStatus 0 SControl 300)
+kern	info	2.139835	-	ata6: SATA link down (SStatus 0 SControl 300)
+kern	debug	2.170450	-	sr 2:0:0:0: Attached scsi CD-ROM sr0
+kern	debug	2.170450	-	 SUBSYSTEM=scsi
+kern	debug	2.170450	-	 DEVICE=+scsi:2:0:0:0
+kern	notice	2.170589	-	sr 2:0:0:0: Attached scsi generic sg0 type 5
+kern	notice	2.170589	-	 SUBSYSTEM=scsi
+kern	notice	2.170589	-	 DEVICE=+scsi:2:0:0:0
+kern	notice	2.171030	-	scsi 3:0:0:0: CD-ROM            NECVMWar VMware SATA CD01 1.00 PQ: 0 ANSI: 5
+kern	notice	2.171030	-	 SUBSYSTEM=scsi
+kern	notice	2.171030	-	 DEVICE=+scsi:3:0:0:0
+kern	notice	2.302697	-	scsi 32:0:0:0: Direct-Access     VMware,  VMware Virtual S 1.0  PQ: 0 ANSI: 2
+kern	notice	2.302697	-	 SUBSYSTEM=scsi
+kern	notice	2.302697	-	 DEVICE=+scsi:32:0:0:0
+kern	info	2.390605	-	sr 3:0:0:0: [sr1] scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+kern	info	2.390605	-	 SUBSYSTEM=scsi
+kern	info	2.390605	-	 DEVICE=+scsi:3:0:0:0
+kern	info	2.474528	-	scsi target32:0:0: Beginning Domain Validation
+kern	info	2.474528	-	 SUBSYSTEM=scsi
+kern	info	2.474528	-	 DEVICE=+scsi:target32:0:0
+kern	info	2.475005	-	scsi target32:0:0: Domain Validation skipping write tests
+kern	info	2.475005	-	 SUBSYSTEM=scsi
+kern	info	2.475005	-	 DEVICE=+scsi:target32:0:0
+kern	info	2.475147	-	scsi target32:0:0: Ending Domain Validation
+kern	info	2.475147	-	 SUBSYSTEM=scsi
+kern	info	2.475147	-	 DEVICE=+scsi:target32:0:0
+kern	info	2.475307	-	scsi target32:0:0: FAST-40 WIDE SCSI 80.0 MB/s ST (25 ns, offset 127)
+kern	info	2.475307	-	 SUBSYSTEM=scsi
+kern	info	2.475307	-	 DEVICE=+scsi:target32:0:0
+kern	notice	2.477810	-	sd 32:0:0:0: Attached scsi generic sg1 type 0
+kern	notice	2.477810	-	 SUBSYSTEM=scsi
+kern	notice	2.477810	-	 DEVICE=+scsi:32:0:0:0
+kern	notice	2.477903	-	sd 32:0:0:0: [sda] 56623104 512-byte logical blocks: (29.0 GB/27.0 GiB)
+kern	notice	2.477903	-	 SUBSYSTEM=scsi
+kern	notice	2.477903	-	 DEVICE=+scsi:32:0:0:0
+kern	notice	2.478246	-	sd 32:0:0:0: [sda] Write Protect is off
+kern	notice	2.478246	-	 SUBSYSTEM=scsi
+kern	notice	2.478246	-	 DEVICE=+scsi:32:0:0:0
+kern	debug	2.478400	-	sd 32:0:0:0: [sda] Mode Sense: 61 00 00 00
+kern	debug	2.478400	-	 SUBSYSTEM=scsi
+kern	debug	2.478400	-	 DEVICE=+scsi:32:0:0:0
+kern	notice	2.478466	-	sd 32:0:0:0: [sda] Cache data unavailable
+kern	notice	2.478466	-	 SUBSYSTEM=scsi
+kern	notice	2.478466	-	 DEVICE=+scsi:32:0:0:0
+kern	err	2.478605	-	sd 32:0:0:0: [sda] Assuming drive cache: write through
+kern	err	2.478605	-	 SUBSYSTEM=scsi
+kern	err	2.478605	-	 DEVICE=+scsi:32:0:0:0
+kern	debug	2.490546	-	sr 3:0:0:0: Attached scsi CD-ROM sr1
+kern	debug	2.490546	-	 SUBSYSTEM=scsi
+kern	debug	2.490546	-	 DEVICE=+scsi:3:0:0:0
+kern	notice	2.490613	-	sr 3:0:0:0: Attached scsi generic sg2 type 5
+kern	notice	2.490613	-	 SUBSYSTEM=scsi
+kern	notice	2.490613	-	 DEVICE=+scsi:3:0:0:0
+kern	info	2.499370	-	 sda: sda1 sda2 sda3
+kern	info	2.506816	-	e1000 0000:02:02.0 eth1: (PCI:66MHz:32-bit) 00:0c:29:3a:ab:d4
+kern	info	2.506816	-	 SUBSYSTEM=pci
+kern	info	2.506816	-	 DEVICE=+pci:0000:02:02.0
+kern	info	2.506978	-	e1000 0000:02:02.0 eth1: Intel(R) PRO/1000 Network Connection
+kern	info	2.506978	-	 SUBSYSTEM=pci
+kern	info	2.506978	-	 DEVICE=+pci:0000:02:02.0
+kern	notice	2.522563	-	sd 32:0:0:0: [sda] Attached SCSI disk
+kern	notice	2.522563	-	 SUBSYSTEM=scsi
+kern	notice	2.522563	-	 DEVICE=+scsi:32:0:0:0
+kern	info	2.529405	-	e1000 0000:02:01.0 ens33: renamed from eth0
+kern	info	2.529405	-	 SUBSYSTEM=pci
+kern	info	2.529405	-	 DEVICE=+pci:0000:02:01.0
+kern	info	2.546864	-	e1000 0000:02:02.0 ens34: renamed from eth1
+kern	info	2.546864	-	 SUBSYSTEM=pci
+kern	info	2.546864	-	 DEVICE=+pci:0000:02:02.0
+kern	info	2.850415	-	raid6: avx2x4   gen() 32864 MB/s
+kern	info	2.898414	-	raid6: avx2x4   xor() 16099 MB/s
+kern	info	2.946415	-	raid6: avx2x2   gen() 32065 MB/s
+kern	info	2.994415	-	raid6: avx2x2   xor() 25393 MB/s
+kern	info	3.042414	-	raid6: avx2x1   gen() 31451 MB/s
+kern	info	3.090412	-	raid6: avx2x1   xor() 25522 MB/s
+kern	info	3.138413	-	raid6: sse2x4   gen() 25774 MB/s
+kern	info	3.186413	-	raid6: sse2x4   xor() 15073 MB/s
+kern	info	3.234414	-	raid6: sse2x2   gen() 26054 MB/s
+kern	info	3.282414	-	raid6: sse2x2   xor() 15973 MB/s
+kern	info	3.330414	-	raid6: sse2x1   gen() 22173 MB/s
+kern	info	3.378413	-	raid6: sse2x1   xor() 14530 MB/s
+kern	info	3.378571	-	raid6: using algorithm avx2x4 gen() 32864 MB/s
+kern	info	3.378731	-	raid6: .... xor() 16099 MB/s, rmw enabled
+kern	info	3.378896	-	raid6: using avx2x2 recovery algorithm
+kern	info	3.379994	-	xor: automatically using best checksumming function   avx       
+kern	info	3.380846	-	async_tx: api initialized (async)
+kern	info	3.449709	-	Btrfs loaded, crc32c=crc32c-intel
+kern	info	4.199172	-	EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts: (null)
+daemon	info	4.311039	-	systemd[1]: Inserted module 'autofs4'
+daemon	info	4.319078	-	systemd[1]: systemd 245.4-4ubuntu3.20 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+daemon	info	4.319636	-	systemd[1]: Detected virtualization vmware.
+daemon	info	4.319820	-	systemd[1]: Detected architecture x86-64.
+daemon	info	4.337362	-	systemd[1]: Set hostname to <victim-u20>.
+daemon	warn	4.706302	-	systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+daemon	info	4.753460	-	systemd[1]: Created slice system-modprobe.slice.
+daemon	info	4.754231	-	systemd[1]: Created slice system-systemd\x2dfsck.slice.
+daemon	info	4.755017	-	systemd[1]: Created slice User and Session Slice.
+daemon	info	4.755588	-	systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+daemon	info	4.756391	-	systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+daemon	info	4.757339	-	systemd[1]: Reached target User and Group Name Lookups.
+daemon	info	4.757975	-	systemd[1]: Reached target Slices.
+daemon	info	4.758598	-	systemd[1]: Reached target Mounting snaps.
+daemon	info	4.759221	-	systemd[1]: Listening on Device-mapper event daemon FIFOs.
+daemon	info	4.759837	-	systemd[1]: Listening on LVM2 poll daemon socket.
+daemon	info	4.760439	-	systemd[1]: Listening on multipathd control socket.
+daemon	info	4.761060	-	systemd[1]: Listening on Syslog Socket.
+daemon	info	4.761655	-	systemd[1]: Listening on fsck to fsckd communication Socket.
+daemon	info	4.762252	-	systemd[1]: Listening on initctl Compatibility Named Pipe.
+daemon	info	4.763002	-	systemd[1]: Listening on Journal Audit Socket.
+daemon	info	4.763597	-	systemd[1]: Listening on Journal Socket (/dev/log).
+daemon	info	4.764211	-	systemd[1]: Listening on Journal Socket.
+daemon	info	4.764800	-	systemd[1]: Listening on Network Service Netlink Socket.
+daemon	info	4.765407	-	systemd[1]: Listening on udev Control Socket.
+daemon	info	4.766025	-	systemd[1]: Listening on udev Kernel Socket.
+daemon	info	4.767264	-	systemd[1]: Mounting Huge Pages File System...
+daemon	info	4.768357	-	systemd[1]: Mounting POSIX Message Queue File System...
+daemon	info	4.769410	-	systemd[1]: Mounting Kernel Debug File System...
+daemon	info	4.770672	-	systemd[1]: Mounting Kernel Trace File System...
+daemon	info	4.772207	-	systemd[1]: Starting Journal Service...
+daemon	info	4.773504	-	systemd[1]: Starting Set the console keyboard layout...
+daemon	info	4.775895	-	systemd[1]: Starting Create list of static device nodes for the current kernel...
+daemon	info	4.777893	-	systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+daemon	info	4.780458	-	systemd[1]: Starting Load Kernel Module chromeos_pstore...
+daemon	info	4.781760	-	systemd[1]: Condition check resulted in Load Kernel Module drm being skipped.
+daemon	info	4.783638	-	systemd[1]: Starting Load Kernel Module efi_pstore...
+daemon	info	4.786047	-	systemd[1]: Starting Load Kernel Module pstore_blk...
+daemon	info	4.791197	-	systemd[1]: Starting Load Kernel Module pstore_zone...
+daemon	info	4.793451	-	systemd[1]: Starting Load Kernel Module ramoops...
+daemon	info	4.794629	-	systemd[1]: Condition check resulted in OpenVSwitch configuration for cleanup being skipped.
+daemon	info	4.797318	-	systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+daemon	info	4.797875	-	systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+daemon	info	4.799435	-	systemd[1]: Starting Load Kernel Modules...
+daemon	info	4.800577	-	systemd[1]: Starting Remount Root and Kernel File Systems...
+daemon	info	4.801840	-	systemd[1]: Starting udev Coldplug all Devices...
+daemon	info	4.803033	-	systemd[1]: Starting Uncomplicated firewall...
+daemon	info	4.805324	-	systemd[1]: Mounted Huge Pages File System.
+daemon	info	4.806245	-	systemd[1]: Mounted POSIX Message Queue File System.
+daemon	info	4.807033	-	systemd[1]: Mounted Kernel Debug File System.
+daemon	info	4.807764	-	systemd[1]: Mounted Kernel Trace File System.
+daemon	info	4.808677	-	systemd[1]: Finished Create list of static device nodes for the current kernel.
+daemon	info	4.809510	-	systemd[1]: modprobe@efi_pstore.service: Succeeded.
+daemon	info	4.810011	-	systemd[1]: Finished Load Kernel Module efi_pstore.
+kern	info	4.810860	-	EXT4-fs (dm-0): re-mounted. Opts: (null)
+daemon	info	4.812129	-	systemd[1]: modprobe@pstore_blk.service: Succeeded.
+daemon	info	4.812836	-	systemd[1]: Finished Load Kernel Module pstore_blk.
+daemon	info	4.814376	-	systemd[1]: modprobe@pstore_zone.service: Succeeded.
+daemon	info	4.815033	-	systemd[1]: Finished Load Kernel Module pstore_zone.
+daemon	info	4.815765	-	systemd[1]: modprobe@ramoops.service: Succeeded.
+daemon	info	4.816240	-	systemd[1]: Finished Load Kernel Module ramoops.
+daemon	info	4.817181	-	systemd[1]: Finished Remount Root and Kernel File Systems.
+daemon	info	4.818039	-	systemd[1]: Finished Set the console keyboard layout.
+daemon	info	4.818967	-	systemd[1]: Finished Load Kernel Modules.
+daemon	info	4.819769	-	systemd[1]: Finished Uncomplicated firewall.
+daemon	info	4.820926	-	systemd[1]: Activating swap /swap.img...
+daemon	info	4.822487	-	systemd[1]: Mounting FUSE Control File System...
+daemon	info	4.823623	-	systemd[1]: Mounting Kernel Configuration File System...
+daemon	info	4.824542	-	systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+daemon	info	4.825579	-	systemd[1]: Starting Load/Save Random Seed...
+daemon	info	4.829058	-	systemd[1]: Starting Apply Kernel Variables...
+daemon	info	4.830200	-	systemd[1]: Starting Create System Users...
+daemon	info	4.831759	-	systemd[1]: Mounted FUSE Control File System.
+daemon	info	4.832424	-	systemd[1]: Mounted Kernel Configuration File System.
+daemon	info	4.847144	-	systemd[1]: Finished Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+daemon	info	4.847823	-	systemd[1]: Finished Load/Save Random Seed.
+daemon	info	4.850353	-	systemd[1]: Started Journal Service.
+syslog	info	4.856575	-	systemd-journald[523]: Received client request to flush runtime journal.
+kern	info	4.882540	-	Adding 2603004k swap on /swap.img.  Priority:-2 extents:4 across:3520508k FS
+kern	info	5.203720	-	vmw_vmci 0000:00:07.7: Found VMCI PCI device at 0x11080, irq 16
+kern	info	5.203720	-	 SUBSYSTEM=pci
+kern	info	5.203720	-	 DEVICE=+pci:0000:00:07.7
+kern	info	5.203770	-	vmw_vmci 0000:00:07.7: Using capabilities 0x1c
+kern	info	5.203770	-	 SUBSYSTEM=pci
+kern	info	5.203770	-	 DEVICE=+pci:0000:00:07.7
+kern	info	5.206796	-	Guest personality initialized and is active
+kern	info	5.207145	-	VMCI host device registered (name=vmci, major=10, minor=59)
+kern	info	5.207145	-	Initialized host personality
+kern	info	6.095224	-	alua: device handler registered
+kern	info	6.096238	-	emc: device handler registered
+kern	info	6.097606	-	rdac: device handler registered
+kern	info	6.142193	-	EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+kern	notice	6.276958	-	audit: type=1400 audit(1766862126.821:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=777 comm="apparmor_parser"
+kern	notice	6.283599	-	audit: type=1400 audit(1766862126.829:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=778 comm="apparmor_parser"
+kern	notice	6.283822	-	audit: type=1400 audit(1766862126.829:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=778 comm="apparmor_parser"
+kern	notice	6.314460	-	audit: type=1400 audit(1766862126.861:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=779 comm="apparmor_parser"
+kern	notice	6.320541	-	audit: type=1400 audit(1766862126.865:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=794 comm="apparmor_parser"
+kern	notice	6.320732	-	audit: type=1400 audit(1766862126.865:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=794 comm="apparmor_parser"
+kern	notice	6.320927	-	audit: type=1400 audit(1766862126.865:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=794 comm="apparmor_parser"
+kern	notice	6.379505	-	audit: type=1400 audit(1766862126.925:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=793 comm="apparmor_parser"
+kern	notice	6.379618	-	audit: type=1400 audit(1766862126.925:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=793 comm="apparmor_parser"
+kern	notice	6.379838	-	audit: type=1400 audit(1766862126.925:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=780 comm="apparmor_parser"
+kern	info	6.404423	-	NET: Registered protocol family 40
+kern	info	7.035277	-	e1000: ens34 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+kern	info	7.035653	-	e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+kern	info	7.036541	-	IPv6: ADDRCONF(NETDEV_CHANGE): ens34: link becomes ready
+kern	info	7.036654	-	IPv6: ADDRCONF(NETDEV_CHANGE): ens33: link becomes ready
+kern	warn	10023.080555	-	lime: loading out-of-tree module taints kernel.
+kern	notice	10023.080641	-	lime: module verification failed: signature and/or required key missing - tainting kernel

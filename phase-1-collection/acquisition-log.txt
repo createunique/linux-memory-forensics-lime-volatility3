@@ -1,0 +1,106 @@
+=== MEMORY ACQUISITION LOG ===
+
+Case ID: CASE_20251228_0001
+Evidence Item: RAM Memory Dump
+Acquisition Method: Live Response (LiME Kernel Module)
+
+---
+
+VICTIM SYSTEM
+-------------
+Hostname: victim-u20
+IP Address: 192.168.164.129 (ens34, host-only)
+OS: Ubuntu 20.04.6 LTS
+Kernel: 5.4.0-216-generic
+Architecture: x86_64
+RAM Size: 4096 MB
+
+ACQUISITION DETAILS
+-------------------
+Date: 2025-12-27
+Start Time: 21:48:36 UTC
+End Time: 21:49:03 UTC
+Duration: ~27 seconds
+
+Tool: LiME (Linux Memory Extractor)
+Module: lime-5.4.0-216-generic.ko
+Module Vermagic: 5.4.0-216-generic SMP mod_unload
+Module Version: 1.9
+
+Command Executed:
+sudo insmod ./lime-5.4.0-216-generic.ko "path=/home/labadmin/dfir_acq/mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime format=lime timeout=0"
+
+Parameters:
+- path: /home/labadmin/dfir_acq/mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+- format: lime (preserves physical memory layout)
+- timeout: 0 (disable page-read timeout for complete acquisition)
+
+OUTPUT FILE
+-----------
+Filename: mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+Location (victim): /home/labadmin/dfir_acq/
+Location (analyst): ~/dfir-cases/CASE_20251228_0001/evidence/
+Size: ~1.2 GB (1,200,000,000 bytes approximate)
+Permissions: 640 (rw-r-----)
+Owner: labadmin:labadmin
+
+INTEGRITY VERIFICATION
+----------------------
+Hash Algorithm: SHA-256
+Hash Value: [Stored in evidence.sha256]
+Hash Verification: PASSED
+Verified By: labadmin (analyst)
+Verification Time: 2025-12-27 21:51:00 UTC
+
+EVIDENCE TRANSFER
+-----------------
+Transfer Method: SCP (Secure Copy Protocol)
+Transfer Time: 2025-12-27 21:50:15 UTC
+Source: labadmin@192.168.164.129:/home/labadmin/dfir_acq/
+Destination: analystvmu20:~/dfir-cases/CASE_20251228_0001/evidence/
+Transfer Status: SUCCESSFUL
+Post-Transfer Hash Verification: PASSED
+
+CHAIN OF CUSTODY
+----------------
+2025-12-27 21:48:36 UTC | Acquisition initiated | labadmin (on victim-u20)
+2025-12-27 21:49:03 UTC | Acquisition completed | labadmin (on victim-u20)
+2025-12-27 21:50:15 UTC | Evidence transferred | labadmin (to analystvmu20)
+2025-12-27 21:51:00 UTC | Integrity verified | labadmin (on analystvmu20)
+
+ANALYST INFORMATION
+-------------------
+Name: labadmin
+Role: DFIR Analyst
+Workstation: analystvmu20 (192.168.164.130)
+Case Directory: ~/dfir-cases/CASE_20251228_0001/
+
+PRE-ACQUISITION STATE
+---------------------
+System Uptime: 2 hours 46 minutes (since 2025-12-27 19:02:00 UTC)
+Active Sessions: 1 SSH session (attacker suspected)
+System Load: Normal operation
+Network Status: ens33 (NAT) and ens34 (host-only) both UP
+Running Services: SSH, Apache2, systemd services
+
+NOTES
+-----
+- System remained powered on during acquisition
+- No shutdown or reboot required
+- LiME module loaded and unloaded cleanly (no kernel panic)
+- No swap/pagefile acquisition performed (not required for this investigation)
+- Victim system preserved in running state for potential follow-up collection
+- Original dump removed from victim after successful transfer and verification
+
+ACQUISITION STATUS
+------------------
+Status: COMPLETE
+Integrity: VERIFIED
+Evidence Secured: YES
+Ready for Analysis: YES
+
+---
+
+Logged by: labadmin
+Log Date: 2025-12-27
+Signature: [Digital signature placeholder]

@@ -1,0 +1,90 @@
+Volatility 3 Framework 2.26.2
+
+Offset	Module Name	Code Size	Taints	Load Arguments	File Output
+
+0xffffc0ab0040	lime	0x6000	OOT_MODULE,UNSIGNED_MODULE	compress=None, timeout=None, digest=, localhostonly=None, format=P, dio=None, path=0	N/A
+0xffffc0aab040	xsk_diag	0x4000			N/A
+0xffffc0aa3000	vsock_diag	0x4000			N/A
+0xffffc0a9b040	udp_diag	0x4000			N/A
+0xffffc0a93000	raw_diag	0x4000			N/A
+0xffffc0a8b040	unix_diag	0x4000			N/A
+0xffffc0a83040	af_packet_diag	0x4000			N/A
+0xffffc0a7e040	netlink_diag	0x4000			N/A
+0xffffc0a79040	tcp_diag	0x4000			N/A
+0xffffc0a70080	inet_diag	0x6000			N/A
+0xffffc0991080	vmw_vsock_vmci_transport	0x8000			N/A
+0xffffc0981280	vsock	0xa000			N/A
+0xffffc0950240	dm_multipath	0x8000			N/A
+0xffffc09470c0	scsi_dh_rdac	0x4000		rdac_logging=None	N/A
+0xffffc091a0c0	scsi_dh_emc	0x4000			N/A
+0xffffc08cc0c0	scsi_dh_alua	0x5000		optimize_stpg=None	N/A
+0xffffc08b0180	vmw_balloon	0x6000		vmwballoon_shrinker_enable=None	N/A
+0xffffc087a400	binfmt_misc	0x6000			N/A
+0xffffc09420c0	joydev	0x6000			N/A
+0xffffc0938080	input_leds	0x4000			N/A
+0xffffc092d480	snd_ens1371	0x7000		lineio=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, spdif=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, joystick_port=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, enable=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, id=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, index=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None	N/A
+0xffffc09231c0	serio_raw	0x5000			N/A
+0xffffc09109c0	snd_ac97_codec	0x20000		power_save=None, enable_loopback=None	N/A
+0xffffc08f0240	gameport	0x5000		use_ktime=None	N/A
+0xffffc08e4240	snd_rawmidi	0x9000		amidi_map=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, midi_map=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None	N/A
+0xffffc08d7140	snd_seq_device	0x4000			N/A
+0xffffc08d20c0	ac97_bus	0x4000			N/A
+0xffffc08c3500	vmw_vmci	0x11000		disable_guest=None, disable_host=None, disable_msix=None, disable_msi=None	N/A
+0xffffc08a38c0	snd_pcm	0x1b000		max_alloc_per_card=None, maximum_substreams=None, preallocate_dma=None	N/A
+0xffffc0887140	snd_timer	0xa000		timer_tstamp_monotonic=None, timer_limit=None	N/A
+0xffffc086d3c0	snd	0x16000		cards_limit=None, major=None, slots=None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None	N/A
+0xffffc085c000	soundcore	0x4000		preclaim_oss=None	N/A
+0xffffc06da2c0	mac_hid	0x4000			N/A
+0xffffc0670140	sch_fq_codel	0x5000			N/A
+0xffffc066a000	msr	0x4000			N/A
+0xffffc0665340	ramoops	0x7000		ecc=None, dump_oops=None, mem_type=None, mem_size=None, mem_address=None, pmsg_size=None, ftrace_size=None, console_size=None, record_size=None	N/A
+0xffffc065d080	reed_solomon	0x6000			N/A
+0xffffc056c0c0	efi_pstore	0x4000		pstore_disable=None	N/A
+0xffffc06292c0	ip_tables	0x8000			N/A
+0xffffc061e380	x_tables	0xa000			N/A
+0xffffc053f880	autofs4	0xb000			N/A
+0xffffc0828f40	btrfs	0x136000			N/A
+0xffffc071e000	zstd_compress	0x29000			N/A
+0xffffc05b32c0	raid10	0xf000		max_queued_requests=None	N/A
+0xffffc0652100	raid456	0x26000		devices_handle_discard_safely=None	N/A
+0xffffc05240c0	async_raid6_recov	0x6000			N/A
+0xffffc04f6080	async_memcpy	0x5000			N/A
+0xffffc04ed140	async_pq	0x6000			N/A
+0xffffc04e6140	async_xor	0x5000			N/A
+0xffffc04e00c0	async_tx	0x5000			N/A
+0xffffc04670c0	xor	0x6000			N/A
+0xffffc04d9000	raid6_pq	0x1c000			N/A
+0xffffc045c040	libcrc32c	0x4000			N/A
+0xffffc04523c0	raid1	0xb000		max_queued_requests=None	N/A
+0xffffc0397540	raid0	0x6000		default_layout=None	N/A
+0xffffc0390200	multipath	0x5000			N/A
+0xffffc0342100	linear	0x5000			N/A
+0xffffc062f240	crct10dif_pclmul	0x4000			N/A
+0xffffc0563240	crc32_pclmul	0x4000			N/A
+0xffffc06b7dc0	vmwgfx	0x49000		assume_16bpp=None, restrict_dma_mask=None, force_coherent=None, restrict_iommu=None, force_dma_api=None, enable_fbdev=None	N/A
+0xffffc0571440	ghash_clmulni_intel	0x4000			N/A
+0xffffc06eeb00	ttm	0x1a000			N/A
+0xffffc060adc0	aesni_intel	0x5b000			N/A
+0xffffc0534040	crypto_simd	0x4000			N/A
+0xffffc0597680	drm_kms_helper	0x2d000		dp_aux_i2c_transfer_size=None, dp_aux_i2c_speed_khz=None, poll=None, edid_firmware=None, drm_fbdev_overalloc=None, fbdev_emulation=None, drm_dp_cec_unregister_delay=None	N/A
+0xffffc0558100	cryptd	0x6000		cryptd_max_cpu_qlen=None	N/A
+0xffffc0550000	syscopyarea	0x4000			N/A
+0xffffc0549040	sysfillrect	0x4000			N/A
+0xffffc03798c0	ahci	0xa000		mobile_lpm_policy=None, marvell_enable=None	N/A
+0xffffc052f000	glue_helper	0x4000			N/A
+0xffffc036c000	sysimgblt	0x4000			N/A
+0xffffc0517ac0	psmouse	0x26000		resync_time=None, resetafter=None, a4tech_workaround=None, smartscroll=None, rate=None, resolution=None, proto=None, synaptics_intertouch=None, elantech_smbus=None	N/A
+0xffffc0365040	fb_sys_fops	0x4000			N/A
+0xffffc04b8480	e1000	0x24000		debug=None, copybreak=None, SmartPowerDownEnable=None, InterruptThrottleRate=None, RxAbsIntDelay=None, RxIntDelay=None, TxAbsIntDelay=None, TxIntDelay=None, XsumRX=None, FlowControl=None, AutoNeg=None, Duplex=None, Speed=None, RxDescriptors=None, TxDescriptors=None	N/A
+0xffffc0492600	libahci	0x9000		devslp_idle_timeout=None, ahci_em_messages=None, ignore_sss=None, skip_host_reset=None	N/A
+0xffffc0485400	i2c_piix4	0x7000		force_addr=None, force=None	N/A
+0xffffc0479400	mptspi	0x6000		mpt_saf_te=None	N/A
+0xffffc0471200	mptscsih	0xa000			N/A
+0xffffc041b140	drm	0x79000		debug=None, edid_fixup=None, timestamp_precision_usec=None, vblankoffdelay=None, edid_firmware=	N/A
+0xffffc03c6400	mptbase	0x17000		mpt_fwfault_debug=None, mpt_debug_level=None, mpt_channel_mapping=None, mpt_msi_enable_sas=None, mpt_msi_enable_fc=None, mpt_msi_enable_spi=None	N/A
+0xffffc0389680	scsi_transport_spi	0x8000			N/A
+0xffffc0358480	pata_acpi	0x4000			N/A
+0xffffc03aac40	floppy	0x14000		FLOPPY_DMA=None, FLOPPY_IRQ=None, floppy=	N/A
+0xffffc035e140	hid_generic	0x4000			N/A
+0xffffc0351900	usbhid	0xe000		quirks=None,None,None,None, ignoreled=None, kbpoll=None, jspoll=None, mousepoll=None	N/A
+0xffffc0339300	hid	0x20000		ignore_special_drivers=None, debug=None	N/A

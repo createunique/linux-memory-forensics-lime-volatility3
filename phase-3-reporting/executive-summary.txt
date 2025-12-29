@@ -1,0 +1,174 @@
+=== EXECUTIVE SUMMARY ===
+
+Case: CASE_20251228_0001
+Date: 2025-12-27 / 2025-12-28
+Analyst: labadmin
+System: victim-u20 (Ubuntu 20.04.6, kernel 5.4.0-216-generic)
+
+---
+
+FINDING: SYSTEM ACTIVELY COMPROMISED
+Status: CRITICAL
+Confidence: 98% (Very High)
+
+---
+
+KEY THREATS IDENTIFIED
+----------------------
+
+1. ACTIVE ATTACKER SSH SESSION
+   - Attacker bash session (PID 3038) with 50+ commands executed
+   - Session established via SSH on host-only network (192.168.164.x)
+   - Commands span reconnaissance → persistence → code injection
+   - Full command history recovered from memory
+
+2. PERSISTENCE MECHANISMS
+   - Systemd service: kworker-update.service (masqueraded as kernel worker)
+   - Hidden user account: backupsvc (UID 997) with passwordless sudo
+   - Masqueraded process: .kworker_update (mimics legitimate kernel thread)
+   - Staged binaries in hidden directories (/opt/.cache, /var/tmp/.dbus)
+
+3. CODE INJECTION DETECTED
+   - Process PID 20480 (.injector) with rwx (read-write-execute) memory pages
+   - Shellcode pattern identified: 90 90 90 90 90 90 90 90 CC 31 C0 48 31 FF C3
+   - Pattern matches: NOP sled + INT3 breakpoint + register zeroing + RET
+   - Additional rwx pages in system processes (networkd-dispatcher, unattended-upgrades)
+
+4. C2 INFRASTRUCTURE STAGING
+   - Reverse shell script: /opt/.cache/.rsim.py
+   - Target C2 server: 192.168.164.1:4444
+   - Connection attempt logged at 2025-12-27 20:07:22 UTC
+   - Staging logs: /var/log/.rsim.log
+
+---
+
+ATTACK TIMELINE (UTC)
+----------------------
+
+19:02:00 - System boot from VM snapshot
+19:04:43 - Attacker SSH login → bash PID 3038 opened
+19:04-19:08 - Network reconnaissance (ip route, curl scanning)
+19:08-19:20 - Build tools installation (apt install build-essential)
+19:20-19:23 - Apache2 + PHP installation
+19:23:09 - Persistence directories created (/opt/.cache, /var/tmp/.dbus)
+19:47:06 - In-memory marker deployed (mem_marker.py, 9MB)
+20:00-20:10 - Hidden user creation (backupsvc, UID 997)
+20:10:39 - Systemd service kworker-update.service installed
+20:11-20:15 - Code injection binaries compiled (.uhelper, .injector)
+20:07:22 - Reverse shell simulator attempt to C2 (192.168.164.1:4444)
+21:48:36 - LiME memory acquisition begins
+21:49:03 - Memory image finalized (1.2GB)
+
+Total attack duration: 2 hours 47 minutes (active at time of capture)
+
+---
+
+INDICATORS OF COMPROMISE (IOCs)
+--------------------------------
+
+PROCESSES:
+- .kworker_update (PID 20288) - Masqueraded kernel process
+- .uhelper (PID 20375) - Code injection helper
+- .injector (PID 20480) - Active code injection tool
+- python3 /opt/.cache/.rsim.py - Reverse shell simulator
+
+USER ACCOUNTS:
+- backupsvc (UID 997) - Hidden user with sudo NOPASSWD
+
+SERVICES:
+- kworker-update.service (/etc/systemd/system/)
+
+FILES:
+- /opt/.cache/.rsim.py - Reverse shell script
+- /opt/.cache/mem_marker.py - In-memory marker (9MB)
+- /usr/local/bin/.kworker_update.sh - Service script
+- /etc/sudoers.d/010-backupsvc - Sudo configuration
+- /var/log/.rsim.log - C2 staging logs
+
+DIRECTORIES:
+- /opt/.cache/ - Primary staging location
+- /var/tmp/.dbus/ - Code injection staging
+- /var/tmp/.cache-update/ - Secondary persistence
+
+NETWORK:
+- C2 Target: 192.168.164.1:4444
+- Victim IP: 192.168.164.129 (ens34, host-only)
+
+MEMORY ARTIFACTS:
+- Shellcode pattern: 90 90 90 90 90 90 90 90 CC 31 C0 48 31 FF C3
+- RWX anonymous pages at: 0x7f3396a68000 (PID 20480)
+
+---
+
+RECOMMENDATIONS
+---------------
+
+IMMEDIATE ACTIONS (0-1 hour):
+1. Isolate victim-u20 from all networks immediately
+2. Kill attacker SSH session (PID 2945) and descendant processes
+3. Disable SSH service: systemctl stop ssh
+4. Block source IP: 192.168.164.1 (if attacker workstation identified)
+5. Preserve all logs: /var/log/auth.log, /var/log/syslog, /var/log/apache2/
+
+SHORT-TERM ACTIONS (1-24 hours):
+1. Full filesystem forensics (disk image via dd or FTK Imager)
+2. Extract and reverse engineer .injector and .uhelper binaries
+3. Analyze bash history for additional commands (41_bash.txt)
+4. Review Apache2 access logs for web-based initial access
+5. Check cron jobs and systemd timers for additional persistence
+
+LONG-TERM REMEDIATION (1-7 days):
+1. Reimage victim-u20 from clean baseline
+2. Rotate all SSH keys and passwords for labadmin and any shared accounts
+3. Enable SSH key-only authentication (disable password auth)
+4. Implement host-based firewall (UFW or iptables)
+5. Enable kernel module signing to prevent unsigned LKM loading
+6. Deploy host-based IDS (OSSEC, Wazuh, or Falco)
+7. Harden sudo configuration (remove NOPASSWD entries)
+8. Enable AppArmor or SELinux in enforcing mode
+
+FORENSIC FOLLOW-UP:
+1. Correlate with network logs (if PCAP available)
+2. Memory string analysis for additional C2 indicators
+3. YARA rule creation for shellcode pattern
+4. Threat intelligence lookup for C2 IP/domain
+5. Document attack chain for incident response playbook
+
+---
+
+EVIDENCE INTEGRITY
+------------------
+Memory dump: mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+SHA-256: [Stored separately in evidence.sha256]
+Acquisition method: LiME kernel module
+Verification: PASSED
+Chain of custody: Maintained
+
+Volatility3 outputs: 13 plugin files
+Total evidence size: ~1.2 GB memory + 528 KB analysis outputs
+All timestamps: UTC
+
+---
+
+INVESTIGATION CONCLUSION
+------------------------
+The victim system was demonstrably compromised with multiple persistence mechanisms, 
+active code injection, and C2 staging at the time of memory acquisition. The attack 
+appears to be a controlled penetration testing or DFIR training scenario based on 
+the lab network topology (host-only 192.168.164.0/24) and the presence of 
+deliberately planted artifacts.
+
+However, all forensic techniques and findings are applicable to real-world incident 
+response scenarios. The complete bash history recovery (14_psaux.txt, 41_bash.txt) 
+provides a rare and valuable record of attacker actions, which is uncommon in 
+production compromises where attackers typically employ anti-forensic techniques.
+
+SYSTEM STATUS: CRITICAL - IMMEDIATE ISOLATION REQUIRED
+FORENSIC CONFIDENCE: VERY HIGH (98%)
+INVESTIGATION STATUS: COMPLETE
+
+---
+
+Report compiled: 2025-12-28
+Analyst: labadmin
+Case closed: Pending remediation verification

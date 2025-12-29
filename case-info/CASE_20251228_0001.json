@@ -1,0 +1,122 @@
+{
+  "case_id": "CASE_20251228_0001",
+  "case_title": "Linux Memory Forensics - Active Code Injection Detection",
+  "created_date": "2025-12-27",
+  "completed_date": "2025-12-28",
+  "analyst": "labadmin",
+  "status": "INVESTIGATION_COMPLETE",
+  "severity": "CRITICAL",
+  "victim_system": {
+    "hostname": "victim-u20",
+    "os": "Ubuntu 20.04.6 LTS (Focal Fossa)",
+    "kernel": "5.4.0-216-generic",
+    "architecture": "x86_64",
+    "ram_size_mb": 4096,
+    "ip_addresses": [
+      "172.16.179.143/24 (ens33, NAT)",
+      "192.168.164.129/24 (ens34, host-only)"
+    ]
+  },
+  "evidence": {
+    "memory_dump": {
+      "filename": "mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime",
+      "size_mb": 1200,
+      "acquisition_method": "LiME kernel module",
+      "acquisition_time_utc": "2025-12-27T21:48:36Z",
+      "completion_time_utc": "2025-12-27T21:49:03Z",
+      "hash_algorithm": "SHA-256",
+      "verified": true
+    },
+    "volatility_outputs": {
+      "plugin_count": 13,
+      "total_files": 13,
+      "location": "phase-2-examination/examination-outputs/"
+    }
+  },
+  "findings": {
+    "compromise_detected": true,
+    "confidence": 0.98,
+    "active_at_capture": true,
+    "primary_threats": [
+      "Active attacker SSH session (PID 3038)",
+      "Code injection with rwx memory pages (PID 20480)",
+      "Systemd persistence (kworker-update.service)",
+      "Hidden user account (backupsvc, UID 997)",
+      "C2 staging (192.168.164.1:4444)"
+    ],
+    "iocs_count": 39,
+    "processes_of_interest": [
+      {
+        "pid": 3038,
+        "name": "bash",
+        "significance": "Attacker shell session",
+        "confidence": "VERY_HIGH"
+      },
+      {
+        "pid": 20288,
+        "name": ".kworker_update",
+        "significance": "Masqueraded kernel process",
+        "confidence": "VERY_HIGH"
+      },
+      {
+        "pid": 20375,
+        "name": ".uhelper",
+        "significance": "Code injection helper",
+        "confidence": "VERY_HIGH"
+      },
+      {
+        "pid": 20480,
+        "name": ".injector",
+        "significance": "Primary code injection process",
+        "confidence": "VERY_HIGH"
+      }
+    ],
+    "shellcode_detected": {
+      "pattern": "90 90 90 90 90 90 90 90 CC 31 C0 48 31 FF C3",
+      "address": "0x7f3396a68000",
+      "process_pid": 20480,
+      "permissions": "rwx",
+      "confidence": "VERY_HIGH"
+    }
+  },
+  "timeline": {
+    "boot_time_utc": "2025-12-27T19:02:00.568903Z",
+    "initial_compromise_utc": "2025-12-27T19:04:43Z",
+    "first_persistence_utc": "2025-12-27T19:23:09Z",
+    "code_injection_utc": "2025-12-27T20:11:00Z",
+    "memory_capture_utc": "2025-12-27T21:49:03Z",
+    "attack_duration_minutes": 167
+  },
+  "recommendations": {
+    "immediate": [
+      "Isolate system from network",
+      "Kill attacker session (PID 2945, 3038)",
+      "Disable SSH service",
+      "Preserve logs"
+    ],
+    "short_term": [
+      "Full filesystem forensics",
+      "Reverse engineer binaries",
+      "Review Apache logs"
+    ],
+    "long_term": [
+      "Reimage from clean baseline",
+      "Rotate all credentials",
+      "Implement SSH key-only auth",
+      "Deploy host-based IDS",
+      "Enable kernel module signing"
+    ]
+  },
+  "tools_used": {
+    "acquisition": "LiME (Linux Memory Extractor)",
+    "analysis": "Volatility3 v2.26+",
+    "symbols": "Ubuntu_5.4.0-216-generic ISF JSON"
+  },
+  "case_notes": "Investigation of controlled DFIR training environment with planted artifacts. All techniques applicable to real-world incident response.",
+  "completeness": {
+    "phase_0_environment": true,
+    "phase_1_collection": true,
+    "phase_2_examination": true,
+    "phase_3_reporting": true
+  }
+}

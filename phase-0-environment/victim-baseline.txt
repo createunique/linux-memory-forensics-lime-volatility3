@@ -1,0 +1,57 @@
+# Victim System Baseline
+
+## System Information
+- **Hostname:** victim-u20
+- **OS:** Ubuntu 20.04.6 LTS (Focal Fossa)
+- **Kernel:** 5.4.0-216-generic
+- **Architecture:** x86_64
+- **Boot Time:** 2025-12-27 19:02:00.568903 UTC
+- **Uptime at Acquisition:** 2 hours 46 minutes 62 seconds
+
+## Hardware (Virtual)
+- **Platform:** VMware Workstation
+- **CPU:** 2 vCPU
+- **RAM:** 4096 MB
+- **Disk:** 60 GB
+
+## Network Interfaces
+- **ens33:** 172.16.179.143/24 (NAT)
+- **ens34:** 192.168.164.129/24 (Host-only)
+- **Default Gateway:** 172.16.179.2 via ens33
+
+## Installed Packages (relevant)
+- openssh-server
+- apache2
+- php
+- libapache2-mod-php
+- build-essential
+- linux-headers-5.4.0-216-generic
+- open-vm-tools
+
+## Running Services
+- SSH (port 22)
+- Apache2 (port 80)
+- systemd-resolved (port 53)
+
+## User Accounts
+- labadmin (UID 1000) - primary user
+- backupsvc (UID 997) - planted artifact
+
+## Filesystem Layout
+Standard Ubuntu 20.04 layout with additions:
+- `/opt/.cache/` - staging directory (artifact)
+- `/var/tmp/.dbus/` - staging directory (artifact)
+- `/var/tmp/.cache-update/` - staging directory (artifact)
+
+## Security Configuration
+- AppArmor: Enabled
+- UFW Firewall: Inactive
+- SSH: Password authentication enabled
+- SELinux: Not installed (Ubuntu default)
+
+## System State at Memory Capture
+- **Time:** 2025-12-27 21:48:36 UTC
+- **Active Sessions:** 1 SSH session (attacker)
+- **Suspicious Processes:** Present (planted artifacts running)
+- **Network Connections:** SSH established, C2 attempted
+- **System Load:** Normal operation

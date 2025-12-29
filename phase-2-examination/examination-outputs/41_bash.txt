@@ -1,0 +1,345 @@
+Volatility 3 Framework 2.26.2
+
+PID	Process	CommandTime	Command
+
+2175	bash	2025-12-27 19:04:43.000000 UTC	sudo apt update
+2175	bash	2025-12-27 19:05:21.000000 UTC	ip -br a
+2175	bash	2025-12-27 19:05:23.000000 UTC	ip route
+2175	bash	2025-12-27 20:02:29.000000 UTC	ifconfig
+2175	bash	2025-12-27 20:02:34.000000 UTC	ipconfig
+2175	bash	2025-12-27 20:02:37.000000 UTC	ip
+2175	bash	2025-12-27 20:02:40.000000 UTC	ip a
+3038	bash	2025-12-27 19:08:07.000000 UTC	sudo apt install -y git build-essential linux-headers-$(uname -r)   python3 python3-venv python3-pip jq
+3038	bash	2025-12-27 19:08:17.000000 UTC	sudo apt install -y git build-essential linux-headers-$(uname -r)  python3 python3-venv python3-pip jq
+3038	bash	2025-12-27 19:10:14.000000 UTC	ls
+3038	bash	2025-12-27 19:10:52.000000 UTC	vmware --version || true
+3038	bash	2025-12-27 19:13:22.000000 UTC	/lib/modules/$(uname -r)/build
+3038	bash	2025-12-27 19:13:38.000000 UTC	ls /lib/modules/$(uname -r)
+3038	bash	2025-12-27 19:13:42.000000 UTC	ls /lib/modules/
+3038	bash	2025-12-27 19:13:56.000000 UTC	ls
+3038	bash	2025-12-27 19:13:56.000000 UTC	bashrc
+3038	bash	2025-12-27 19:14:03.000000 UTC	cd ~
+3038	bash	2025-12-27 19:17:07.000000 UTC	ip -br a
+3038	bash	2025-12-27 19:20:20.000000 UTC	sudo apt update
+3038	bash	2025-12-27 19:20:23.000000 UTC	sudo apt install -y apache2
+3038	bash	2025-12-27 19:20:34.000000 UTC	sudo apt update
+3038	bash	2025-12-27 19:20:37.000000 UTC	sudo apt install -y php libapache2-mod-php php-cli
+3038	bash	2025-12-27 19:21:12.000000 UTC	curl -I http://127.0.0.1/
+3038	bash	2025-12-27 19:21:29.000000 UTC	php -v
+3038	bash	2025-12-27 19:21:36.000000 UTC	curl -s http://127.0.0.1/health.php
+3038	bash	2025-12-27 19:21:36.000000 UTC	echo '<?php echo "OK ".date("c")."\n"; ?>' | sudo tee /var/www/html/health.php >/dev/null
+3038	bash	2025-12-27 19:22:04.000000 UTC	sudo apt update
+3038	bash	2025-12-27 19:22:07.000000 UTC	sudo apt install -y   git build-essential linux-headers-$(uname -r)   python3 python3-venv python3-pip   jq unzip
+3038	bash	2025-12-27 19:22:18.000000 UTC	ls /lib/modules/
+3038	bash	2025-12-27 19:22:39.000000 UTC	curl -I http://192.168.164.129/health.php
+3038	bash	2025-12-27 19:22:39.000000 UTC	curl -I http://192.168.164.129/
+3038	bash	2025-12-27 19:23:09.000000 UTC	sudo chmod 700 /opt/.cache /var/lib/.cache/.backupsvc
+3038	bash	2025-12-27 19:23:09.000000 UTC	sudo chmod 755 /tmp/.cache-update /var/tmp/.dbus
+3038	bash	2025-12-27 19:23:09.000000 UTC	sudo bash -c 'echo "uhelper placeholder" > /var/tmp/.dbus/.uhelper.bin'
+3038	bash	2025-12-27 19:23:09.000000 UTC	sudo bash -c 'echo "note=placeholder artifact" > /opt/.cache/.note'
+3038	bash	2025-12-27 19:23:09.000000 UTC	sudo bash -c 'echo "staging_dir" > /tmp/.cache-update/.staging'
+3038	bash	2025-12-27 19:23:09.000000 UTC	sudo mkdir -p /opt/.cache /var/tmp/.dbus /tmp/.cache-update /var/lib/.cache/.backupsvc
+3038	bash	2025-12-27 19:23:18.000000 UTC	logger -p daemon.warning "dfir-lab: simulated service anomaly (training artifact)"
+3038	bash	2025-12-27 19:23:18.000000 UTC	logger -p authpriv.notice "dfir-lab: simulated suspicious login pattern (training artifact)"
+3038	bash	2025-12-27 19:23:23.000000 UTC	sudo tail -n 50 /var/log/auth.log
+3038	bash	2025-12-27 19:23:23.000000 UTC	sudo tail -n 50 /var/log/syslog
+3038	bash	2025-12-27 19:23:37.000000 UTC	curl -I http://192.168.164.129/ >/dev/null || true
+3038	bash	2025-12-27 19:23:37.000000 UTC	curl -I https://example.com >/dev/null
+3038	bash	2025-12-27 19:23:58.000000 UTC	printf 'GET / HTTP/1.0\r\n\r\n' | nc 192.168.164.1 8080
+3038	bash	2025-12-27 19:47:06.000000 UTC	sudo mkdir -p /opt/.cache
+3038	bash	2025-12-27 19:47:27.000000 UTC	sudo tee /opt/.cache/mem_marker.py >/dev/null <<'PY'
+#!/usr/bin/env python3
+
+import time
+
+# Unique marker for training; keep it in RAM intentionally.
+
+MARKER = "DFIR_TRAINING_MARKER_2025_12_28__CASE_WEB01__SEV2"
+
+# Inflate memory a bit so the string is very likely to be present in RAM
+
+# when you acquire the dump (still benign).
+
+blob = (MARKER + "\n") * 200000  # ~9MB depending on marker length
+
+
+print("mem_marker running; marker loaded into memory")
+while True:
+    time.sleep(60)
+PY
+
+3038	bash	2025-12-27 19:47:27.000000 UTC	sudo chmod 755 /opt/.cache/mem_marker.py
+3038	bash	2025-12-27 19:47:40.000000 UTC	sudo nohup /opt/.cache/mem_marker.py >/dev/null 2>&1 &
+3038	bash	2025-12-27 19:47:40.000000 UTC	echo $! | sudo tee /var/run/mem_marker.pid >/dev/null
+3038	bash	2025-12-27 19:51:48.000000 UTC	sudo mkdir -p /var/tmp/.cache-update
+3038	bash	2025-12-27 19:51:48.000000 UTC	sudo sha256sum /var/tmp/.cache-update/staging_telemetry.tgz | sudo tee /var/tmp/.cache-update/staging_telemetry.tgz.sha256 >/dev/null
+3038	bash	2025-12-27 19:51:48.000000 UTC	sudo tee /var/tmp/.cache-update/README.TRAINING >/dev/null <<'TXT'
+DFIR-LAB TRAINING ARTIFACT
+Simulated "staging" directory. Contains no sensitive data.
+TXT
+
+3038	bash	2025-12-27 19:51:48.000000 UTC	sudo tar -czf /var/tmp/.cache-update/staging_telemetry.tgz -C /var/tmp/.cache-update README.TRAINING
+3038	bash	2025-12-27 19:52:04.000000 UTC	sudo tee /opt/dfir-lab/dfir_training_worker.sh >/dev/null <<'SH'
+#!/bin/bash
+
+LOG="/var/log/dfir-training-worker.log"
+end=$((SECONDS+180))
+while [ $SECONDS -lt $end ]; do
+  date -u +"%Y-%m-%dT%H:%M:%SZ dfir-lab worker heartbeat pid=$$" >> "$LOG"
+  sleep 15
+done
+SH
+
+3038	bash	2025-12-27 19:52:04.000000 UTC	sudo chmod 755 /opt/dfir-lab/dfir_training_worker.sh
+3038	bash	2025-12-27 19:52:04.000000 UTC	sudo nohup /opt/dfir-lab/dfir_training_worker.sh >/dev/null 2>&1 &
+3038	bash	2025-12-27 20:00:43.000000 UTC	python3 --version
+3038	bash	2025-12-27 20:01:25.000000 UTC	sudo tee /opt/.cache/.rsim.py >/dev/null <<'PY'
+#!/usr/bin/env python3
+
+import socket, time, os, sys
+
+DST_HOST = sys.argv[1] if len(sys.argv) > 1 else "192.168.164.1"
+DST_PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 4444
+LOG      = "/var/log/.rsim.log"
+
+def log(msg):
+    ts = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    with open(LOG, "a") as f:
+        f.write(f"{ts} {msg}\n")
+
+def main():
+    log(f"rsim start pid={os.getpid()} dst={DST_HOST}:{DST_PORT}")
+    while True:
+        try:
+            s = socket.create_connection((DST_HOST, DST_PORT), timeout=5)
+            s.sendall(b"RSIM_BEACON hello\n")
+            log("connected+beacon_sent")
+            time.sleep(15)
+            s.close()
+        except Exception as e:
+            log(f"connect_fail {e.__class__.__name__}")
+            time.sleep(10)
+
+if __name__ == "__main__":
+    main()
+PY
+
+3038	bash	2025-12-27 20:01:25.000000 UTC	sudo mkdir -p /opt/.cache
+3038	bash	2025-12-27 20:01:25.000000 UTC	sudo chmod 755 /opt/.cache/.rsim.py
+3038	bash	2025-12-27 20:05:08.000000 UTC	ip addr show
+3038	bash	2025-12-27 20:07:22.000000 UTC	echo $! | sudo tee /var/run/.rsim.pid >/dev/null
+3038	bash	2025-12-27 20:07:22.000000 UTC	sudo nohup /opt/.cache/.rsim.py 192.168.164.1 4444 >/dev/null 2>&1 &
+3038	bash	2025-12-27 20:09:13.000000 UTC	for u in 999 998 997 996 995 994 993 992 991 990; do   getent passwd "$u" >/dev/null || echo "FREE_UID=$u"; done | head -n 1
+3038	bash	2025-12-27 20:09:29.000000 UTC	sudo useradd -u "$FREE_UID" -m -d /var/lib/.cache/.backupsvc -s /bin/bash backupsvc
+3038	bash	2025-12-27 20:09:29.000000 UTC	FREE_UID=997
+3038	bash	2025-12-27 20:09:29.000000 UTC	sudo usermod -aG sudo backupsvc
+3038	bash	2025-12-27 20:09:29.000000 UTC	echo 'backupsvc:Winter2025!' | sudo chpasswd
+3038	bash	2025-12-27 20:09:42.000000 UTC	echo 'backupsvc ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/010-backupsvc >/dev/null
+3038	bash	2025-12-27 20:09:42.000000 UTC	sudo chmod 0440 /etc/sudoers.d/010-backupsvc
+3038	bash	2025-12-27 20:09:50.000000 UTC	sudo -l -U backupsvc
+3038	bash	2025-12-27 20:09:50.000000 UTC	id backupsvc
+3038	bash	2025-12-27 20:10:13.000000 UTC	sudo chmod 755 /usr/local/bin/.kworker_update.sh
+3038	bash	2025-12-27 20:10:13.000000 UTC	sudo tee /usr/local/bin/.kworker_update.sh >/dev/null <<'SH'
+#!/bin/bash
+
+LOG="/var/log/.kworker_update.log"
+DROP="/tmp/.cache-update"
+mkdir -p "$DROP"
+
+while true; do
+  TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  F="$DROP/.uaccess-${TS}"
+  touch "$F"
+  echo "$TS pid=$$ touched=$F" >> "$LOG"
+  sleep 20
+done
+SH
+
+3038	bash	2025-12-27 20:10:39.000000 UTC	sudo systemctl daemon-reload
+3038	bash	2025-12-27 20:10:39.000000 UTC	sudo tee /etc/systemd/system/kworker-update.service >/dev/null <<'UNIT'
+[Unit]
+Description=Kernel Worker Update Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/.kworker_update.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+UNIT
+
+3038	bash	2025-12-27 20:10:40.000000 UTC	sudo systemctl enable --now kworker-update.service
+3038	bash	2025-12-27 20:10:46.000000 UTC	sudo tail -n 20 /var/log/.kworker_update.log
+3038	bash	2025-12-27 20:10:46.000000 UTC	ls -la /tmp/.cache-update | tail -n 10
+3038	bash	2025-12-27 20:10:46.000000 UTC	systemctl status kworker-update.service --no-pager
+3038	bash	2025-12-27 20:10:46.000000 UTC	pgrep -af '\.kworker_update\.sh'
+3038	bash	2025-12-27 20:11:14.000000 UTC	sudo chmod 755 /var/tmp/.dbus/.uhelper
+3038	bash	2025-12-27 20:11:14.000000 UTC	sudo mkdir -p /var/tmp/.dbus
+3038	bash	2025-12-27 20:11:14.000000 UTC	sudo tee /var/tmp/.dbus/uhelper.c >/dev/null <<'C'
+#include <stdio.h>
+
+#include <unistd.h>
+
+#include <time.h>
+
+#include <stdlib.h>
+
+
+int main() {
+    FILE *f;
+    while (1) {
+        time_t t = time(NULL);
+        f = fopen("/var/tmp/.dbus/.uhelper.log", "a");
+        if (f) {
+            fprintf(f, "ts=%ld pid=%d heartbeat\n", (long)t, getpid());
+            fclose(f);
+        }
+        // Allocate a little memory to show up in memory snapshots (benign).
+        void *p = malloc(1024 * 1024);
+        if (p) { usleep(10000); free(p); }
+        sleep(30);
+    }
+    return 0;
+}
+C
+
+3038	bash	2025-12-27 20:11:14.000000 UTC	sudo gcc -O2 -o /var/tmp/.dbus/.uhelper /var/tmp/.dbus/uhelper.c
+3038	bash	2025-12-27 20:11:21.000000 UTC	sudo tee /var/tmp/.dbus/uhelper.c >/dev/null <<'C'
+#include <stdio.h>
+
+#include <unistd.h>
+
+#include <time.h>
+
+#include <stdlib.h>
+
+
+int main() {
+    FILE *f;
+    while (1) {
+        time_t t = time(NULL);
+        f = fopen("/var/tmp/.dbus/.uhelper.log", "a");
+        if (f) {
+            fprintf(f, "ts=%ld pid=%d heartbeat\n", (long)t, getpid());
+            fclose(f);
+        }
+        // Allocate a little memory to show up in memory snapshots (benign).
+        void *p = malloc(1024 * 1024);
+        if (p) { usleep(10000); free(p); }
+        sleep(30);
+    }
+    return 0;
+}
+C
+
+3038	bash	2025-12-27 20:11:21.000000 UTC	sudo gcc -O2 -o /var/tmp/.dbus/.uhelper /var/tmp/.dbus/uhelper.c
+3038	bash	2025-12-27 20:11:21.000000 UTC	sudo mkdir -p /var/tmp/.dbus
+3038	bash	2025-12-27 20:11:21.000000 UTC	sudo chmod 755 /var/tmp/.dbus/.uhelper
+3038	bash	2025-12-27 20:11:27.000000 UTC	echo $! | sudo tee /var/run/.uhelper.pid >/dev/null
+3038	bash	2025-12-27 20:11:27.000000 UTC	sudo nohup /var/tmp/.dbus/.uhelper >/dev/null 2>&1 &
+3038	bash	2025-12-27 20:11:34.000000 UTC	sudo tail -n 10 /var/tmp/.dbus/.uhelper.log
+3038	bash	2025-12-27 20:11:34.000000 UTC	sudo cat /var/run/.uhelper.pid
+3038	bash	2025-12-27 20:11:34.000000 UTC	ps -fp "$(sudo cat /var/run/.uhelper.pid)"
+3038	bash	2025-12-27 20:11:41.000000 UTC	sudo crontab -e
+3038	bash	2025-12-27 20:12:02.000000 UTC	sudo crontab -l
+3038	bash	2025-12-27 20:12:08.000000 UTC	sudo sed -n '1,200p' /var/spool/cron/crontabs/root
+3038	bash	2025-12-27 20:12:08.000000 UTC	sudo ls -la /var/spool/cron/crontabs/
+3038	bash	2025-12-27 20:12:39.000000 UTC	sudo mkdir -p /opt/.cache
+3038	bash	2025-12-27 20:12:39.000000 UTC	sudo tee /opt/.cache/.injector.c >/dev/null <<'C'
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <string.h>
+
+#include <sys/mman.h>
+
+#include <unistd.h>
+
+
+int main() {
+    // Allocate RWX memory (PAGE_EXECUTE_READWRITE - highly suspicious)
+    void *mem = mmap(NULL, 4096, PROT_READ|PROT_WRITE|PROT_EXEC,
+                     MAP_PRIVATE|MAP_ANONYMOUS, -1, 0);
+    
+    if (mem == MAP_FAILED) {
+        perror("mmap");
+        return 1;
+    }
+    
+    // Write classic shellcode patterns (NOP sled + INT3 + simple instructions)
+    unsigned char shellcode[] = {
+        0x90, 0x90, 0x90, 0x90,  // NOP sled (common shellcode signature)
+        0x90, 0x90, 0x90, 0x90,
+        0xCC,                     // INT3 (breakpoint instruction)
+        0x31, 0xC0,               // XOR EAX, EAX
+        0x48, 0x31, 0xFF,         // XOR RDI, RDI (x64)
+        0xC3,                     // RET
+        0x90, 0x90, 0x90, 0x90   // More NOPs
+    };
+    
+    memcpy(mem, shellcode, sizeof(shellcode));
+    
+    FILE *f = fopen("/var/log/
+3038	bash	2025-12-27 20:12:45.000000 UTC	sudo gcc -o /opt/.cache/.injector /opt/.cache/.injector.c
+3038	bash	2025-12-27 20:12:48.000000 UTC	sudo chmod 755 /opt/.cache/.injector
+3038	bash	2025-12-27 20:12:57.000000 UTC	sudo nohup /opt/.cache/.injector >/dev/null 2>&1 &
+3038	bash	2025-12-27 20:12:58.000000 UTC	echo $! | sudo tee /var/run/.injector.pid >/dev/null
+3038	bash	2025-12-27 20:13:04.000000 UTC	sudo cat /var/run/.injector.pid
+3038	bash	2025-12-27 20:13:04.000000 UTC	ps -fp "$(sudo cat /var/run/.injector.pid)"
+3038	bash	2025-12-27 20:13:04.000000 UTC	sudo cat /proc/"$(sudo cat /var/run/.injector.pid)"/maps | grep -E 'rwxp'
+3038	bash	2025-12-27 20:13:04.000000 UTC	sudo tail -n 10 /var/log/.injector.log
+3038	bash	2025-12-27 20:16:14.000000 UTC	sudo tee /root/dfir-lab/planted_artifacts_phase0.csv >/dev/null <<'CSV'
+artifact_name,type,path,how_created,sha256,created_time_utc,purpose
+CSV
+
+3038	bash	2025-12-27 20:16:14.000000 UTC	sudo mkdir -p /root/dfir-lab
+3038	bash	2025-12-27 20:16:21.000000 UTC	H2="$(hash_or_na "$A2")"
+3038	bash	2025-12-27 20:16:21.000000 UTC	A2="/tmp/.cache-update/.staging"
+3038	bash	2025-12-27 20:16:21.000000 UTC	H1="$(hash_or_na "$A1")"
+3038	bash	2025-12-27 20:16:21.000000 UTC	A3="/var/tmp/.dbus/.uhelper.bin"
+3038	bash	2025-12-27 20:16:21.000000 UTC	TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+3038	bash	2025-12-27 20:16:21.000000 UTC	A1="/opt/.cache/.note"
+3038	bash	2025-12-27 20:16:21.000000 UTC	hash_or_na() { sudo test -f "$1" && sudo sha256sum "$1" | awk '{print $1}' || echo ""; }
+3038	bash	2025-12-27 20:16:21.000000 UTC	H3="$(hash_or_na "$A3")"
+3038	bash	2025-12-27 20:16:21.000000 UTC	sudo tee -a /root/dfir-lab/planted_artifacts_phase0.csv >/dev/null <<CSV
+hidden_note,file,$A1,manual_echo,$H1,$TS,"Hidden-looking file for timeline + hash validation"
+cache_staging,file,$A2,manual_echo,$H2,$TS,"Temp staging artifact (non-executable)"
+fake_binary_blob,file,$A3,manual_echo,$H3,$TS,"Suspicious filename for triage practice (not runnable)"
+CSV
+
+3038	bash	2025-12-27 20:16:32.000000 UTC	curl -I http://192.168.164.129/
+3038	bash	2025-12-27 20:16:32.000000 UTC	systemctl is-active apache2
+3038	bash	2025-12-27 20:16:32.000000 UTC	ip -br a
+3038	bash	2025-12-27 20:16:32.000000 UTC	ss -ltnp | egrep '(:22|:80)\s'
+3038	bash	2025-12-27 20:16:32.000000 UTC	ip route
+3038	bash	2025-12-27 20:16:32.000000 UTC	sudo ls -la /opt/.cache /tmp/.cache-update /var/tmp/.dbus
+3038	bash	2025-12-27 20:16:32.000000 UTC	curl -I http://127.0.0.1/
+3038	bash	2025-12-27 20:16:32.000000 UTC	systemctl is-active ssh
+3038	bash	2025-12-27 20:16:32.000000 UTC	sudo cat /root/dfir-lab/planted_artifacts_phase0.csv
+3038	bash	2025-12-27 21:07:52.000000 UTC	ifconfig
+3038	bash	2025-12-27 21:08:08.000000 UTC	sudo apt install net-tools
+3038	bash	2025-12-27 21:08:16.000000 UTC	ifconfig
+26332	bash	2025-12-27 21:47:32.000000 UTC	exit
+26332	bash	2025-12-27 21:47:40.000000 UTC	sudo apt update
+26332	bash	2025-12-27 21:48:01.000000 UTC	sudo apt install -y git build-essential linux-headers-$(uname -r)
+26332	bash	2025-12-27 21:48:06.000000 UTC	mkdir -p ~/dfir_tools ~/dfir_acq ~/dfir_symbols/linux
+26332	bash	2025-12-27 21:48:10.000000 UTC	ls
+26332	bash	2025-12-27 21:48:14.000000 UTC	rm -rf LiME || true
+26332	bash	2025-12-27 21:48:14.000000 UTC	git clone https://github.com/504ensicsLabs/LiME.git
+26332	bash	2025-12-27 21:48:14.000000 UTC	cd ~/dfir_tools
+26332	bash	2025-12-27 21:48:15.000000 UTC	make
+26332	bash	2025-12-27 21:48:15.000000 UTC	cd LiME/src
+26332	bash	2025-12-27 21:48:15.000000 UTC	make clean || true
+26332	bash	2025-12-27 21:48:36.000000 UTC	modinfo "./$KO" | egrep 'filename|vermagic|depends' || true
+26332	bash	2025-12-27 21:48:36.000000 UTC	[00m:[01;34m~/dfir_tools/LiME/src[00m$ 
+26332	bash	2025-12-27 21:48:36.000000 UTC	if [ -f "lime-$(uname -r).ko" ]; then   KO="lime-$(uname -r).ko"; elif [ -f "lime.ko" ]; then   KO="lime.ko"; else   echo "[ERROR] No LiME module found";   ls -lah;   exit 1; fi
+26332	bash	2025-12-27 21:48:36.000000 UTC	uname -r
+26332	bash	2025-12-27 21:48:36.000000 UTC	cd ~/dfir_tools/LiME/src
+26332	bash	2025-12-27 21:49:03.000000 UTC	sudo rmmod lime 2>/dev/null || true
+26332	bash	2025-12-27 21:49:03.000000 UTC	sudo insmod "./$KO" "path=$OUT format=lime timeout=0"
+26332	bash	2025-12-27 21:49:03.000000 UTC	echo "OUT=$OUT"
+26332	bash	2025-12-27 21:49:03.000000 UTC	OUT="$HOME/dfir_acq/mem_$(hostname)_$(uname -r)_$(date -u +%Y%m%dT%H%M%SZ).lime"
