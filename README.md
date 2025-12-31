@@ -2,17 +2,17 @@
 
 <div align="center">
 
-** SECURITY STATUS: ACTIVELY COMPROMISED — CRITICAL **
+**SECURITY STATUS: ACTIVELY COMPROMISED — CRITICAL**
 
-[![DFIR](https://img.shields.io/badge/DFIR-Memory%20Forensics-red? style=for-the-badge)](https://github.com/createunique/linux-memory-forensics-lime-volatility3)
+[![DFIR](https://img.shields.io/badge/DFIR-Memory%20Forensics-red?style=for-the-badge)](https://github.com/createunique/linux-memory-forensics-lime-volatility3)
 [![Platform](https://img.shields.io/badge/Platform-Linux-orange?style=for-the-badge&logo=linux)](https://ubuntu.com)
-[![Volatility3](https://img.shields.io/badge/Analysis-Volatility3-blue? style=for-the-badge)](https://github.com/volatilityfoundation/volatility3)
+[![Volatility3](https://img.shields.io/badge/Analysis-Volatility3-blue?style=for-the-badge)](https://github.com/volatilityfoundation/volatility3)
 
 </div>
 
 ---
 
-## 🔍 Executive Overview
+## Executive Overview
 
 This repository documents a **professional Digital Forensics and Incident Response (DFIR)** investigation into a **confirmed compromise** of an Ubuntu 20.04 server. The investigation utilizes industry-standard memory acquisition and analysis techniques to identify attacker activity, extract Indicators of Compromise (IOCs), and reconstruct the attack timeline.
 
@@ -23,7 +23,7 @@ This repository documents a **professional Digital Forensics and Incident Respon
 
 ---
 
-## 📋 Case Information
+## Case Information
 
 | **Field** | **Details** |
 |-----------|-------------|
@@ -41,7 +41,7 @@ This repository documents a **professional Digital Forensics and Incident Respon
 
 ---
 
-## 🎯 Key Findings
+## Key Findings
 
 ### Attack Vector
 - **Initial Access:** SSH compromise (credentials unknown — likely brute force or credential theft)
@@ -123,7 +123,7 @@ linux-memory-forensics-lime-volatility3/
 
 ---
 
-## 🛠️ Forensic Methodology
+## Forensic Methodology
 
 ### Tools & Techniques
 
@@ -173,7 +173,7 @@ linux-memory-forensics-lime-volatility3/
 
 ---
 
-## 🔐 Evidence Integrity
+## Evidence Integrity
 
 All evidence has been cryptographically verified to ensure integrity and admissibility. 
 
@@ -184,12 +184,12 @@ sha256sum phase-1-collection/lime-acquisition/victim-u20.lime
 ```
 
 **Hash Algorithm:** SHA-256  
-**Verification Status:** ✅ VERIFIED  
+**Verification Status:** VERIFIED  
 **Chain of Custody:** Complete (see `case-info/chain-of-custody.csv`)
 
 ---
 
-## 📖 How to Use This Repository
+## How to Use This Repository
 
 ### For DFIR Analysts
 1. **Review Executive Summary**  
