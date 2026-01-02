@@ -3,14 +3,15 @@
   "case_id": "CASE_20251228_0001",
   "version": "1.0",
   "created": "2025-12-28",
-  "analyst": "labadmin",
+  "last_updated": "2026-01-02",
+  "analyst": "Sai (DFIR Analyst)",
   "artifacts": {
     "evidence": {
       "memory_dump": {
         "filename": "mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime",
-        "size_mb": 1200,
+        "size_mb": 4096,
         "hash_algo": "SHA256",
-        "location": "phase-1-collection/",
+        "location": "evidence/",
         "synthetic": false,
         "note": "Not committed to git (see .gitignore) - available on request"
       }
@@ -18,27 +19,40 @@
     "analysis_outputs": {
       "volatility3_plugins": 13,
       "total_files": 13,
-      "location": "phase-2-examination/examination-outputs/",
+      "location": "analysis/outputs/",
       "synthetic": false
     },
     "reports": {
-      "executive_summary": "phase-3-reporting/executive-summary.txt",
-      "technical_report": "phase-3-reporting/analysis-report.md",
-      "iocs_csv": "phase-3-reporting/iocs-found.csv",
-      "timeline": "phase-3-reporting/timeline.txt"
+      "executive_summary": "findings/executive-summary.md",
+      "technical_report": "findings/TECHNICAL-REPORT.md",
+      "findings_overview": "findings/findings-README.md",
+      "malicious_processes": "findings/malicious-processes.md",
+      "memory_injection": "findings/memory-injection.md",
+      "network_c2_analysis": "findings/network-c2-analysis.md",
+      "python_malware": "findings/python-malware-analysis.md",
+      "shellcode_analysis": "findings/shellcode-analysis.md",
+      "iocs_indicators": "iocs/indicators.txt",
+      "yara_rules": "iocs/yara-rules.yar",
+      "methodology_overview": "methodology/methodology-README.md",
+      "procedures": "methodology/procedures.md",
+      "tools_used": "methodology/tools-used.md"
     }
   },
   "completeness": {
-    "total_phases": 4,
-    "phase_0_complete": true,
-    "phase_1_complete": true,
-    "phase_2_complete": true,
-    "phase_3_complete": true
+    "directories": {
+      "evidence": true,
+      "analysis": true,
+      "findings": true,
+      "iocs": true,
+      "methodology": true
+    },
+    "total_directories": 5,
+    "all_complete": true
   },
   "tools": {
     "acquisition": "LiME kernel module",
-    "analysis": "Volatility3 v2.26+",
-    "symbols": "Ubuntu_5.4.0-216-generic ISF JSON"
+    "analysis": "Volatility 3 Framework 2.26.2",
+    "symbols": "Ubuntu 5.4.0-216-generic ISF JSON"
   },
   "status": "INVESTIGATION_COMPLETE",
   "severity": "CRITICAL"
