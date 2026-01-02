@@ -1,0 +1,203 @@
+MIT License
+
+Copyright (c) 2025 Digital Forensics & Incident Response Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ADDITIONAL TERMS FOR DIGITAL FORENSICS CASE MATERIALS
+
+This repository contains forensic analysis materials, malware samples, and 
+sensitive technical findings from a controlled security incident investigation.
+
+AUTHORIZED USE CASES:
+[PERMITTED] Educational and training purposes
+[PERMITTED] Academic research in cybersecurity and digital forensics
+[PERMITTED] Professional incident response team reference
+[PERMITTED] Security awareness and training programs
+[PERMITTED] Authorized penetration testing and red team exercises (with written permission)
+
+RESTRICTED USE CASES:
+[PROHIBITED] Reproduction or distribution of actual attack code
+[PROHIBITED] Using findings to develop or deploy actual malware
+[PROHIBITED] Commercial malware-as-a-service offerings
+[PROHIBITED] Unauthorized network penetration testing
+[PROHIBITED] Blackmail, extortion, or malicious purposes
+
+DISCLAIMER:
+This material is provided for lawful security research, education, and 
+incident response purposes only. Users are responsible for complying with 
+all applicable laws and regulations in their jurisdiction. Unauthorized 
+access to computer systems is illegal. The authors assume no liability for 
+misuse of this material.
+
+---
+
+CASE MATERIALS DISCLAIMER:
+
+CASE ID: CASE_20251228_0001
+ANALYSIS DATE: 2025-12-31
+EVIDENCE TYPE: Linux Memory Forensics (LiME RAM Image Analysis)
+
+This repository contains:
+- Forensic analysis findings from a controlled lab environment
+- Real attack artifacts and malware indicators
+- Technical deep-dives into sophisticated attack techniques
+- Python reverse shell code and shellcode disassembly
+
+IMPORTANT SECURITY NOTES:
+
+1. CONTAINED ENVIRONMENT ONLY
+   These findings are from a deliberately compromised lab VM in an isolated
+   network segment. Do not use these findings as authorization to compromise
+   production systems or attempt similar attacks without explicit written
+   permission.
+
+2. EDUCATIONAL REFERENCE ONLY
+   The techniques documented here are for understanding attack methods and
+   improving defensive security posture. Using this information to conduct
+   unauthorized attacks on any system (test or production) is illegal.
+
+3. PROFESSIONAL RESPONSIBILITY
+   This material is intended for security professionals, incident responders,
+   and authorized researchers. If you are learning security fundamentals,
+   please work with qualified instructors and use approved lab environments.
+
+4. LEGAL COMPLIANCE
+   - USA: Violations may constitute felonies under the Computer Fraud and
+     Abuse Act (18 USC Section 1030)
+   - EU: GDPR and national cybercrimes laws apply
+   - Most Jurisdictions: Similar laws criminalize unauthorized system access
+
+---
+
+ATTRIBUTION & CITATION:
+
+If using this material in research, training, or professional contexts, 
+please cite as:
+
+  Digital Forensics & Incident Response Team (2025).
+  "Linux Memory Forensics & Incident Analysis: Case Study CASE_20251228_0001"
+  Volatility 3 Framework Analysis Report.
+  Available at: [repository URL]
+
+For academic work:
+
+  @misc{dfir2025linuxmem,
+    title={Linux Memory Forensics Analysis: Multi-Process Injection Incident},
+    author={Digital Forensics Team},
+    year={2025},
+    howpublished={GitHub Repository},
+    note={Educational DFIR Case Study}
+  }
+
+---
+
+EVIDENCE & CHAIN OF CUSTODY:
+
+Original Evidence:
+- File: mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+- Size: ~4 GB
+- Hash: See evidence/integrity.txt
+- Acquisition: 2025-12-27 21:49:03 UTC
+- Status: Forensically preserved, read-only storage
+
+This evidence was collected using standard forensic procedures and is
+maintained under chain of custody protocols per RFC 3227 guidelines.
+
+---
+
+CONTRIBUTING & FEEDBACK:
+
+This is a static case study repository (read-only). For:
+
+- Bug reports or analysis corrections: File an issue (with evidence)
+- Educational questions: Reference the findings/ documentation
+- Tool-specific questions: See methodology/tools-used.md
+- Incident response support: Contact your incident response team
+
+Do NOT:
+- Submit pull requests containing attack code or exploitation tools
+- Propose modifications that enable actual malware deployment
+- Request malware samples or attack infrastructure information
+- Ask for help setting up attack infrastructure
+
+---
+
+WARRANTY DISCLAIMER:
+
+THIS SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS-IS" WITHOUT WARRANTY OF ANY 
+KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY 
+CLAIMS, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS MATERIAL.
+
+Users assume full responsibility for:
+- Proper use of the forensic techniques described
+- Compliance with all applicable laws and regulations
+- Obtaining proper authorization before using any techniques
+- Securing and protecting sensitive forensic information
+- Proper evidence handling and chain of custody procedures
+
+---
+
+RESPONSIBLE DISCLOSURE STATEMENT:
+
+If you identify:
+- Additional vulnerabilities in the documented attack
+- Overlapping artifacts suggesting related incidents
+- Similar malware signatures in your infrastructure
+
+Please:
+1. Contact your security team or incident response provider
+2. Do NOT publicly disclose vulnerability details
+3. Do NOT attempt to contact or communicate with threat actors
+4. Preserve all evidence in a forensic manner
+5. Engage law enforcement if warranted
+
+---
+
+CONTACT & SUPPORT:
+
+For legitimate inquiries:
+- Security Research: [security.research@organization.com]
+- Incident Response: [incident.response@organization.com]
+- Legal Questions: [counsel@organization.com]
+
+For unauthorized or threatening content:
+- Report to law enforcement
+- Contact FBI Cyber Division (IC3.gov)
+- Report to your national cybercrime authority
+
+---
+
+DOCUMENT VERSION:
+License Version: 1.0
+Last Updated: 2025-12-31
+Repository Status: Complete & Archived
+
+This license supersedes any previous license terms for this repository.
+
+---
+
+End of License Agreement
+
+By accessing, downloading, or using any part of this repository, you 
+acknowledge that you have read and agree to be bound by all terms and 
+conditions of this license agreement.
+

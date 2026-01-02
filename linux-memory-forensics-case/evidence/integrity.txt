@@ -1,0 +1,44 @@
+EVIDENCE INTEGRITY VERIFICATION
+
+Case ID:           CASE_20251228_0001
+Case Date:         2025-12-31
+Analyst:           Sai (DFIR Analyst)
+Verification Date: 2025-12-31
+Status:            VERIFIED
+
+1. ORIGINAL EVIDENCE (LiME Memory Dump)
+
+File Name:         mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+Size:              4,294,967,296 bytes (4 GB)
+Location:          evidence/
+Created:           2025-12-27T21:49:03 UTC (victim VM)
+Transferred:       2025-12-27T21:50:15 UTC (analyst VM)
+
+Source Hash (Victim-Generated):
+  Hash Algorithm:  SHA-256
+  Hash Value:      a2b17a37b0250034bb9857ba0c0e34f2724b04b0bf8b51f92d7595682f94c748
+  Original Path:   /home/labadmin/dfir_acq/mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+  Verified By:     System (Automated)
+  Verified Date:   2025-12-27T21:49:15 UTC
+
+Analyst Verification Hash (Local Path):
+  Hash Algorithm:  SHA-256
+  Hash Value:      a2b17a37b0250034bb9857ba0c0e34f2724b04b0bf8b51f92d7595682f94c748
+  Verified Path:   evidence/mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+  Verified By:     Sai (DFIR Analyst)
+  Verified Date:   2025-12-27T21:51:45 UTC
+  Command:         sha256sum -c mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime.local.sha256
+
+HASH MATCH CONFIRMED - NO CORRUPTION DETECTED
+
+2. PRE-ACQUISITION BASELINE HASHES
+
+File: pre_acq_baselines_20251227T214513Z.sha256
+
+Purpose: Document system state BEFORE memory acquisition
+Authority: RFC 3227 Evidence Collection Best Practices
+
+Pre-Acquisition Files:
+
+  2ba10a06a6e2b7a0372c64eac1ca0179dad0fe907a19eaa7be37113b246d9787  
+  /home/analystvm/dfir-cases/CASE_20251228_0001/logs/pre_acq_arp_20251227T214513Z.txt

@@ -1,0 +1,50 @@
+# Indicators of Compromise (IOCs)
+## Complete IOC Summary | CASE_20251228_0001
+
+**Case ID**: CASE_20251228_0001
+**Evidence**: mem_victim-u20_5.4.0-216-generic_20251227T214903Z.lime
+**Analysis Date**: 2025-12-31
+**Threat Level**: CRITICAL - Active C2 Compromise
+
+---
+
+## Executive Summary
+
+**Attack Classification**: Active Command & Control (C2) Compromise with Memory-Based Injection
+
+**Key Indicators**:
+- **Active C2 Connection**: ESTABLISHED TCP socket at acquisition time
+- **Python Reverse Shell**: Hardcoded C2 IP/port in Python script
+- **Memory Code Injection**: RWX shellcode in 3 processes (system services compromised)
+- **Hidden Malware Files**: Dot-file naming convention in `/opt/.cache/`
+- **Persistence Mechanism**: nohup execution with sudo privileges
+
+**Recommended Immediate Actions**:
+1. Block C2 IP address: 192.168.164.1:4444
+2. Kill malicious processes: PIDs 20480, 19983, 19442, 1048, 1140
+3. Remove hidden malware files from `/opt/.cache/`
+4. Isolate affected system from network
+5. Perform threat hunting on network for C2 communication
+
+---
+
+## Network IOCs
+
+### C2 Server Infrastructure
+
+#### Primary C2 Connection
+
+| Attribute | Value | Source |
+|---|---|---|
+| **C2 Server IP** | 192.168.164.1 | sockstat.txt (20_sockstat) |
+| **C2 Server Port** | 4444 | psaux.txt (14_psaux), sockstat.txt (20_sockstat) |
+| **Protocol** | TCP (SOCK_STREAM) | sockstat.txt (20_sockstat) |
+| **Connection Type** | Socket Family: AF_INET (IPv4) | sockstat.txt (20_sockstat) |
+| **Service Type** | Unknown (custom port 4444) | Port analysis |
+| **Threat Level** | CRITICAL | Active ESTABLISHED connection |
+
+#### Victim-Side Connection Details
+
+| Attribute | Value | Source |
+|---|---|---|
+| **Victim IP** | 192.168.164.129 | psaux.txt (14_psaux), sockstat.txt (20_sockstat) |
